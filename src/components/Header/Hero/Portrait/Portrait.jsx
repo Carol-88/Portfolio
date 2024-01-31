@@ -1,6 +1,6 @@
 export const Portrait = () => {
   return (
-    <div className='md:columns-2xs'>
+    <div className='md:columns-2xs lg:columns-lg xl:columns-xl'>
       <img
         src="\src\assets\img\portrait.jpg"
         // className=" h-full object-cover justify-items-start fixed"

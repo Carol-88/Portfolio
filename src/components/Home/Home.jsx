@@ -1,18 +1,14 @@
 import { Hero } from "../Header/Hero/Hero"
-import { Navbar } from "../Header/Navbar/Navbar"
-import { AboutMe } from '../AboutMe/AboutMe'
-import { Skills } from '../Skills/Skills'
-import { Experience } from '../Experience/Experience'
 import { Footer } from '../Footer/Footer'
+import { Header } from "../Header/Header"
+import { Content } from "./Content/Content"
 
 export const Home = () => {
   return (
-      <div>
+    <div>
+       <Header/>
         <Hero />
-        <Navbar />
-        <AboutMe />
-        <Skills />
-        <Experience />
+        <Content/>
         <Footer />
       </div>
   )
