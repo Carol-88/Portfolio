@@ -1,11 +1,13 @@
-import { Home } from "./components/Home/Home"
+import { Layout } from "./layout/Layout"
+import { Home } from "./pages/Home/Home"
+
 
 export const App = () => {
 
   return (
-    <>
-      <Home/>     
-    </>
+    <Layout>
+        <Home />   
+    </Layout>
   )
 }
 
