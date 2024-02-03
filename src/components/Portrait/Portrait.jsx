@@ -1,9 +1,9 @@
 export const Portrait = () => {
   return (
-    <div>
+    <div className="h-screen">
       <img
         src="\src\assets\img\portrait.webp"
-        className="min-h-screen object-cover"
+        className="object-cover object-center h-full w-full"
         alt="Portrait"
       />
     </div>
