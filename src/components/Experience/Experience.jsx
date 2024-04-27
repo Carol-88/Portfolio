@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const ProjectCard = ({ imgSrc, title, description }) => (
-  <article className="card shadow-lg hover:shadow-xl transition-shadow duration-300 w-full md:w-full lg:w-1/3">
+  <article className="card shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-80">
     <img
       src={imgSrc}
       alt={title}
