@@ -5,21 +5,24 @@ import { Portrait} from '../components/Portrait/Portrait'
 import { Card } from "../components/Card/Card"
 
 export const Layout = ({children}) => {
-  return (
-    <body className="flex flex-col md:flex-row h-screen">
-      <aside className="md:w-1/3">
+ return (
+    <div className="grid grid-cols-[1fr_1200px] m-auto">
+      <aside className="  object-contain h-screen col-start-1 col-end-1">
         <Portrait />
         <Card/>
       </aside>
-      <main className="md:w-2/3">
+      <main className=" col-start-2">
         <Navbar />
           {children}
         <Footer />
-        </main>
-    </body>
-  )
+      </main>
+    </div>
+ )
 }
 
 Layout.propTypes = {
  children: PropTypes.node.isRequired,
 };
+
+
+

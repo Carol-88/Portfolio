@@ -2,7 +2,7 @@
 
 export const AboutMe = () => {
   return (
-    <section className="p-4 pt-8">
+    <section className="">
       <h1 className="">
         Carolina Romero
       </h1>
