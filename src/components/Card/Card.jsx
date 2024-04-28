@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Card = () => {
    return (
-    <div className=" flex justify-center pt-5 sm:hidden md:hidden lg:hidden xl:hidden">
+    <div className=" flex justify-center p-5 sm:hidden md:hidden lg:hidden xl:hidden">
       <div className="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
         <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-80">
           <img src="\src\assets\img\portrait.webp" alt="profile-picture" />
