@@ -1,0 +1,13 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "banner": "/img/bannerauj.jpg",
+      "name": "Adopta un Junior",
+      "subtitle": "Proyecto colaborativo para acercar los perfiles Juniors al sector Tech",
+      "link": "https://example.com",
+      "role": "Desarrollo web frontend",
+      "web": "https://adoptaunjunior.es",
+      "description": " psum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+    }
+]}
