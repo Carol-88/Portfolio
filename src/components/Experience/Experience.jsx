@@ -56,12 +56,12 @@ TechnologyLogo.propTypes = {
 export const Experience = () => {
   const projects = [
     {
-      imgSrc: "src/assets/img/bannerauj.jpg",
+      imgSrc: "/img/bannerauj.jpg",
       title: "Adopta un Junior",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
-      imgSrc: "src/assets/img/logocs.png",
+      imgSrc: "/img/logocs.png",
       title: "Cloudsolute",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
