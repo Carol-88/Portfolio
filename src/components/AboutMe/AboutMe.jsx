@@ -3,7 +3,7 @@ export const AboutMe = () => {
     <section id="aboutme" className="p-14">
       <h1 className="text-5xl mb-8">Carolina Romero</h1>
       <p className="">
-        Bienvenido a mi portafolio. Soy Carolina, una desarrolladora web
+        Bienvenido a mi portafolio. Soy , una desarrolladora web
         frontend con un año de experiencia trabajando en equipos de desarrollo
         multidisciplinarios. Mi trabajo se centra en crear sitios web y
         aplicaciones web interactivas, utilizando una combinación de creatividad

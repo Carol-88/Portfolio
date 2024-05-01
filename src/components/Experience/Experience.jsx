@@ -67,7 +67,7 @@ export const Experience = () => {
       </div>
       <div id="techs" className="mt-8">
         <h2 className="text-2xl font-bold mb-4">Tecnologías</h2>
-        <div id="logos" className="flex flex-wrap justify-center gap-4">
+        <div id="logos" className="flex flex-wrap justify-center gap-4 ">
           {technologies.map((tech, index) => (
             <TechnologyLogo key={index} {...tech} />
           ))}
