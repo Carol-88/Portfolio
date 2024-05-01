@@ -18,7 +18,7 @@ export const Contact = () => {
     });
 };
   return (
-    <div className="flex items-center justify-center ">
+    <div id='contact' className="flex items-center justify-center ">
       <div className="mx-auto w-full max-w-[550px]">
         <form onSubmit={sendEmail} aria-label="Contact Form">
           <div className="mb-5">

@@ -65,7 +65,7 @@ export const Experience = () => {
           <ProjectCard key={index} {...project} />
         ))}
       </div>
-      <div id="other-exp" className="mt-8">
+      <div id="techs" className="mt-8">
         <h2 className="text-2xl font-bold mb-4">Tecnologías</h2>
         <div id="logos" className="flex flex-wrap justify-center gap-4">
           {technologies.map((tech, index) => (

@@ -12,4 +12,8 @@
   p {
     @apply text-p-color text-center;
   }
+
+  hr {
+    @apply w-1/2 m-auto;
+  }
 }
