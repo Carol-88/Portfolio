@@ -1,19 +1,17 @@
-
-
 export const AboutMe = () => {
   return (
     <section id="aboutme" className="p-14">
-      <h1 className="">
-        Carolina Romero
-      </h1>
+      <h1 className="text-5xl mb-8">Carolina Romero</h1>
       <p className="">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum accusamus quo ducimus,
-        ipsam quis optio quod officiis architecto neque laudantium, veniam rerum quasi deserunt.
-        Unde cum beatae quo corporis labore.
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum accusamus quo ducimus,
-        ipsam quis optio quod officiis architecto neque laudantium, veniam rerum quasi deserunt.
-        Unde cum beatae quo corporis labore.
+        Bienvenido a mi portafolio. Soy Carolina, una desarrolladora web
+        frontend con un año de experiencia trabajando en equipos de desarrollo
+        multidisciplinarios. Mi trabajo se centra en crear sitios web y
+        aplicaciones web interactivas, utilizando una combinación de creatividad
+        y habilidades técnicas. Estoy buscando oportunidades para trabajar en
+        proyectos que me permitan aplicar mis habilidades y contribuir a la
+        creación de experiencias web que sean fáciles de usar y que cumplan con
+        los objetivos de los clientes.
       </p>
     </section>
-  )
-}
+  );
+};
