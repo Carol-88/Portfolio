@@ -7,7 +7,7 @@
     @apply text-2xl text-title-color text-center pb-3 font-bold;
   }
   h2 {
-    @apply text-xl text-title-color text-center pb-3 font-bold;
+    @apply text-xl text-title-color text-center  font-bold;
   }
   p {
     @apply text-p-color text-center;

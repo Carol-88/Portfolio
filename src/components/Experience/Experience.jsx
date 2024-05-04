@@ -8,10 +8,10 @@ const ProjectCard = ({ banner, name, subtitle }) => (
       alt={name}
       className="w-full h-64 object-cover shadow-md"
     />
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">{name}</h2>
-      <p className="text-gray-600">{subtitle}</p>
-      <a href="" className="text-blue-500 hover:underline">
+    <div className="flex flex-col justify-center items-start gap-4 p-4">
+      <h2 className="text-xl font-semibold">{name}</h2>
+      <p className="text-gray-600 text-start">{subtitle}</p>
+      <a href="{`/proyecto/${id}`}" className="text-[#7f1d1d] font-semibold hover:font-bold">
         Ver más
       </a>
     </div>
@@ -21,7 +21,8 @@ const ProjectCard = ({ banner, name, subtitle }) => (
 ProjectCard.propTypes = {
  banner: PropTypes.string.isRequired,
  name: PropTypes.string.isRequired,
- subtitle: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+ id:PropTypes.number.isRequired
 };
 
 const technologies = [
