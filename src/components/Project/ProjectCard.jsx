@@ -12,7 +12,7 @@ export const ProjectCard = ({ banner, name, subtitle }) => (
     <div className="flex flex-col justify-center items-start gap-4 p-4">
       <h2 className="text-xl font-semibold">{name}</h2>
       <p className="text-gray-600 text-start">{subtitle}</p>
-      <a href="{`/proyecto/${id}`}" className="text-[#7f1d1d] font-semibold hover:font-bold">
+      <a href="" className="text-[#7f1d1d] font-semibold hover:font-bold">
         Ver más
       </a>
     </div>
