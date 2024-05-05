@@ -34,7 +34,7 @@ export const Contact = () => {
               type="text"
               name="from_name" // Ajustado para coincidir con la plantilla
               id="from_name"
-              placeholder="Nombre Completo"
+              placeholder=" ... "
               required
               className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
             />
@@ -67,6 +67,7 @@ export const Contact = () => {
               type="text"
               name="subject" // Ajustado para coincidir con la plantilla
               id="subject"
+              placeholder=" ... "
               required
               className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
             />
@@ -82,7 +83,7 @@ export const Contact = () => {
               rows="4"
               name="message" // Ajustado para coincidir con la plantilla
               id="message"
-              placeholder="Escribeme"
+              placeholder=" ... "
               required
               className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
             ></textarea>

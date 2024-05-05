@@ -3,22 +3,34 @@
     {
       "id": 1,
       "banner": "/img/bannerauj.jpg",
+      "logo": "/img/logoauj.png",
+      "video": "",
       "name": "Adopta un Junior",
-      "subtitle": "Proyecto colaborativo para acercar los perfiles Juniors al sector Tech",
+      "subtitle": "Conectamos talento tecnológico junior con empresas innovadoras, construyendo un futuro tecnológico más inclusivo, diverso y accesible para todos.",
       "role": "Desarrollo web frontend",
       "web": "https://adoptaunjunior.es",
       "projectLink": "/project/:id",
-      "description": " psum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem "
+      "description": {
+        "goal": "El objetivo general del proyecto AUJ  es ofrecer servicios y desarrollar una plataforma en línea.",
+        "services": " Permite hacer el proyecto sostenible y brindar beneficios tangibles al equipo de desarrollo. Se alienta a todos los miembros del equipo a proponer servicios que puedan ofrecerse desde AdoptaUnJunior.",
+        "platform": " Tiene como objetivo conectar a juniors del sector IT  con empresas que buscan impulsar su innovación y desarrollo. Además, se pretende crear una comunidad sólida de juniors para fomentar la formación continua, el apoyo entre compañeros y ayudar a crecer profesionalmente, así como potenciar el acceso a su primer empleo en el sector tecnológico."
+      }
     },
     {
       "id": 2,
       "banner": "/img/logocs.png",
+      "logo": "/img/logocs.png",
+      "video": "https://www.youtube.com/embed/LAbO2WE2U6Q?si=sAHjQrcFhC9fic2t",
       "name": "Cloudsolute",
-      "subtitle": "Plataforma que invita al elearning proporcionando una búsqueda de palabras dentro de videos",
+      "subtitle": "Explora una amplia colección de videos, transformando el contenido visual en texto accesible con nuestra tecnología de reconocimiento óptico de caracteres (OCR) en video.",
       "role": "Desarrollo web frontend",
       "web": "https://cloudsolute.net",
       "projectLink": "/project/:id",
-      "description": "psum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem "
+      "description": {
+        "goal": "Obetivo",
+        "services": "Servicios",
+        "platform": "Plataforma"
+      }
     }
   ]
 }
