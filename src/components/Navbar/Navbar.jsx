@@ -21,7 +21,7 @@ export const Navbar = () => {
         className="fixed right-0 top-0 p-2 focus:outline-none z-50 block"
       >
         <svg
-          className="h-6 w-6 m-3 text-black fill-current"
+          className="h-6 w-6 m-3 text-black hover:text-cyan-800 fill-current"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
