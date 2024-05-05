@@ -18,21 +18,23 @@ export const Contact = () => {
     });
 };
   return (
-    <div id='contact' className="flex items-center justify-center ">
+    <div id='contact' className="flex items-center justify-center mt-14 ">
+      
       <div className="mx-auto w-full max-w-[550px]">
         <form onSubmit={sendEmail} aria-label="Contact Form">
+          <h2 className="text-center text-2xl font-bold mb-8">Contacto</h2>
           <div className="mb-5">
             <label
               htmlFor="from_name"
               className="mb-3 block text-base font-medium text-[#07074D]"
             >
-              Full Name
+              Nombre Completo
             </label>
             <input
               type="text"
               name="from_name" // Ajustado para coincidir con la plantilla
               id="from_name"
-              placeholder="Full Name"
+              placeholder="Nombre Completo"
               required
               className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
             />
@@ -42,13 +44,13 @@ export const Contact = () => {
               htmlFor="email"
               className="mb-3 block text-base font-medium text-[#07074D]"
             >
-              Email Address
+              Email 
             </label>
             <input
               type="email"
               name="email" // Ajustado para coincidir con la plantilla
               id="email"
-              placeholder="example@domain.com"
+              placeholder="ejemplo@domain.com"
               required
               autoComplete="off"
               className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
@@ -59,13 +61,12 @@ export const Contact = () => {
               htmlFor="subject"
               className="mb-3 block text-base font-medium text-[#07074D]"
             >
-              Subject
+              Asunto
             </label>
             <input
               type="text"
               name="subject" // Ajustado para coincidir con la plantilla
               id="subject"
-              placeholder="Enter your subject"
               required
               className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
             />
@@ -75,13 +76,13 @@ export const Contact = () => {
               htmlFor="message"
               className="mb-3 block text-base font-medium text-[#07074D]"
             >
-              Message
+              Mensaje
             </label>
             <textarea
               rows="4"
               name="message" // Ajustado para coincidir con la plantilla
               id="message"
-              placeholder="Type your message"
+              placeholder="Escribeme"
               required
               className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
             ></textarea>
@@ -89,7 +90,7 @@ export const Contact = () => {
           <div>
             <button
               type="submit"
-              className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none"
+              className="hover:shadow-form rounded-md bg-cyan-700 hover:bg-cyan-900 py-3 px-8 text-base font-semibold text-white outline-none"
               aria-label="Submit Form"
             >
               Submit

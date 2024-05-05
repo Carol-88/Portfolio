@@ -50,7 +50,8 @@ export const Navbar = () => {
         } absolute right-0 top-0 mt-2 w-48 rounded-md shadow-lg bg-burguer`}
       >
         <div className="w-1/2 rounded-lg max-w-[430px] text-center m-3 pt-5 fixed bg-burguer p-4 right-0 top-0 shadow-md" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-          {menuItems.map((item, index) => (
+         <a href="/" className="block px-4 py-5 text-sm hover:ease-out">Home</a><hr /> 
+         {menuItems.map((item, index) => (
             <div key={index}>
               <a
                 href={`#${item.id}`}
