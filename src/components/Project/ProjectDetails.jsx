@@ -1,24 +1,27 @@
-import { useParams } from 'react-router-dom';
-import projects from '../Experience/projects.json';
+import { useParams } from "react-router-dom";
+import jsonData from "../Experience/projects.json";
 
 export const ProjectDetails = () => {
- const { id } = useParams();
- const project = projects.find(p => p.id === Number(id));
+  const { id } = useParams();
+  const project = jsonData.projects.find((p) => p.id === Number(id));
 
- if (!project) {
+  if (!project) {
     return <div>Proyecto no encontrado</div>;
- }
- return (
+  }
+
+  return (
     <section>
-      {projects.map((project, index) => (
-        <div key={index}>
-          <h2>{project.name}</h2>
-          <p>{project.subtitle}</p>
-          <p>Rol: {project.role}</p>
-          <a href={project.web} target="_blank" rel="noopener noreferrer">{project.web}</a>
-          <p>{project.description}</p>
-        </div>
-      ))}
+      <div className="flex justify-center">
+        <img src={project.banner} alt="Logo" width={50} height={50} />
+        <a href={project.web} target="_blank" rel="noopener noreferrer">
+          <h1 className="hover:text-cyan-700">{project.name}</h1>
+        </a>
+      </div>
+      <h3 className="pt-4 text-start">{project.subtitle}</h3>
+      <em className="pb-4 text-title-color text-start text-xs font-semibold">
+        {project.role}
+      </em>
+      <p className="pt-12">{project.description}</p>
     </section>
- );
+  );
 };

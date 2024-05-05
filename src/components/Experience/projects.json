@@ -7,7 +7,7 @@
       "subtitle": "Proyecto colaborativo para acercar los perfiles Juniors al sector Tech",
       "role": "Desarrollo web frontend",
       "web": "https://adoptaunjunior.es",
-      "projectLink": "",
+      "projectLink": "/project/:id",
       "description": " psum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem "
     },
     {
@@ -17,7 +17,7 @@
       "subtitle": "Plataforma que invita al elearning proporcionando una búsqueda de palabras dentro de videos",
       "role": "Desarrollo web frontend",
       "web": "https://cloudsolute.net",
-      "projectLink": "",
+      "projectLink": "/project/:id",
       "description": "psum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem "
     }
   ]

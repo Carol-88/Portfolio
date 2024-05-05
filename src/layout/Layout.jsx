@@ -13,7 +13,7 @@ export const Layout = ({children}) => {
         <Portrait />
         <ProfileCard/>
       </aside>
-      <main className="col-start-2 col-end-4 px-10">
+      <main className="col-start-2 col-end-4 px-10 h-screen">
         <Navbar />
           {children}
         <Footer />
