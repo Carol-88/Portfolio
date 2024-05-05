@@ -5,19 +5,20 @@
       "banner": "/img/bannerauj.jpg",
       "name": "Adopta un Junior",
       "subtitle": "Proyecto colaborativo para acercar los perfiles Juniors al sector Tech",
-      "link": "https://example.com",
       "role": "Desarrollo web frontend",
       "web": "https://adoptaunjunior.es",
-      "description": " psum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+      "projectLink": "",
+      "description": " psum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem "
     },
     {
       "id": 2,
       "banner": "/img/logocs.png",
       "name": "Cloudsolute",
-      "subtitle": "Plataforma que invita al elearning proporcionado una búsqueda de palabras dentro de videos",
-      "link": "https://example.com",
+      "subtitle": "Plataforma que invita al elearning proporcionando una búsqueda de palabras dentro de videos",
       "role": "Desarrollo web frontend",
       "web": "https://cloudsolute.net",
-      "description": "psum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+      "projectLink": "",
+      "description": "psum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem "
     }
-]}
+  ]
+}
