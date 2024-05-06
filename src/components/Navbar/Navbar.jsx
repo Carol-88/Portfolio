@@ -7,6 +7,7 @@ export const Navbar = () => {
     setIsOpen(prevIsOpen => !prevIsOpen);
  };
 
+ const isHomePage = window.location.pathname === '/';
  const menuItems = [
     { id: 'aboutme', label: 'Sobre mí' },
     { id: 'experience', label: 'Experiencia' },
@@ -19,6 +20,8 @@ export const Navbar = () => {
       <button
         onClick={toggleMenu}
         className="fixed right-0 top-0 p-2 focus:outline-none z-50 block"
+        aria-label="Toggle navigation menu"
+        aria-expanded={isOpen}
       >
         <svg
           className="h-6 w-6 m-3 text-black hover:text-cyan-800 fill-current"
@@ -50,34 +53,22 @@ export const Navbar = () => {
         } absolute right-0 top-0 mt-2 w-48 rounded-md shadow-lg bg-burguer`}
       >
         <div className="w-1/2 rounded-lg max-w-[430px] text-center m-3 pt-5 fixed bg-burguer p-4 right-0 top-0 shadow-md" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-         <a href="/" className="block px-4 py-5 text-sm hover:ease-out">Home</a><hr /> 
-         {menuItems.map((item, index) => (
-            <div key={index}>
+          {isHomePage ? (
+            menuItems.map((item) => (
               <a
+                key={item.id}
                 href={`#${item.id}`}
                 className="block px-4 py-5 text-sm hover:ease-out"
                 role="menuitem"
               >
                 {item.label}
               </a>
-              {index < menuItems.length - 1 && <hr />}
-            </div>
-          ))}
+            ))
+          ) : (
+            <a href="/" className="block px-4 py-5 text-sm hover:ease-out">Home</a>
+          )}
         </div>
       </div>
     </nav>
  );
 };
-
-
-
-
-
-
-
-
-
-
-
-
-//cambiar el hover bold a otro color
