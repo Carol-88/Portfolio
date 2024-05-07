@@ -1,4 +1,4 @@
-
+import {Section} from '../commons/Section'
 
 export const AboutMe = () => {
   return (
@@ -9,7 +9,7 @@ export const AboutMe = () => {
         en equipos de desarrollo multidisciplinarios.
       </p>
 
-      <p className="text-start mb-4">
+      <p className="text-start mb-4" >
         Mi trabajo se centra en crear sitios web y aplicaciones web
         interactivas, utilizando una combinación de creatividad y habilidades
         técnicas.

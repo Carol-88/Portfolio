@@ -11,7 +11,7 @@ function isInViewport(element) {
  );
 }
 
-const Section = ({ children, animation }) => {
+export const Section = ({ children, animation , className}) => {
  const sectionRef = useRef(null);
 
  useEffect(() => {
@@ -37,7 +37,6 @@ const Section = ({ children, animation }) => {
     };
  }, [animation]);
 
- return <section ref={sectionRef}>{children}</section>;
+ return <section ref={sectionRef} className={className}>{children}</section>;
 };
 
-export default Section;
