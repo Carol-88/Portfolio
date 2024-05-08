@@ -24,7 +24,7 @@ export const Navbar = () => {
         aria-expanded={isOpen}
       >
         <svg
-          className="h-6 w-6 m-3 text-black hover:text-cyan-800 fill-current"
+          className="h-6 w-6 m-3 text-black hover:font-bold fill-current"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -58,14 +58,14 @@ export const Navbar = () => {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="block px-4 py-5 text-sm hover:ease-out"
+                className="block px-4 py-5 text-sm hover:font-bold"
                 role="menuitem"
               >
                 {item.label}
               </a>
             ))
           ) : (
-            <a href="/" className="block px-4 py-5 text-sm hover:ease-out">Home</a>
+            <a href="/" className="block px-4 py-5 text-sm hover:font-bold">Home</a>
           )}
         </div>
       </div>

@@ -27,9 +27,9 @@
       "web": "https://cloudsolute.net",
       "projectLink": "/project/:id",
       "description": {
-        "goal": "Obetivo",
-        "services": "Servicios",
-        "platform": "Plataforma"
+        "goal": "Queremos ofrecer una herramienta útil y avanzada para gestionar el aprendizaje de los usuarios de forma audiovisual.",
+        "services": "Ofrecemos búsquedas por palabras, donde nuestra API te redirige a los frames del video donde esta aparece. También disponemos de búsqueda avanzada con mas filtros para asegurar una búsqueda completa, y la oportunidad de crear tus propias listas de videos.",
+        "platform": "Nuestra plataforma esta enfocada al e-leaarnig, proporcionando una herramienta útil para el estudio. Pronto podremos ofrecer otras funcionalidades interesantes, siempre enfocados en la usabilidad del usuario y el aprovechamiento de nuestra tecnología."
       }
     }
   ]

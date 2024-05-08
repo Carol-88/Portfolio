@@ -15,7 +15,7 @@ export const ProjectDetails = () => {
     <section>
       <div className="flex justify-center items-center p-12">
         <img src={project.logo} alt="Logo" className="w-12 h-12 rounded-full" />
-        <a href={project.web} target="_blank" rel="noopener noreferrer" className="ml-4">
+        <a href={project.web} target="_blank" rel="noopener noreferrer" className="ml-4 text-red-800">
           <h1 className="text-2xl font-bold hover:text-cyan-700">{project.name}</h1>
         </a>
       </div>

@@ -38,14 +38,14 @@ export const Experience = () => {
 
  return (
     <section id="experience" className="container mx-auto">
-      <h2 className="text-center text-2xl font-bold mb-8">Experiencia</h2>
+      <h2 className="text-center text-2xl font-bold mb-8 text-red-800">Experiencia</h2>
       <div id="projects" className="flex flex-wrap justify-center gap-8">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
       </div>
       <div id="techs" className="mt-8">
-        <h2 className="text-2xl font-bold mb-4 mt-14">Tecnologías</h2>
+        <h2 className="text-2xl font-bold mb-4 mt-14 text-center text-red-800">Tecnologías</h2>
         <div id="logos" className="flex flex-wrap justify-center gap-4">
           {technologies.map((tech, index) => (
             <TechnologyLogo key={index} {...tech} />
