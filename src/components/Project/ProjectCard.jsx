@@ -9,7 +9,7 @@ export const ProjectCard = ({
   id
   
 }) => (
-  <article className="card shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-80">
+  <article className="card shadow-lg hover:shadow-xl w-full max-w-80">
     <img
       src={banner}
       alt={name}
