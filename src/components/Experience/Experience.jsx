@@ -23,7 +23,7 @@ const TechnologyLogo = ({ src, alt }) => (
     <img
       src={src}
       alt={alt}
-      className="w-10 h-10 grayscale hover:grayscale-0 transition-colors duration-300"
+      className="w-10 h-10 saturate-50 hover:saturate-100 transition-colors duration-300"
     />
  </div>
 );
@@ -34,7 +34,7 @@ TechnologyLogo.propTypes = {
 };
 
 export const Experience = () => {
- const projects = projectsData.projects; // Asegúrate de que los datos del JSON coincidan con la estructura esperada
+ const projects = projectsData.projects; 
 
  return (
     <section id="experience" className="container mx-auto">

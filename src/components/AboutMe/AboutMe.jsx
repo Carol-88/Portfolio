@@ -1,8 +1,7 @@
-import {Section} from '../commons/Section'
 
 export const AboutMe = () => {
   return (
-    <Section animation="slide-in-left" id="aboutme" className="p-14 ">
+    <section id='aboutme' className="p-14 ">
       <h1 className="text-5xl mb-8 text-red-800 font-bold">Carolina Romero</h1>
       <p className="text-start mb-4"> 
         Soy una desarrolladora web frontend trabajando en equipos de desarrollo multidisciplinarios.
@@ -20,6 +19,6 @@ export const AboutMe = () => {
         que sean fáciles de usar y que cumplan con los objetivos de los
         clientes.
       </p>
-    </Section>
+    </section>
   );
 };

@@ -1,21 +1,28 @@
 import { useState } from 'react';
 
 export const Navbar = () => {
- const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
- const toggleMenu = () => {
-    setIsOpen(prevIsOpen => !prevIsOpen);
- };
+  const toggleMenu = () => {
+    setIsOpen(prevIsOpen =>!prevIsOpen);
+  };
 
- const isHomePage = window.location.pathname === '/';
- const menuItems = [
+ const handleClickLink = () => {
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 100); 
+  };
+  
+
+  const isHomePage = window.location.pathname === '/';
+  const menuItems = [
     { id: 'aboutme', label: 'Sobre mí' },
     { id: 'experience', label: 'Experiencia' },
-   { id: 'techs', label: 'Tecnologías' },
-   { id: 'contact', label: 'Contacto' },
- ];
+    { id: 'techs', label: 'Tecnologías' },
+    { id: 'contact', label: 'Contacto' },
+  ];
 
- return (
+  return (
     <nav className="relative z-30">
       <button
         onClick={toggleMenu}
@@ -49,26 +56,27 @@ export const Navbar = () => {
       </button>
       <div
         className={`${
-          isOpen ? 'block' : 'hidden'
+          isOpen? 'block' : 'hidden'
         } absolute right-0 top-0 mt-2 w-48 rounded-md shadow-lg bg-burguer`}
       >
-        <div className="w-1/2 rounded-lg max-w-[430px] text-center m-3 pt-5 fixed bg-burguer p-4 right-0 top-0 shadow-md" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-          {isHomePage ? (
+        <div className="md:w-3/5 w-full h-full text-center content-around pt-5 fixed bg-burguer p-4 right-0 top-0 shadow-md" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+          {isHomePage? (
             menuItems.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
                 className="block px-4 py-5 text-sm hover:font-bold"
                 role="menuitem"
+                onClick={handleClickLink} 
               >
                 {item.label}
               </a>
             ))
           ) : (
-            <a href="/" className="block px-4 py-5 text-sm hover:font-bold">Home</a>
+            <a href="/" className="block px-4 py-5 text-sm hover:font-bold" onClick={handleClickLink}>Home</a>
           )}
         </div>
       </div>
     </nav>
- );
+  );
 };

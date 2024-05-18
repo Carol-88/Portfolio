@@ -13,7 +13,7 @@ export const ProjectCard = ({
     <img
       src={banner}
       alt={name}
-      className="w-full h-48 object-cover shadow-md  sepia hover:sepia-0"
+      className="w-full h-48 object-cover shadow-md  saturate-50 hover:saturate-100"
     />
     <div className="flex flex-col justify-center items-start gap-4 p-4 h-56">
       <Link to={web} target="_blank">
