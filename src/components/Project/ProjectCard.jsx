@@ -1,21 +1,14 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-export const ProjectCard = ({
-  banner,
-  name,
-  subtitle,
-  web,
-  id
-  
-}) => (
-  <article className="flex flex-col justify-around card shadow-lg hover:shadow-xl w-full max-w-80">
+export const ProjectCard = ({ banner, name, subtitle, web, id }) => (
+  <article className="flex flex-col justify-around card shadow-lg hover:shadow-xl w-full max-w-80 font-thin text-xs">
     <img
       src={banner}
       alt={name}
       className="w-full h-48 object-cover shadow-md  saturate-50 hover:saturate-100"
     />
-    <div className="flex flex-col justify-center items-start gap-4 p-4 h-56">
+    <div className="flex flex-col justify-center items-start gap-8 p-4 h-56">
       <Link to={web} target="_blank">
         <h2 className="text-xl font-semibold hover:font-bold">{name}</h2>
       </Link>

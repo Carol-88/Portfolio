@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 
-
 export const ProfileCard = () => {
-   return (
+  return (
     <div className=" flex justify-center p-5 sm:hidden md:hidden lg:hidden xl:hidden">
       <div className="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
-        <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-80">
+        <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-80 saturate-50 hover:saturate-100">
           <img src="/img/portrait.webp" alt="profile-picture" />
         </div>
         <div className="p-6 text-center">
@@ -16,15 +15,29 @@ export const ProfileCard = () => {
             Diseño y desarrollo Web
           </p>
         </div>
-        <div className="flex justify-center p-6 pt-2 gap-7">
-          <Link href="#linkedin" className="block font-sans text-xl antialiased font-normal leading-relaxed text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-blue-400">
-            <img src="/img/linkedin.png" className="w-12" aria-hidden="true"></img>
+        <div className="flex justify-center p-6 pt-2 gap-7 saturate-50 hover:saturate-100">
+          <Link
+            href="#linkedin"
+            className="block font-sans text-xl antialiased font-normal leading-relaxed text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-blue-400"
+          >
+            <img
+              src="/img/linkedin.png"
+              className="w-12"
+              aria-hidden="true"
+            ></img>
           </Link>
-          <Link href="#github" className="block font-sans text-xl antialiased font-normal leading-relaxed text-transparent bg-clip-text bg-gradient-to-tr from-light-blue-600 to-light-blue-400">
-            <img src="/img/github.png" className=" w-12" aria-hidden="true"></img>
+          <Link
+            href="#github"
+            className="block font-sans text-xl antialiased font-normal leading-relaxed text-transparent bg-clip-text bg-gradient-to-tr from-light-blue-600 to-light-blue-400"
+          >
+            <img
+              src="/img/github.png"
+              className=" w-12"
+              aria-hidden="true"
+            ></img>
           </Link>
         </div>
       </div>
     </div>
   );
-}
+};

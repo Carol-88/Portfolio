@@ -15,22 +15,7 @@
         "services": " Permite hacer el proyecto sostenible y brindar beneficios tangibles al equipo de desarrollo. Se alienta a todos los miembros del equipo a proponer servicios que puedan ofrecerse desde AdoptaUnJunior.",
         "platform": " Tiene como objetivo conectar a juniors del sector IT  con empresas que buscan impulsar su innovación y desarrollo. Además, se pretende crear una comunidad sólida de juniors para fomentar la formación continua, el apoyo entre compañeros y ayudar a crecer profesionalmente, así como potenciar el acceso a su primer empleo en el sector tecnológico."
       }
-    },
-    {
-      "id": 2,
-      "banner": "/img/logocs.png",
-      "logo": "/img/logocs.png",
-      "video": "https://www.youtube.com/embed/LAbO2WE2U6Q?si=sAHjQrcFhC9fic2t",
-      "name": "Cloudsolute",
-      "subtitle": "Desarrollo web frontend, migración de React a Next.js v14, de Javascript a Typescript y de CSS a Tailwind CSS.",
-      "role": "Desarrollo web frontend",
-      "web": "https://cloudsolute.net",
-      "projectLink": "/project/:id",
-      "description": {
-        "goal": "Queremos ofrecer una herramienta útil y avanzada para gestionar el aprendizaje de los usuarios de forma audiovisual.",
-        "services": "Explora una amplia colección de videos, transformando el contenido visual en texto accesible con nuestra tecnología de reconocimiento óptico de caracteres (OCR) en video. También disponemos de búsqueda avanzada con más filtros para asegurar una búsqueda completa, y la oportunidad de crear tus propias listas de videos.",
-        "platform": "Nuestra plataforma esta enfocada al e-leaarnig, proporcionando una herramienta útil para el estudio. Pronto podremos ofrecer otras funcionalidades interesantes, siempre enfocados en la usabilidad del usuario y el aprovechamiento de nuestra tecnología."
-      }
     }
+
   ]
 }
