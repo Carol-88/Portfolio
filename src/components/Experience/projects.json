@@ -6,7 +6,7 @@
       "logo": "/img/logoauj.png",
       "video": "",
       "name": "Adopta un Junior",
-      "subtitle": "Conectamos talento tecnológico junior con empresas innovadoras, construyendo un futuro tecnológico más inclusivo, diverso y accesible para todos.",
+      "subtitle": "Desarrollo web frontend, migración de React a Next.js v14, de Javascript a Typescript y de CSS a Tailwind CSS. Organización, gestión de equipo de desarrollo y gestión de proyectos.",
       "role": "Desarrollo web frontend",
       "web": "https://adoptaunjunior.es",
       "projectLink": "/project/:id",
@@ -22,13 +22,13 @@
       "logo": "/img/logocs.png",
       "video": "https://www.youtube.com/embed/LAbO2WE2U6Q?si=sAHjQrcFhC9fic2t",
       "name": "Cloudsolute",
-      "subtitle": "Explora una amplia colección de videos, transformando el contenido visual en texto accesible con nuestra tecnología de reconocimiento óptico de caracteres (OCR) en video.",
+      "subtitle": "Desarrollo web frontend, migración de React a Next.js v14, de Javascript a Typescript y de CSS a Tailwind CSS.",
       "role": "Desarrollo web frontend",
       "web": "https://cloudsolute.net",
       "projectLink": "/project/:id",
       "description": {
         "goal": "Queremos ofrecer una herramienta útil y avanzada para gestionar el aprendizaje de los usuarios de forma audiovisual.",
-        "services": "Ofrecemos búsquedas por palabras, donde nuestra API te redirige a los frames del video donde esta aparece. También disponemos de búsqueda avanzada con mas filtros para asegurar una búsqueda completa, y la oportunidad de crear tus propias listas de videos.",
+        "services": "Explora una amplia colección de videos, transformando el contenido visual en texto accesible con nuestra tecnología de reconocimiento óptico de caracteres (OCR) en video. También disponemos de búsqueda avanzada con más filtros para asegurar una búsqueda completa, y la oportunidad de crear tus propias listas de videos.",
         "platform": "Nuestra plataforma esta enfocada al e-leaarnig, proporcionando una herramienta útil para el estudio. Pronto podremos ofrecer otras funcionalidades interesantes, siempre enfocados en la usabilidad del usuario y el aprovechamiento de nuestra tecnología."
       }
     }
