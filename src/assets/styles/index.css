@@ -1,37 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-/* Animación para aparecer desde la derecha */
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
- }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
- }
-}
-
-/* Animación para aparecer desde la izquierda */
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
- }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
- }
-}
-
-/* Clases para aplicar las animaciones */
-.slide-in-right {
- animation: slideInFromRight 1s ease-out;
-}
-
-.slide-in-left {
- animation: slideInFromLeft 1s ease-out;
-}

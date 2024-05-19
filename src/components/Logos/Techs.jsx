@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export const TechLogos = () => {
+export const Techs = () => {
   const technologies = [
     { src: "/icons/html.png", alt: "HTML" },
     { src: "/icons/css.png", alt: "CSS" },
@@ -21,7 +21,7 @@ export const TechLogos = () => {
       <img
         src={src}
         alt={alt}
-        className="w-10 h-10 saturate-50 hover:saturate-100 transition-colors duration-300"
+        className="w-10 h-10 saturate-50 hover:saturate-100 hover:animate-bounce"
       />
     </div>
   );
@@ -31,10 +31,15 @@ export const TechLogos = () => {
     alt: PropTypes.string.isRequired,
   };
   return (
-    <div id="logos" className="flex flex-wrap justify-center gap-4">
-      {technologies.map((tech, index) => (
-        <TechnologyLogo key={index} {...tech} />
-      ))}
+    <div id="techs" className="mx-auto pb-14">
+      <h2 className="text-2xl font-bold mb-8 text-center text-red-800">
+        Tecnologías
+      </h2>
+      <div id="logos" className="flex flex-wrap justify-center gap-4">
+        {technologies.map((tech, index) => (
+          <TechnologyLogo key={index} {...tech} />
+        ))}
+      </div>
     </div>
   );
 };

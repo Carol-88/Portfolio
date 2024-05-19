@@ -1,6 +1,5 @@
 import projectsData from "./projects.json"; // Asegúrate de que la ruta sea correcta
 import { ProjectCard } from "../Project/ProjectCard";
-import { TechLogos } from "../Logos/Techs";
 
 export const Experience = () => {
   const projects = projectsData.projects;
@@ -14,12 +13,6 @@ export const Experience = () => {
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
-      </div>
-      <div id="techs" className="mt-8">
-        <h2 className="text-2xl font-bold mb-4 mt-14 text-center text-red-800">
-          Tecnologías
-        </h2>
-        <TechLogos />
       </div>
     </section>
   );
