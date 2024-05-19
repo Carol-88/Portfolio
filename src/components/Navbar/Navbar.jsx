@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { RRSS } from "../Logos/RRSS";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,24 +20,6 @@ export const Navbar = () => {
     { href: "/#experience", label: "Experiencia" },
     { href: "/#techs", label: "Tecnologías" },
     { href: "/#contact", label: "Contacto" },
-  ];
-
-  const rrss = [
-    {
-      src: "/icons/github.png",
-      alt: "GitHub",
-      url: "https://github.com/Carol-88",
-    },
-    {
-      src: "/icons/linkedin.png",
-      alt: "LinkedIn",
-      url: "https://www.linkedin.com/in/carolina-romero-c/",
-    },
-    {
-      src: "/icons/twitter.png",
-      alt: "Twitter",
-      url: "https://x.com/caroldev_",
-    },
   ];
 
   return (
@@ -93,22 +76,7 @@ export const Navbar = () => {
               {item.label}
             </a>
           ))}
-          <div className="flex justify-center gap-4 pt-8">
-            {rrss.map((social, index) => (
-              <a
-                key={index}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={social.src}
-                  alt={social.alt}
-                  className="w-12 h-12 saturate-50 shadow-lg hover:shadow-red-900"
-                />
-              </a>
-            ))}
-          </div>
+          <RRSS />
         </div>
       </div>
     </nav>

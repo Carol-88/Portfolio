@@ -1,6 +1,6 @@
 import projectsData from "./projects.json"; // Asegúrate de que la ruta sea correcta
 import { ProjectCard } from "../Project/ProjectCard";
-import { TechLogos } from "../TechnologyLogo/TechLogos";
+import { TechLogos } from "../Logos/Techs";
 
 export const Experience = () => {
   const projects = projectsData.projects;
