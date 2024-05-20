@@ -5,17 +5,100 @@
       "banner": "/img/bannerauj.jpg",
       "logo": "/img/logoauj.png",
       "video": "",
+      "contributions": {
+        "landing":"",
+        "contribution1": "",
+        "contribution2": "",
+        "contribution3": "",
+        "contribution4": "",
+        "contribution5": "",
+        "contribution6": ""
+      },
       "name": "Adopta un Junior",
-      "subtitle": "Desarrollo web frontend, migración de React a Next.js v14, de Javascript a Typescript y de CSS a Tailwind CSS. Organización, gestión de equipo de desarrollo y gestión de proyectos.",
+      "subtitle": "Transformación digital con Next.js y TypeScript, optimizando el rendimiento y la experiencia de usuario. Colaboración en el liderazgo en desarrollo frontend y gestión eficaz de equipos.",
       "role": "Desarrollo web frontend",
       "web": "https://adoptaunjunior.es",
       "projectLink": "/project/:id",
       "description": {
-        "goal": "El objetivo general del proyecto AUJ  es ofrecer servicios y desarrollar una plataforma en línea.",
-        "services": " Permite hacer el proyecto sostenible y brindar beneficios tangibles al equipo de desarrollo. Se alienta a todos los miembros del equipo a proponer servicios que puedan ofrecerse desde AdoptaUnJunior.",
-        "platform": " Tiene como objetivo conectar a juniors del sector IT  con empresas que buscan impulsar su innovación y desarrollo. Además, se pretende crear una comunidad sólida de juniors para fomentar la formación continua, el apoyo entre compañeros y ayudar a crecer profesionalmente, así como potenciar el acceso a su primer empleo en el sector tecnológico."
+        "goal": "Nuestro compromiso es construir una plataforma digital robusta que conecte talentos emergentes con oportunidades de crecimiento en el sector tecnológico",
+        "services": "Fomentamos la innovación y el emprendimiento dentro de nuestro equipo, incentivando la propuesta de nuevos servicios que enriquezcan nuestra oferta y beneficien a nuestra comunidad.",
+        "platform": "Creemos en el poder de la comunidad para transformar el futuro del sector IT. Nuestra plataforma busca ser un puente entre profesionales y empresas innovadoras, promoviendo la educación continua, el networking y el desarrollo profesional."
+      }
+    },
+        {
+      "id": 2,
+      "banner": "",
+      "logo": "",
+      "video": "",
+      "contributions": {
+        "landing":"img/todolist/dashboard.png",
+        "contribution1": "/img/todolist/register.png",
+        "contribution2": "/img/todolist/login.png",
+        "contribution3": "/img/todolist/profile.png",
+        "contribution4": "/img/todolist/usercard.png",
+        "contribution5": "",
+        "contribution6": ""
+      },
+      "name": "Blog",
+      "subtitle": "",
+      "role": "Desarrollo web frontend",
+      "web": "",
+      "projectLink": "/project/:id",
+      "description": {
+        "goal": "",
+        "services": "",
+        "platform": ""
+      }
+    },
+        {
+      "id": 3,
+      "banner": "",
+      "logo": "",
+      "video": "",
+      "contributions": {
+        "landing":"img/todolist/dashboard.png",
+        "contribution1": "/img/todolist/register.png",
+        "contribution2": "/img/todolist/login.png",
+        "contribution3": "/img/todolist/profile.png",
+        "contribution4": "/img/todolist/usercard.png",
+        "contribution5": "",
+        "contribution6": ""
+      },
+      "name": "Benkyo",
+      "subtitle": "",
+      "role": "Desarrollo web frontend",
+      "web": "",
+      "projectLink": "/project/:id",
+      "description": {
+        "goal": "",
+        "services": "",
+        "platform": ""
+      }
+    },
+        {
+      "id": 4,
+      "banner": "",
+      "logo": "",
+      "video": "",
+      "contributions": {
+        "landing":"img/todolist/dashboard.png",
+        "contribution1": "/img/todolist/register.png",
+        "contribution2": "/img/todolist/login.png",
+        "contribution3": "/img/todolist/profile.png",
+        "contribution4": "/img/todolist/usercard.png",
+        "contribution5": "",
+        "contribution6": ""
+      },
+      "name": "Clon de Instagram",
+      "subtitle": "",
+      "role": "Desarrollo web frontend",
+      "web": "",
+      "projectLink": "/project/:id",
+      "description": {
+        "goal": "",
+        "services": "",
+        "platform": ""
       }
     }
-
   ]
 }
