@@ -51,19 +51,19 @@ export const Navbar = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } absolute right-0 top-0 mt-2 w-48 rounded-md shadow-lg bg-burguer`} // Cambiado a bg-white si no tienes la clase bg-burguer
-        aria-hidden={!isOpen} // Mejora de accesibilidad
+        } absolute right-0 top-0 mt-2 w-48 rounded-md shadow-lg bg-burguer`}
+        aria-hidden={!isOpen}
       >
         <div
-          className="md:w-3/5 w-full h-full text-center content-around pt-5 fixed bg-burguer p-4 right-0 top-0 shadow-md" // Cambiado a bg-white si no tienes la clase bg-burguer
+          className="md:w-3/5 w-full h-full text-center content-around pt-5 fixed bg-burguer p-4 right-0 top-0 shadow-md"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="options-menu"
         >
           {menuItems.map((item) => (
             <a
-              key={item.label} // Corrección aquí
-              href={item.path} // Corrección aquí
+              key={item.label}
+              href={item.path}
               className="block px-4 py-5 text-sm hover:font-bold"
               role="menuitem"
             >
