@@ -1,6 +1,6 @@
-export const AboutMe = () => {
+export const Hero = () => {
   return (
-    <section id="aboutme" className="p-14 ">
+    <section id="hero" className="p-14 ">
       <h1 className="text-2xl md:text-5xl mb-8 text-red-800 font-bold hover:animate-bounce">
         Desarrolladora Web Frontend
       </h1>
