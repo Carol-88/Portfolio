@@ -62,7 +62,7 @@ export const Navbar = () => {
         >
           {menuItems.map((item) => (
             <a
-              key={item.path} // Corrección aquí
+              key={item.label} // Corrección aquí
               href={item.path} // Corrección aquí
               className="block px-4 py-5 text-sm hover:font-bold"
               role="menuitem"
