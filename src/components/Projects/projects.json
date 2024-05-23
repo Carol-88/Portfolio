@@ -6,10 +6,10 @@
       "logo": "/img/logoauj.png",
       "video": "",
       "contributions": {
-        "landing":"",
-        "contribution1": "",
-        "contribution2": "",
-        "contribution3": "",
+        "landing":"/img/contributions/auj/landingauj.png",
+        "contribution1": "/img/contributions/auj/footerlap.png",
+        "contribution2": "/img/contributions/auj/footermov.png",
+        "contribution3": "/img/contributions/auj/footertab.png",
         "contribution4": "",
         "contribution5": "",
         "contribution6": ""
@@ -31,7 +31,7 @@
       "logo": "",
       "video": "",
       "contributions": {
-        "landing":"img/todolist/dashboard.png",
+        "landing":"",
         "contribution1": "/img/todolist/register.png",
         "contribution2": "/img/todolist/login.png",
         "contribution3": "/img/todolist/profile.png",
@@ -52,27 +52,27 @@
     },
         {
       "id": 3,
-      "banner": "",
-      "logo": "",
+      "banner": "/img/contributions/todolist/dashboard.png",
+      "logo": "/img/contributions/todolist/logotodo.png",
       "video": "",
       "contributions": {
-        "landing":"img/todolist/dashboard.png",
-        "contribution1": "/img/todolist/register.png",
-        "contribution2": "/img/todolist/login.png",
-        "contribution3": "/img/todolist/profile.png",
-        "contribution4": "/img/todolist/usercard.png",
+        "landing":"/img/contributions/todolist/dashboard.png",
+        "contribution1": "/img/contributions/todolist/register.png",
+        "contribution2": "/img/contributions/todolist/login.png",
+        "contribution3": "/img/contributions/todolist/profile.png",
+        "contribution4": "/img/contributions/todolist/usercard.png",
         "contribution5": "",
         "contribution6": ""
       },
-      "name": "todolist",
-      "subtitle": "",
+      "name": "To Do List",
+      "subtitle": "Aplicación web para gestionar tus tareas, utilizando Vue.js3, pinia y Supabase.",
       "role": "Desarrollo web frontend",
-      "web": "",
+      "web": "https://dashboard-todolist.netlify.app/",
       "projectLink": "/project/:id",
       "description": {
-        "goal": "",
-        "services": "",
-        "platform": ""
+        "goal": "Lista de tareas para gestionar mejor tu tiempo",
+        "services": "Registro, Login, Perfil, Lista de tareas",
+        "platform": "Puedes utilzar la plataforma o hacer fork del repositorio para desarrollar tu propia aplicación"
       }
     },
         {
