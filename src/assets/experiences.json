@@ -1,0 +1,27 @@
+{
+  "jobs": [
+    {
+      "jobTitle": "AdoptaUnJunior - Desarrollador Web FrontEnd",
+      "period": "Noviembre 2023 - Actualidad",
+      "tasks": [
+        "Creación de componentes reutilizables y transición a Next.js con TypeScript.",
+        "Organización de tareas y revisión de código para mantener altos estándares de calidad."
+      ]
+    },
+    {
+      "jobTitle": "CloudSolute - Desarrollador Web FrontEnd",
+      "period": "Febrero 2024 - Actualidad",
+      "tasks": [
+        "Desarrollo de funcionalidades clave y colaboración en la maquetación y componetización.",
+        "Integración de APIs y contribución en la migración tecnológica a Next.js."
+      ]
+    },
+    {
+      "jobTitle": "Securitas Direct S.A. - Operador/a de Emergencias",
+      "period": "Mayo 2018 - Febrero 2024",
+      "tasks": [
+        "Atención de alarmas y coordinación de respuesta a emergencias, demostrando capacidad de trabajo bajo presión."
+      ]
+    }
+  ]
+}

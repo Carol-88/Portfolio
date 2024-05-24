@@ -1,8 +1,8 @@
-import projects from '../../components/Experience/projects.json';
-import ProjectCard from '../Experience/Experience'
+import projects from "../../assets/projects.json";
+import ProjectCard from "../Experience/Experience";
 
 export const Project = () => {
- return (
+  return (
     <section>
       {projects.map((project, index) => (
         <div key={index}>
@@ -17,5 +17,5 @@ export const Project = () => {
         </div>
       ))}
     </section>
- );
+  );
 };

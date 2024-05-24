@@ -1,4 +1,4 @@
-import projectsData from "./projects.json"; // Asegúrate de que la ruta sea correcta
+import projectsData from "../../assets/projects.json";
 import { ProjectCard } from "../Project/ProjectCard";
 
 export const Projects = () => {

@@ -1,6 +1,5 @@
 import { Layout } from "./layout/Layout";
 import { AboutMe } from "./pages/Aboutme";
-import { Blog } from "./pages/Blog";
 import { Experience } from "./pages/Experience";
 import { Home } from "./pages/Home";
 import { Services } from "./pages/Services";
@@ -11,7 +10,6 @@ const App = () => {
   const routes = useRoutes([
     { path: "/", element: <Home /> },
     { path: "/aboutme", element: <AboutMe /> },
-    { path: "/blog", element: <Blog /> },
     { path: "/experience", element: <Experience /> },
     { path: "/services", element: <Services /> },
     { path: "/projects/:id", element: <ProjectPage /> },

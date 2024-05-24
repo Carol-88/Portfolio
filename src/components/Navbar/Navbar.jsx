@@ -8,11 +8,19 @@ export const Navbar = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
+  const handleLinkClick = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   const menuItems = [
     { path: "/", label: "Home" },
     { path: "/aboutme", label: "Sobre mí" },
     { path: "/experience", label: "Experiencia" },
-    { path: "/blog", label: "Blog" },
+    {
+      path: "https://www.linkedin.com/newsletters/7059940563789189120/",
+      label: "Newsletter",
+      external: true,
+    },
     { path: "/services", label: "Servicios" },
   ];
 
@@ -63,9 +71,15 @@ export const Navbar = () => {
           {menuItems.map((item) => (
             <a
               key={item.label}
-              href={item.path}
+              href={item.external ? "#" : item.path}
               className="block px-4 py-5 text-sm hover:font-bold"
               role="menuitem"
+              onClick={(e) => {
+                if (item.external) {
+                  e.preventDefault();
+                  handleLinkClick(item.path);
+                }
+              }}
             >
               {item.label}
             </a>
