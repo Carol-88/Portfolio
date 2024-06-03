@@ -11,10 +11,14 @@ export const Hero = () => {
             alt="Mi retrato"
             className="hidden float-left w-32 rounded-3xl mx-4 grayscale hover:grayscale-0 md:block"
           />
-          Me considero afortunada de dedicarme a lo que amo: crear aplicaciones
-          web que resalten por su diseño, funcionalidad y accesibilidad. Aunque
-          soy consciente de que tengo mucho margen para crecer y aprender, me
-          enorgullece ofrecer soluciones digitales que marcan la diferencia.
+          Me considero afortunada de dedicarme a lo que amo:
+          <h3 className="font-bold">
+            crear aplicaciones web que resalten por su diseño, funcionalidad y
+            accesibilidad.
+          </h3>
+          Aunque soy consciente de que tengo mucho margen para crecer y
+          aprender, me enorgullece ofrecer soluciones digitales que marcan la
+          diferencia.
         </p>
         <p className="text-start mb-4">
           Estoy abierta a colaborar en proyectos que me permitan aplicar mis

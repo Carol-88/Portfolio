@@ -6,7 +6,7 @@
       "logo": "/img/logoauj.png",
       "video": "",
       "contributions": {
-        "landing":"/img/contributions/auj/landingauj.png",
+        "landing": "/img/contributions/auj/landingauj.png",
         "contribution1": "/img/contributions/auj/footerlap.png",
         "contribution2": "/img/contributions/auj/footermov.png",
         "contribution3": "/img/contributions/auj/footertab.png",
@@ -25,21 +25,21 @@
         "platform": "Creemos en el poder de la comunidad para transformar el futuro del sector IT. Nuestra plataforma busca ser un puente entre profesionales y empresas innovadoras, promoviendo la educación continua, el networking y el desarrollo profesional."
       }
     },
-        {
+    {
       "id": 2,
       "banner": "",
       "logo": "",
       "video": "",
       "contributions": {
-        "landing":"",
-        "contribution1": "/img/todolist/register.png",
-        "contribution2": "/img/todolist/login.png",
-        "contribution3": "/img/todolist/profile.png",
-        "contribution4": "/img/todolist/usercard.png",
+        "landing": "",
+        "contribution1": "",
+        "contribution2": "",
+        "contribution3": "",
+        "contribution4": "",
         "contribution5": "",
         "contribution6": ""
       },
-      "name": "Blog",
+      "name": "Blog 'Tech para noobs'",
       "subtitle": "",
       "role": "Desarrollo web frontend",
       "web": "",
@@ -50,13 +50,13 @@
         "platform": ""
       }
     },
-        {
+    {
       "id": 3,
       "banner": "/img/contributions/todolist/dashboard.png",
       "logo": "/img/contributions/todolist/logotodo.png",
       "video": "",
       "contributions": {
-        "landing":"/img/contributions/todolist/dashboard.png",
+        "landing": "/img/contributions/todolist/dashboard.png",
         "contribution1": "/img/contributions/todolist/register.png",
         "contribution2": "/img/contributions/todolist/login.png",
         "contribution3": "/img/contributions/todolist/profile.png",
@@ -70,34 +70,34 @@
       "web": "https://dashboard-todolist.netlify.app/",
       "projectLink": "/project/:id",
       "description": {
-        "goal": "Lista de tareas para gestionar mejor tu tiempo",
+        "goal": "CRUD autenticación y lista de tareas para gestionar mejor tu tiempo",
         "services": "Registro, Login, Perfil, Lista de tareas",
         "platform": "Puedes utilzar la plataforma o hacer fork del repositorio para desarrollar tu propia aplicación"
       }
     },
-        {
-      "id": 4,
-      "banner": "",
-      "logo": "",
+    {
+      "id": 4 ,
+      "banner": "/img/CloudSolute.png",
+      "logo": "/img/logocs.png",
       "video": "",
       "contributions": {
-        "landing":"img/todolist/dashboard.png",
-        "contribution1": "/img/todolist/register.png",
-        "contribution2": "/img/todolist/login.png",
-        "contribution3": "/img/todolist/profile.png",
-        "contribution4": "/img/todolist/usercard.png",
+        "landing": "",
+        "contribution1": "",
+        "contribution2": "/img/contributions/",
+        "contribution3": "/img/contributions/",
+        "contribution4": "/img/contributions/",
         "contribution5": "",
         "contribution6": ""
       },
-      "name": "Clon de Instagram",
-      "subtitle": "",
+      "name": "Cloudsolute",
+      "subtitle": "Desarrollo web frontend, migración de React a Next.js v14, de Javascript a Typescript y de CSS a Tailwind CSS.",
       "role": "Desarrollo web frontend",
-      "web": "",
+      "web": "https://cloudsolute.net",
       "projectLink": "/project/:id",
       "description": {
-        "goal": "",
-        "services": "",
-        "platform": ""
+        "goal": "Queremos ofrecer una herramienta útil y avanzada para gestionar el aprendizaje de los usuarios de forma audiovisual.",
+        "services": "Explora una amplia colección de videos, transformando el contenido visual en texto accesible con nuestra tecnología de reconocimiento óptico de caracteres (OCR) en video. También disponemos de búsqueda avanzada con más filtros para asegurar una búsqueda completa, y la oportunidad de crear tus propias listas de videos.",
+        "platform": "Nuestra plataforma esta enfocada al e-leaarnig, proporcionando una herramienta útil para el estudio. Pronto podremos ofrecer otras funcionalidades interesantes, siempre enfocados en la usabilidad del usuario y el aprovechamiento de nuestra tecnología."
       }
     }
   ]
