@@ -151,17 +151,17 @@ export const AboutMe = () => {
           </section>
         </main>
       </div>
-      <div className="text-lg">
+      <div className="text-md bg-red-300 p-4 font-bold rounded-lg shadow-lg">
         {" "}
         <a
           href="/CV2024_SIMPLE.pdf"
           download
-          className="text-red-700 hover:font-bold"
+          className=" text-red-800 hover:animate-ping"
         >
           Descarga mi currículum si quieres saber más
         </a>{" "}
         o{" "}
-        <a href="/contact" className="text-green-700 hover:font-bold">
+        <a href="/contact" className="text-green-700 hover:animate-ping">
           Contacta conmigo directamente por email
         </a>
       </div>

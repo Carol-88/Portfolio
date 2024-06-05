@@ -1,15 +1,15 @@
 export const Hero = () => {
   return (
-    <section id="hero" className="p-14 ">
+    <section id="hero" className="mt-14 bg-slate-100 p-8 rounded-lg">
       <h1 className="text-2xl md:text-5xl mb-8 text-red-800 font-bold hover:animate-bounce">
         Desarrolladora Web Frontend
       </h1>
       <article>
         <p className="text-start mb-4 ">
           <img
-            src="/img/me.jpeg"
+            src="/img/me.png"
             alt="Mi retrato"
-            className="hidden float-left w-32 rounded-3xl mx-4 grayscale hover:grayscale-0 md:block"
+            className="hidden float-left w-48 rounded-3xl mx-4 grayscale hover:grayscale-0 md:block"
           />
           Me considero afortunada de dedicarme a lo que amo:
           <h3 className="font-bold">

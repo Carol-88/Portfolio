@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 export const ProjectCard = ({ banner, name, subtitle, web, id }) => (
-  <article className="flex flex-col justify-around card shadow-lg hover:shadow-xl w-full max-w-80 font-thin text-xs">
+  <article className="flex flex-col justify-around card shadow-lg hover:shadow-xl w-full max-w-80 font-thin text-xs bg-white">
     <img
       src={banner}
       alt={name}
