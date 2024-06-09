@@ -1,3 +1,102 @@
+/* eslint-disable react/prop-types */
+
+import jobsData from "../../assets/experiences.json";
+
+// Componente para mostrar una lista de habilidades
+const SkillsList = ({ skills }) => (
+  <ul className="flex flex-wrap gap-2 mb-8">
+    {skills.map((skill, index) => (
+      <li
+        key={index} // Considera usar un identificador único si es posible
+        className="px-2 py-1 rounded-lg shadow-md bg-orange-700 hover:animate-bounce text-white"
+      >
+        {skill}
+      </li>
+    ))}
+  </ul>
+);
+
+// Componente para mostrar experiencias profesionales
+const ExperienceItem = ({ jobTitle, period, tasks }) => (
+  <article className="bg-red-50 shadow-md rounded-lg p-4 mb-8">
+    <h3 className="font-semibold text-xl mb-2">{jobTitle}</h3>
+    <p className="text-sm text-gray-600 mb-2">{period}</p>
+    <ul className="list-disc pl-5">
+      {tasks.map((task, index) => (
+        <li key={index}>{task}</li> // Aquí también, usa un identificador único si es posible
+      ))}
+    </ul>
+  </article>
+);
+
 export const Experience = () => {
-  return <div>experience</div>;
+  const jobsArray = jobsData.jobs;
+
+  // Lista de habilidades técnicas y personales
+  const techSkills = [
+    "HTML",
+    "CSS",
+    "Javascript",
+    "React",
+    "TailwindCSS",
+    "Git",
+    "Github",
+    "Metodologías Ágiles",
+    "TypeScript",
+    "Next.js",
+    "Vue.js",
+  ];
+  const personalSkills = [
+    "Trabajo en equipo multidisciplinario",
+    "Comunicación efectiva",
+    "Organización",
+    "Asertividad",
+    "Proactividad",
+    "Compromiso",
+    "Gestión de equipo",
+  ];
+
+  return (
+    <>
+      <section aria-labelledby="experience-section">
+        <h2 id="experience-section" className="text-2xl font-semibold mb-2">
+          Experiencia Profesional
+        </h2>
+        {jobsArray.map((experience, index) => (
+          <ExperienceItem key={experience.id || index} {...experience} /> // Usa experience.id si existe, de lo contrario usa index
+        ))}
+      </section>
+      <section aria-labelledby="education-skills-section">
+        <h2
+          id="education-skills-section"
+          className="text-2xl font-semibold mb-2"
+        >
+          Habilidades técnicas
+        </h2>
+        <SkillsList skills={techSkills} />
+      </section>
+      <section aria-labelledby="personal-skills-section">
+        <h2
+          id="personal-skills-section"
+          className="text-2xl font-semibold mb-2"
+        >
+          Habilidades personales
+        </h2>
+        <SkillsList skills={personalSkills} />
+      </section>
+      <div className="text-md bg-red-300 p-4 font-bold rounded-lg shadow-lg">
+        <a
+          href="/CV2024_SIMPLE.pdf"
+          download
+          className="text-red-800 hover:animate-ping"
+        >
+          Descarga mi currículum si quieres saber más
+        </a>{" "}
+        o{" "}
+        <a href="/contact" className="text-green-700 hover:animate-ping">
+          Contacta conmigo directamente por email
+        </a>
+      </div>
+    </>
+  );
 };
