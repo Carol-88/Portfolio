@@ -127,7 +127,7 @@ export const Contact = () => {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="flex justify-end hover:shadow-form rounded-md bg-burguer hover:bg-red-800 hover:text-white py-3 px-8 text-base font-semibold text-black outline-none"
+              className="flex justify-end hover:shadow-form rounded-md bg-rose-400 hover:bg-red-800 text-white py-3 px-8 text-base font-semibold outline-none mt-14"
               aria-label="Enviar"
             >
               Enviar

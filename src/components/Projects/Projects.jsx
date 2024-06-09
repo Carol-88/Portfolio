@@ -7,7 +7,7 @@ export const Projects = () => {
   return (
     <section
       id="experience"
-      className="container mx-auto bg-slate-100 rounded-lg p-8"
+      className="container mx-auto bg-red-50 rounded-lg p-8"
     >
       <h2 className="text-center text-2xl font-bold mb-8 text-red-800">
         Proyectos

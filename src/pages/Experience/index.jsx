@@ -7,7 +7,7 @@ const SkillsList = ({ skills }) => (
   <ul className="flex flex-wrap gap-2 mb-8">
     {skills.map((skill, index) => (
       <li
-        key={index} // Considera usar un identificador único si es posible
+        key={index}
         className="px-2 py-1 rounded-lg shadow-md bg-orange-700 hover:animate-bounce text-white"
       >
         {skill}
@@ -18,7 +18,7 @@ const SkillsList = ({ skills }) => (
 
 // Componente para mostrar experiencias profesionales
 const ExperienceItem = ({ jobTitle, period, tasks }) => (
-  <article className="bg-red-50 shadow-md rounded-lg p-4 mb-8">
+  <article className="bg-red-50 shadow-md rounded-lg p-4 mb-8 ">
     <h3 className="font-semibold text-xl mb-2">{jobTitle}</h3>
     <p className="text-sm text-gray-600 mb-2">{period}</p>
     <ul className="list-disc pl-5">
@@ -59,7 +59,10 @@ export const Experience = () => {
   return (
     <>
       <section aria-labelledby="experience-section">
-        <h2 id="experience-section" className="text-2xl font-semibold mb-2">
+        <h2
+          id="experience-section"
+          className="text-2xl font-semibold mb-2 mt-14"
+        >
           Experiencia Profesional
         </h2>
         {jobsArray.map((experience, index) => (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { RRSS } from "../Logos/RRSS";
+import { RRSS } from "../commons/RRSS";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,11 +59,11 @@ export const Navbar = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } absolute right-0 top-0 mt-2 w-48 rounded-md shadow-lg bg-burguer`}
+        } absolute right-0 top-0 mt-2 w-48 rounded-md shadow-lgbg-gradient-to-r from-orange-200 via-rose-200 to-purple-200`}
         aria-hidden={!isOpen}
       >
         <div
-          className="md:w-3/5 w-full h-full text-center content-around pt-5 fixed bg-burguer p-4 right-0 top-0 shadow-md"
+          className="md:w-3/5 w-full h-full text-center content-around pt-5 fixed bg-gradient-to-r from-orange-200 via-rose-200 to-purple-200 p-4 right-0 top-0 shadow-md"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="options-menu"

@@ -1,4 +1,4 @@
-import { RRSS } from "../Logos/RRSS";
+import { RRSS } from "../commons/RRSS";
 
 export const ProfileCard = () => {
   return (

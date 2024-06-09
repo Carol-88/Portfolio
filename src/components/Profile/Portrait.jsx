@@ -4,7 +4,7 @@ export const Portrait = () => {
       <a href="/">
         <img
           src="/img/portrait.webp"
-          className="object-cover h-screen w-full saturate-50 hover:saturate-100"
+          className="object-cover h-screen w-full saturate-50"
           alt="Portrait"
         />
       </a>

@@ -1,6 +1,6 @@
 export const Hero = () => {
   return (
-    <section id="hero" className="mt-14 bg-slate-100 p-8 rounded-lg">
+    <section id="hero" className="mt-14 bg-red-50 p-8 rounded-lg">
       <h1 className="text-2xl md:text-5xl mb-8 text-red-800 font-bold hover:animate-bounce">
         Desarrolladora Web Frontend
       </h1>
