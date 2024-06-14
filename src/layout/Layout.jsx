@@ -12,10 +12,12 @@ export const Layout = ({ children }) => {
         <ProfileCard />
       </aside>
       <main className="col-start-2 col-end-4 text-lg px-4 h-full bg-gradient-to-r from-orange-200 via-rose-200 to-purple-200 p-10">
-        <Navbar />
         {children}
-        <Footer />
       </main>
+      <footer className="col-start-2 col-end-4">
+        <Navbar />
+        <Footer />
+      </footer>
     </div>
   );
 };

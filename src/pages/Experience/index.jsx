@@ -23,7 +23,7 @@ const ExperienceItem = ({ jobTitle, period, tasks }) => (
     <p className="text-sm text-gray-600 mb-2">{period}</p>
     <ul className="list-disc pl-5">
       {tasks.map((task, index) => (
-        <li key={index}>{task}</li> // Aquí también, usa un identificador único si es posible
+        <li key={index}>{task}</li>
       ))}
     </ul>
   </article>
@@ -47,7 +47,7 @@ export const Experience = () => {
     "Vue.js",
   ];
   const personalSkills = [
-    "Trabajo en equipo multidisciplinario",
+    "Trabajo en equipo multidisciplinar",
     "Comunicación efectiva",
     "Organización",
     "Asertividad",
@@ -57,12 +57,9 @@ export const Experience = () => {
   ];
 
   return (
-    <section className="container max-w-4xl mx-auto px-6 py-4 mt-14 bg-red-50 shadow-xl rounded-lg overflow-hidden">
+    <section className="container max-w-4xl mx-auto p-8 mt-14 bg-red-50 shadow-xl rounded-lg overflow-hidden">
       <section aria-labelledby="experience-section">
-        <h2
-          id="experience-section"
-          className="text-2xl font-semibold mb-2 mt-14"
-        >
+        <h2 id="experience-section" className="text-2xl font-semibold mb-8">
           Experiencia Profesional
         </h2>
         {jobsArray.map((experience, index) => (
@@ -72,7 +69,7 @@ export const Experience = () => {
       <section aria-labelledby="education-skills-section">
         <h2
           id="education-skills-section"
-          className="text-2xl font-semibold mb-2"
+          className="text-2xl font-semibold mb-8"
         >
           Habilidades técnicas
         </h2>
@@ -81,7 +78,7 @@ export const Experience = () => {
       <section aria-labelledby="personal-skills-section">
         <h2
           id="personal-skills-section"
-          className="text-2xl font-semibold mb-2"
+          className="text-2xl font-semibold mb-8"
         >
           Habilidades personales
         </h2>
