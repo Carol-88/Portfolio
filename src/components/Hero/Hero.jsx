@@ -16,6 +16,8 @@ export const Hero = () => {
             crear aplicaciones web que resalten por su diseño, funcionalidad y
             accesibilidad.
           </h3>
+        </p>
+        <p className="text-start mb-4 ">
           Aunque soy consciente de que tengo mucho margen para crecer y
           aprender, me enorgullece ofrecer soluciones digitales que marcan la
           diferencia.

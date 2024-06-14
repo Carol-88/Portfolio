@@ -18,7 +18,7 @@ const SkillsList = ({ skills }) => (
 
 // Componente para mostrar experiencias profesionales
 const ExperienceItem = ({ jobTitle, period, tasks }) => (
-  <article className="bg-red-50 shadow-md rounded-lg p-4 mb-8 ">
+  <article className="bg-white shadow-md rounded-lg p-4 mb-8 ">
     <h3 className="font-semibold text-xl mb-2">{jobTitle}</h3>
     <p className="text-sm text-gray-600 mb-2">{period}</p>
     <ul className="list-disc pl-5">
@@ -57,7 +57,7 @@ export const Experience = () => {
   ];
 
   return (
-    <>
+    <section className="container max-w-4xl mx-auto px-6 py-4 mt-14 bg-red-50 shadow-xl rounded-lg overflow-hidden">
       <section aria-labelledby="experience-section">
         <h2
           id="experience-section"
@@ -87,7 +87,7 @@ export const Experience = () => {
         </h2>
         <SkillsList skills={personalSkills} />
       </section>
-      <div className="text-md bg-red-300 p-4 font-bold rounded-lg shadow-lg">
+      <div className="text-md bg-red-300 p-4 font-bold rounded-lg shadow-lg text-center">
         <a
           href="/CV2024_SIMPLE.pdf"
           download
@@ -100,6 +100,6 @@ export const Experience = () => {
           Contacta conmigo directamente por email
         </a>
       </div>
-    </>
+    </section>
   );
 };

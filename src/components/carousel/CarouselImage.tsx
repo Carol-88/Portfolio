@@ -1,4 +1,5 @@
-// Array con las rutas de las imágenes del carrusel
+import React, { useState } from "react";
+
 const images = [
   "img/dogs/dogs-1.webp",
   "img/dogs/dogs-2.webp",
@@ -25,17 +26,19 @@ const images = [
   "img/dogs/dogs-23.webp",
   "img/dogs/dogs-24.webp",
 ];
-import React, { useState } from "react";
 
-// Componente para cada imagen del carrusel
 const CarouselImage = ({ src, isActive }) => (
   <div
     className={`duration-700 ease-in-out ${
       isActive ? "block" : "hidden"
-    } absolute w-full`}
+    } absolute w-full h-full`}
     data-carousel-item
   >
-    <img src={src} className="absolute block w-full" alt="..." />
+    <img
+      src={src}
+      className="absolute block w-auto h-auto max-w-full max-h-full mx-auto my-auto"
+      alt="..."
+    />
   </div>
 );
 
@@ -43,7 +46,6 @@ const CarouselImage = ({ src, isActive }) => (
 const NavigationButton = ({ index, label, current }) => (
   <button
     type="button"
-    className={`w-3 h-3 rounded-full ${current ? "bg-blue-500" : ""}`}
     aria-current={current ? "true" : "false"}
     aria-label={`${label} ${index + 1}`}
     data-carousel-slide-to={index}
@@ -68,7 +70,7 @@ export const Carousel = () => {
   return (
     <div
       id="default-carousel"
-      className="relative w-full z-10 p-8"
+      className=" relative w-full z-10 p-8"
       data-carousel="slide"
     >
       <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
@@ -99,7 +101,7 @@ export const Carousel = () => {
         onClick={handlePrevClick}
         data-carousel-prev
       >
-        {/* Contenido del botón Previo */}
+        <img src="icons/prev.png" alt="prev image" />
       </button>
       <button
         type="button"
@@ -107,7 +109,7 @@ export const Carousel = () => {
         onClick={handleNextClick}
         data-carousel-next
       >
-        {/* Contenido del botón Siguiente */}
+        <img src="icons/nextbtn.png" alt="next image" />
       </button>
     </div>
   );

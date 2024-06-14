@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Carousel } from "../../components/carousel/CarouselImage";
 
 export const AboutMe = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -14,7 +13,7 @@ export const AboutMe = () => {
 
   return (
     <article aria-label="About Me Section">
-      <div className="container max-w-4xl mx-auto px-6 py-4 mt-14 bg-red-50 shadow-xl rounded-lg overflow-hidden">
+      <div className="container max-w-4xl mx-auto px-6 py-4 mt-14 bg-red-50 shadow-xl rounded-lg overflow-hidden text-pretty">
         <header className="text-center p-6">
           <img
             src="/img/portrait.webp"
@@ -104,12 +103,10 @@ export const AboutMe = () => {
               onMouseLeave={handleMouseLeave}
             >
               <a href="/contact" aria-label="Contact me for collaboration">
-                ¡Vamos a hacer cosas geniales juntos 🚀
+                🚀 ¡Vamos a hacer cosas geniales juntos! 🚀
               </a>
             </span>
           </div>
-
-          <Carousel />
         </section>
       </div>
     </article>

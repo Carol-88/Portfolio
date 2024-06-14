@@ -72,7 +72,7 @@ export const Navbar = () => {
             <a
               key={item.label}
               href={item.external ? "#" : item.path}
-              className="block px-4 py-5 text-sm hover:font-bold"
+              className="block px-4 py-5 text-lg hover:font-bold"
               role="menuitem"
               onClick={(e) => {
                 if (item.external) {

@@ -29,7 +29,7 @@ export const RRSS = () => {
           <img
             src={social.src}
             alt={social.alt}
-            className="w-12 h-12 saturate-50 shadow-lg hover:shadow-red-900"
+            className="w-12 h-12 saturate-50 shadow-lg rounded-lg hover:shadow-red-900"
           />
         </a>
       ))}
