@@ -1,6 +1,6 @@
 export const Services = () => {
   return (
-    <section className="container max-w-4xl mx-auto px-6 py-4 mt-14 bg-red-50 shadow-xl rounded-lg overflow-hidden text-pretty">
+    <section className="container max-w-4xl mx-auto px-6 py-4 mt-4 bg-red-50 shadow-xl rounded-lg overflow-hidden text-pretty">
       <h1 className="text-4xl font-bold mb-4">
         Transforma Tus Ideas en Experiencias Digitales
       </h1>

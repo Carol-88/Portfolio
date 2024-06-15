@@ -13,7 +13,7 @@ export const AboutMe = () => {
 
   return (
     <article aria-label="About Me Section">
-      <div className="container max-w-4xl mx-auto px-6 py-4 mt-14 bg-red-50 shadow-xl rounded-lg overflow-hidden text-pretty">
+      <div className="container max-w-4xl mx-auto px-6 py-4 mt-4 bg-red-50 shadow-xl rounded-lg overflow-hidden text-pretty">
         <header className="text-center p-6">
           <img
             src="/img/portrait.webp"

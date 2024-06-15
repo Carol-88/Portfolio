@@ -27,31 +27,6 @@
     },
     {
       "id": 2,
-      "banner": "",
-      "logo": "",
-      "video": "",
-      "contributions": {
-        "landing": "",
-        "contribution1": "",
-        "contribution2": "",
-        "contribution3": "",
-        "contribution4": "",
-        "contribution5": "",
-        "contribution6": ""
-      },
-      "name": "Blog 'Tech para noobs'",
-      "subtitle": "",
-      "role": "Desarrollo web frontend",
-      "web": "",
-      "projectLink": "/project/:id",
-      "description": {
-        "goal": "",
-        "services": "",
-        "platform": ""
-      }
-    },
-    {
-      "id": 3,
       "banner": "/img/contributions/todolist/dashboard.png",
       "logo": "/img/contributions/todolist/logotodo.png",
       "video": "",
@@ -76,7 +51,7 @@
       }
     },
     {
-      "id": 4 ,
+      "id": 3 ,
       "banner": "/img/CloudSolute.png",
       "logo": "/img/logocs.png",
       "video": "",

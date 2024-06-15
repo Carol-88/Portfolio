@@ -57,7 +57,7 @@ export const Experience = () => {
   ];
 
   return (
-    <section className="container max-w-4xl mx-auto p-8 mt-14 bg-red-50 shadow-xl rounded-lg overflow-hidden">
+    <section className="container max-w-4xl mx-auto p-8 mt-4 bg-red-50 shadow-xl rounded-lg overflow-hidden">
       <section aria-labelledby="experience-section">
         <h2 id="experience-section" className="text-2xl font-semibold mb-8">
           Experiencia Profesional

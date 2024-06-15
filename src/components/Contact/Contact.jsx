@@ -58,7 +58,7 @@ export const Contact = () => {
   };
 
   return (
-    <div id="contact" className="flex items-center justify-center mt-14 ">
+    <div id="contact" className="mt-4 bg-red-50 p-8 rounded-lg ">
       <div className="mx-auto w-full max-w-[550px]">
         <form onSubmit={sendEmail} aria-label="Contact Form">
           <h2 className="text-center text-2xl font-bold mb-8 text-red-800">

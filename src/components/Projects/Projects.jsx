@@ -5,10 +5,7 @@ export const Projects = () => {
   const projects = projectsData.projects;
 
   return (
-    <section
-      id="experience"
-      className="container mx-auto bg-red-50 rounded-lg p-8"
-    >
+    <section id="experience" className=" bg-red-50 p-8 rounded-lg">
       <h2 className="text-center text-2xl font-bold mb-8 text-red-800">
         Proyectos
       </h2>

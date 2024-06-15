@@ -1,6 +1,6 @@
 export const Hero = () => {
   return (
-    <section id="hero" className="mt-14 bg-red-50 p-8 rounded-lg">
+    <section id="hero" className=" bg-red-50 p-8 rounded-lg">
       <h1 className="text-2xl md:text-5xl mb-8 text-red-800 font-bold hover:animate-bounce">
         Desarrolladora Web Frontend
       </h1>
@@ -22,7 +22,7 @@ export const Hero = () => {
           aprender, me enorgullece ofrecer soluciones digitales que marcan la
           diferencia.
         </p>
-        <p className="text-start mb-4">
+        <p className="text-start">
           Estoy abierta a colaborar en proyectos que me permitan aplicar mis
           habilidades y, al mismo tiempo, expandir mis horizontes. Mi objetivo
           es contribuir con mi granito de arena al éxito de cada proyecto,

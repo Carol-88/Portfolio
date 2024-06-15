@@ -1,11 +1,9 @@
-
 export const Footer = () => {
-
- return (
-    <footer className=" bottom-0 left-0 w-full text-center py-10 z-20 pt-20">
+  return (
+    <footer className=" fixed p-4 bottom-0 bg-gradient-to-r from-orange-200 via-rose-200 to-purple-200 w-full z-20">
       <div className="container mx-auto">
         Created with love by Carolina Romero Cotan
       </div>
     </footer>
- );
+  );
 };

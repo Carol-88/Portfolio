@@ -31,7 +31,7 @@ export const Techs = () => {
     alt: PropTypes.string.isRequired,
   };
   return (
-    <div id="techs" className="mx-auto pb-14  p-8 rounded-lg">
+    <div id="techs" className=" bg-red-50 p-8 rounded-lg">
       <h2 className="text-2xl font-bold mb-8 text-center text-red-800">
         Tecnologías
       </h2>
