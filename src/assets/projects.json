@@ -15,12 +15,12 @@
         "contribution6": ""
       },
       "name": "Adopta un Junior",
-      "subtitle": "Transformación digital con Next.js y TypeScript, optimizando el rendimiento y la experiencia de usuario. Colaboración en el liderazgo en desarrollo frontend y gestión eficaz de equipos.",
+      "subtitle": "Transformación digital con Next.js y TypeScript. Colaboración en el liderazgo en desarrollo frontend.",
       "role": "Desarrollo web frontend",
       "web": "https://adoptaunjunior.es",
       "projectLink": "/project/:id",
       "description": {
-        "goal": "Nuestro compromiso es construir una plataforma digital robusta que conecte talentos emergentes con oportunidades de crecimiento en el sector tecnológico",
+        "goal": "Colaboración en todo el proceso de desarrollo frontend de la plataforma de la comunidad.",
         "services": "Fomentamos la innovación y el emprendimiento dentro de nuestro equipo, incentivando la propuesta de nuevos servicios que enriquezcan nuestra oferta y beneficien a nuestra comunidad.",
         "platform": "Creemos en el poder de la comunidad para transformar el futuro del sector IT. Nuestra plataforma busca ser un puente entre profesionales y empresas innovadoras, promoviendo la educación continua, el networking y el desarrollo profesional."
       }
@@ -42,7 +42,7 @@
       "name": "To Do List",
       "subtitle": "Aplicación web para gestionar tus tareas, utilizando Vue.js3, pinia y Supabase.",
       "role": "Desarrollo web frontend",
-      "web": "https://dashboard-todolist.netlify.app/",
+      "web": "https://github.com/Carol-88/todo-list-vue",
       "projectLink": "/project/:id",
       "description": {
         "goal": "CRUD autenticación y lista de tareas para gestionar mejor tu tiempo",
@@ -54,25 +54,25 @@
       "id": 3 ,
       "banner": "/img/CloudSolute.png",
       "logo": "/img/logocs.png",
-      "video": "",
+      "video": "https://www.loom.com/embed/ed0ead322472487bbeb98b4b70f8a740?sid=d1058cde-7a92-4cc2-9929-17bbf5797889",
       "contributions": {
-        "landing": "",
+        "landing": "/img/contributions/cloudsolute/player.png",
         "contribution1": "",
-        "contribution2": "/img/contributions/",
-        "contribution3": "/img/contributions/",
-        "contribution4": "/img/contributions/",
+        "contribution2": "",
+        "contribution3": "",
+        "contribution4": "",
         "contribution5": "",
         "contribution6": ""
       },
       "name": "Cloudsolute",
-      "subtitle": "Desarrollo web frontend, migración de React a Next.js v14, de Javascript a Typescript y de CSS a Tailwind CSS.",
+      "subtitle": "Transformación digital con Next.js y TypeScript. Colaboración en el liderazgo en desarrollo frontend.",
       "role": "Desarrollo web frontend",
       "web": "https://cloudsolute.net",
       "projectLink": "/project/:id",
       "description": {
-        "goal": "Queremos ofrecer una herramienta útil y avanzada para gestionar el aprendizaje de los usuarios de forma audiovisual.",
+        "goal": "Trabajo en equipo creando el backlog, las issues, diseñando el frontend y organizando el proyecto. Navbar responsive, y menú hamburguesa en tamaños mobile y tablet. Footer responsive. Player responsive componetizado. Fetch para traer información completa de un vídeo, fetch para búsqueda sencilla.",
         "services": "Explora una amplia colección de videos, transformando el contenido visual en texto accesible con nuestra tecnología de reconocimiento óptico de caracteres (OCR) en video. También disponemos de búsqueda avanzada con más filtros para asegurar una búsqueda completa, y la oportunidad de crear tus propias listas de videos.",
-        "platform": "Nuestra plataforma esta enfocada al e-leaarnig, proporcionando una herramienta útil para el estudio. Pronto podremos ofrecer otras funcionalidades interesantes, siempre enfocados en la usabilidad del usuario y el aprovechamiento de nuestra tecnología."
+        "platform": "Nuestra plataforma esta enfocada al e-learnig, proporcionando una herramienta útil para el estudio. Pronto podremos ofrecer otras funcionalidades interesantes, siempre enfocados en la usabilidad y el aprovechamiento de nuestra tecnología."
       }
     }
   ]

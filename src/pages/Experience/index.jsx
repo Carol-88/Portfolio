@@ -8,7 +8,7 @@ const SkillsList = ({ skills }) => (
     {skills.map((skill, index) => (
       <li
         key={index}
-        className="px-2 py-1 rounded-lg shadow-md bg-orange-700 hover:animate-bounce text-white"
+        className="px-2 py-1 rounded-lg shadow-md bg-red-300 hover:animate-bounce text-red-800 font-semibold"
       >
         {skill}
       </li>
@@ -84,7 +84,7 @@ export const Experience = () => {
         </h2>
         <SkillsList skills={personalSkills} />
       </section>
-      <div className="text-md bg-red-300 p-4 font-bold rounded-lg shadow-lg text-center">
+      <div className="text-md mt-14 border-2 border-rose-400 p-4 font-bold rounded-lg shadow-lg text-center">
         <a
           href="/CV2024_SIMPLE.pdf"
           download
