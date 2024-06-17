@@ -12,6 +12,8 @@ export const ProjectDetails = () => {
   }
 
   const hasVideo = project.video && project.video.length > 0;
+  const hasInputs =
+    project.description.services && project.description.services.length > 0;
   const images = [
     project.contributions.landing,
     project.contributions.contribution1,
@@ -56,12 +58,37 @@ export const ProjectDetails = () => {
       <h4 className="text-lg font-semibold text-gray-700 mt-6">
         {project.description.goal}
       </h4>
-      <p className="text-base text-gray-600 mt-4">
-        <strong>Servicios:</strong> {project.description.services}
-      </p>
-      <p className="text-base text-gray-600 mt-4">
-        <strong>Plataforma:</strong> {project.description.platform}
-      </p>
+
+      {hasInputs && (
+        <section>
+          <p className="leading-8 mt-4">
+            {project.description.services.input1}
+          </p>
+          <p className="leading-8 mt-4">
+            {project.description.services.input2}
+          </p>
+          <p className="leading-8 mt-4">
+            {project.description.services.input3}
+          </p>
+          <p className="leading-8 mt-4">
+            {project.description.services.input4}
+          </p>
+          <p className="leading-8 mt-4">
+            {project.description.services.input5}
+          </p>
+          <p className="leading-8 mt-4">
+            {project.description.services.input6}
+          </p>
+          <p className="leading-8 mt-4">
+            {project.description.services.input7}
+          </p>
+        </section>
+      )}
+
+      <h3 className="mt-4">
+        <strong>Plataforma:</strong>
+      </h3>
+      <p>{project.description.platform}</p>
       {hasVideo && (
         <div className="flex justify-center w-full mt-8">
           <iframe
@@ -73,7 +100,7 @@ export const ProjectDetails = () => {
       )}
       {images.length > 0 && (
         <article id="contributions">
-          <h3 className="text-lg font-semibold text-gray-700 mt-4 md:mt-6">
+          <h3 className="text-lg font-semibol mt-4 md:mt-6">
             Contribuciones e imágenes del proyecto
           </h3>
           <div className="flex flex-col md:grid md:grid-cols-2 gap-4 mt-8 h-fit">
