@@ -2,6 +2,25 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import jsonData from "../../assets/projects.json";
 
+const filterImages = (contributions) =>
+  Object.values(contributions).filter(Boolean);
+
+const renderServices = (services) =>
+  services
+    ? Object.entries(services).map(([index, value]) => (
+        <p key={index} className="leading-8 mt-4">
+          {value}
+        </p>
+      ))
+    : null;
+
+const createGridImages = (images, columns) => {
+  const rows = Math.ceil(images.length / columns);
+  return Array.from({ length: columns }, (_, colIndex) =>
+    images.slice(colIndex * rows, colIndex * rows + rows)
+  );
+};
+
 export const ProjectDetails = () => {
   const { id } = useParams();
   const project = jsonData.projects.find((p) => p.id === Number(id));
@@ -11,25 +30,12 @@ export const ProjectDetails = () => {
     return <div>Proyecto no encontrado</div>;
   }
 
-  const hasVideo = project.video && project.video.length > 0;
-  const images = [
-    project.contributions.landing,
-    project.contributions.contribution1,
-    project.contributions.contribution2,
-    project.contributions.contribution3,
-    project.contributions.contribution4,
-    project.contributions.contribution5,
-    project.contributions.contribution6,
-  ].filter(Boolean); // Filtra las imágenes que existen
-
-  const columns = 2;
-  const rows = Math.ceil(images.length / columns);
-  const gridImages = Array.from({ length: columns }, (_, colIndex) =>
-    images.slice(colIndex * rows, colIndex * rows + rows)
-  );
+  const images = filterImages(project.contributions);
+  const gridImages = createGridImages(images, 2);
 
   return (
     <section className="max-w-4xl mx-auto p-6 md:p-12">
+      {/* Sección de detalles del proyecto */}
       <div className="flex flex-col items-center md:flex-row md:justify-start md:items-center p-4">
         <img
           src={project.logo}
@@ -47,6 +53,7 @@ export const ProjectDetails = () => {
           </h1>
         </a>
       </div>
+
       <h3 className="text-lg font-semibold text-gray-700 mt-4 md:mt-6">
         {project.subtitle}
       </h3>
@@ -56,13 +63,20 @@ export const ProjectDetails = () => {
       <h4 className="text-lg font-semibold text-gray-700 mt-6">
         {project.description.goal}
       </h4>
-      <p className="text-base text-gray-600 mt-4">
-        <strong>Servicios:</strong> {project.description.services}
-      </p>
-      <p className="text-base text-gray-600 mt-4">
-        <strong>Plataforma:</strong> {project.description.platform}
-      </p>
-      {hasVideo && (
+
+      {/* Sección de servicios */}
+      {project.description.services && (
+        <section>{renderServices(project.description.services)}</section>
+      )}
+
+      {/* Sección de plataforma */}
+      <h3 className="mt-4">
+        <strong>Plataforma:</strong>
+      </h3>
+      <p>{project.description.platform}</p>
+
+      {/* Sección de video */}
+      {project.video && (
         <div className="flex justify-center w-full mt-8">
           <iframe
             className="w-full max-w-2xl h-64 md:h-96 rounded-lg"
@@ -71,9 +85,11 @@ export const ProjectDetails = () => {
           ></iframe>
         </div>
       )}
+
+      {/* Sección de imágenes */}
       {images.length > 0 && (
         <article id="contributions">
-          <h3 className="text-lg font-semibold text-gray-700 mt-4 md:mt-6">
+          <h3 className="text-lg font-semibold mt-4 md:mt-6">
             Contribuciones e imágenes del proyecto
           </h3>
           <div className="flex flex-col md:grid md:grid-cols-2 gap-4 mt-8 h-fit">
@@ -88,7 +104,7 @@ export const ProjectDetails = () => {
                     <img
                       className="h-auto max-w-full rounded-lg cursor-pointer shadow-md"
                       src={image}
-                      alt={`Contribution ${colIndex * rows + rowIndex + 1}`}
+                      alt={`Contribution ${colIndex * 2 + rowIndex + 1}`}
                     />
                   </div>
                 ))}
@@ -97,6 +113,8 @@ export const ProjectDetails = () => {
           </div>
         </article>
       )}
+
+      {/* Modal de imagen seleccionada */}
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"

@@ -22,6 +22,7 @@ export const Navbar = () => {
       external: true,
     },
     { path: "/services", label: "Servicios" },
+    { path: "/contact", label: "Contacto" },
   ];
 
   return (

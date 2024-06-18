@@ -6,7 +6,7 @@ import { Services } from "./pages/Services";
 import { ProjectPage } from "./pages/Project";
 import { useRoutes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { Contact } from "./components/Contact/Contact";
+import { ContactPage } from "./pages/ContactPage";
 const App = () => {
   const routes = useRoutes([
     { path: "/", element: <Home /> },
@@ -14,7 +14,7 @@ const App = () => {
     { path: "/experience", element: <Experience /> },
     { path: "/services", element: <Services /> },
     { path: "/projects/:id", element: <ProjectPage /> },
-    { path: "/contact", element: <Contact /> },
+    { path: "/contact", element: <ContactPage /> },
   ]);
 
   return (
