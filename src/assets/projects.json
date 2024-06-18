@@ -21,7 +21,9 @@
       "projectLink": "/project/:id",
       "description": {
         "goal": "Colaboración en todo el proceso de desarrollo frontend de la plataforma de la comunidad.",
-        "services": "Fomentamos la innovación y el emprendimiento dentro de nuestro equipo, incentivando la propuesta de nuevos servicios que enriquezcan nuestra oferta y beneficien a nuestra comunidad.",
+        "services": {
+          "input1": "Fomentamos la innovación y el emprendimiento dentro de nuestro equipo, incentivando la propuesta de nuevos servicios que enriquezcan nuestra oferta y beneficien a nuestra comunidad."
+        },
         "platform": "Creemos en el poder de la comunidad para transformar el futuro del sector IT. Nuestra plataforma busca ser un puente entre profesionales y empresas innovadoras, promoviendo la educación continua, el networking y el desarrollo profesional."
       }
     },
@@ -46,7 +48,12 @@
       "projectLink": "/project/:id",
       "description": {
         "goal": "CRUD autenticación y lista de tareas para gestionar mejor tu tiempo",
-        "services": "Registro, Login, Perfil, Lista de tareas",
+        "services": {
+          "input1": "Registro de usuario",
+          "input2": "Login",
+          "input3": "Perfil",
+          "input4": "Lista de tareas"
+        },
         "platform": "Puedes utilzar la plataforma o hacer fork del repositorio para desarrollar tu propia aplicación"
       }
     },
