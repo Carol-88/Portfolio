@@ -5,12 +5,13 @@ import jsonData from "../../assets/projects.json";
 const filterImages = (contributions) =>
   Object.values(contributions).filter(Boolean);
 
+// Corrección y mejora en renderServices
 const renderServices = (services) =>
   services
-    ? Object.entries(services).map(([index, value]) => (
-        <p key={index} className="leading-8 mt-4">
-          {value}
-        </p>
+    ? Object.entries(services).map(([key, service]) => (
+        <div key={key} className="leading-8 mt-4">
+          <strong>{service.title}</strong> {service.description}
+        </div>
       ))
     : null;
 
