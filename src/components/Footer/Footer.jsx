@@ -1,9 +1,11 @@
+import { RRSS } from "../commons/RRSS";
 export const Footer = () => {
   return (
-    <footer className=" fixed p-4 bottom-0 bg-gradient-to-r from-orange-200 via-rose-200 to-purple-200 w-full z-20">
-      <div className="container mx-auto">
+    <footer className="flex justify-end fixed w-full bottom-0 bg-gradient-to-r from-rose-200 via-rose-200 to-orange-200 z-1 shadow-lg">
+      <p className="flex justify-center items-center p-4">
         Created with love by Carolina Romero Cotan
-      </div>
+      </p>
+      <RRSS />
     </footer>
   );
 };

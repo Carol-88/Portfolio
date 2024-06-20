@@ -6,19 +6,27 @@ import { ProfileCard } from "../components/Profile/ProfileCard";
 
 export const Layout = ({ children }) => {
   return (
-    <div className="sm:grid sm:grid-cols-[40%_1fr_1fr] m-auto">
-      <aside className="object-contain sm:h-screen col-start-1 col-end-1">
-        <Portrait />
-        <ProfileCard />
-      </aside>
-      <main className="col-start-2 col-end-4 text-lg px-4 pb-20 h-full bg-gradient-to-r from-orange-200 via-rose-200 to-purple-200 p-10">
-        {children}
-      </main>
-      <footer className="col-start-2 col-end-4">
+    <>
+      <nav aria-label="Navegación Principal">
         <Navbar />
+      </nav>
+      <div className="sm:grid sm:grid-cols-[40%_1fr_1fr] m-auto min-h-screen">
+        <aside className="object-contain sm:h-screen col-start-1 col-end-1">
+          <section aria-label="Perfil del Usuario">
+            <Portrait />
+            <ProfileCard />
+          </section>
+        </aside>
+        <div className="col-start-2 col-end-4">
+          <main className="text-lg px-4 pb-20 h-full bg-gradient-to-r from-orange-200 via-rose-200 to-orange-200 p-10">
+            {children}
+          </main>
+        </div>
+      </div>
+      <footer aria-label="Pie de Página">
         <Footer />
       </footer>
-    </div>
+    </>
   );
 };
 

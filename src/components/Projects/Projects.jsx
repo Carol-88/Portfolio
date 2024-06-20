@@ -1,5 +1,5 @@
 import projectsData from "../../assets/projects.json";
-import { ProjectCard } from "../Project/ProjectCard";
+import { ProjectCard } from "../Projects/ProjectCard";
 
 export const Projects = () => {
   const projects = projectsData.projects;

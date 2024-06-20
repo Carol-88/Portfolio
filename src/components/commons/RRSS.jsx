@@ -1,24 +1,7 @@
+import { rrss } from "../../lib/func-rrss";
 export const RRSS = () => {
-  const rrss = [
-    {
-      src: "/icons/github.png",
-      alt: "GitHub",
-      url: "https://github.com/Carol-88",
-    },
-    {
-      src: "/icons/linkedin.png",
-      alt: "LinkedIn",
-      url: "https://www.linkedin.com/in/carolina-romero-c/",
-    },
-    {
-      src: "/icons/twitter.png",
-      alt: "Twitter",
-      url: "https://x.com/caroldev_",
-    },
-  ];
-
   return (
-    <div className="flex justify-center gap-4 p-8">
+    <div className="flex justify-center gap-4 p-4">
       {rrss.map((social, index) => (
         <a
           key={index}

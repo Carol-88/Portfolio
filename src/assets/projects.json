@@ -9,10 +9,7 @@
         "landing": "/img/contributions/auj/landingauj.png",
         "contribution1": "/img/contributions/auj/footerlap.png",
         "contribution2": "/img/contributions/auj/footermov.png",
-        "contribution3": "/img/contributions/auj/footertab.png",
-        "contribution4": "",
-        "contribution5": "",
-        "contribution6": ""
+        "contribution3": "/img/contributions/auj/footertab.png"
       },
       "name": "Adopta un Junior",
       "subtitle": "Transformación digital con Next.js y TypeScript. Colaboración en el liderazgo en desarrollo frontend.",
@@ -22,7 +19,10 @@
       "description": {
         "goal": "Colaboración en todo el proceso de desarrollo frontend de la plataforma de la comunidad.",
         "services": {
-          "input1": "Fomentamos la innovación y el emprendimiento dentro de nuestro equipo, incentivando la propuesta de nuevos servicios que enriquezcan nuestra oferta y beneficien a nuestra comunidad."
+          "input1": {
+            "title": "Registro de usuario",
+            "description": "Fomentamos la innovación y el emprendimiento dentro de nuestro equipo, incentivando la propuesta de nuevos servicios que enriquezcan nuestra oferta y beneficien a nuestra comunidad."
+          }
         },
         "platform": "Creemos en el poder de la comunidad para transformar el futuro del sector IT. Nuestra plataforma busca ser un puente entre profesionales y empresas innovadoras, promoviendo la educación continua, el networking y el desarrollo profesional."
       }
@@ -37,9 +37,7 @@
         "contribution1": "/img/contributions/todolist/register.png",
         "contribution2": "/img/contributions/todolist/login.png",
         "contribution3": "/img/contributions/todolist/profile.png",
-        "contribution4": "/img/contributions/todolist/usercard.png",
-        "contribution5": "",
-        "contribution6": ""
+        "contribution4": "/img/contributions/todolist/usercard.png"
       },
       "name": "To Do List",
       "subtitle": "Aplicación web para gestionar tus tareas, utilizando Vue.js3, pinia y Supabase.",
@@ -49,27 +47,33 @@
       "description": {
         "goal": "CRUD autenticación y lista de tareas para gestionar mejor tu tiempo",
         "services": {
-          "input1": "Registro de usuario",
-          "input2": "Login",
-          "input3": "Perfil",
-          "input4": "Lista de tareas"
+          "input1": {
+            "title": "Registro de usuario",
+            "description": "Permite a los usuarios registrarse en la plataforma para acceder a funcionalidades adicionales."
+          },
+          "input2": {
+            "title": "Login",
+            "description": "Permite a los usuarios iniciar sesión en la plataforma para acceder a su cuenta."
+          },
+          "input3": {
+            "title": "Perfil",
+            "description": "Permite a los usuarios ver y editar su perfil de usuario."
+          },
+          "input4": {
+            "title": "Lista de tareas",
+            "description": "Permite a los usuarios gestionar y organizar sus tareas de manera efectiva."
+          }
         },
-        "platform": "Puedes utilzar la plataforma o hacer fork del repositorio para desarrollar tu propia aplicación"
+        "platform": "Puedes utilizar la plataforma o hacer fork del repositorio para desarrollar tu propia aplicación"
       }
     },
     {
-      "id": 3 ,
+      "id": 3,
       "banner": "/img/CloudSolute.png",
       "logo": "/img/logocs.png",
       "video": "https://www.loom.com/embed/ed0ead322472487bbeb98b4b70f8a740?sid=d1058cde-7a92-4cc2-9929-17bbf5797889",
       "contributions": {
-        "landing": "/img/contributions/cloudsolute/player.png",
-        "contribution1": "",
-        "contribution2": "",
-        "contribution3": "",
-        "contribution4": "",
-        "contribution5": "",
-        "contribution6": ""
+        "landing": "/img/contributions/cloudsolute/player.png"
       },
       "name": "Cloudsolute",
       "subtitle": "Transformación digital con Next.js y TypeScript. Colaboración en el liderazgo en desarrollo frontend.",
@@ -77,17 +81,38 @@
       "web": "https://cloudsolute.net",
       "projectLink": "/project/:id",
       "description": {
-        "goal": "Colaboración en Equipo Frontend: Participé activamente en todas las etapas del proceso de desarrollo frontend, incluyendo la planificación del diseño, la gestión de backlog e issues, y sesiones de pair programming.Este proyecto no solo me permitió aplicar y mejorar mis habilidades técnicas sino que también reforzó mi capacidad para trabajar en equipo y adaptarme a diferentes desafíos.",
+        "goal": "Colaboración en Equipo Frontend: Participé activamente en todas las etapas del proceso de desarrollo frontend, incluyendo la planificación del diseño, la gestión de backlog e issues, y sesiones de pair programming. Este proyecto no solo me permitió aplicar y mejorar mis habilidades técnicas sino que también reforzó mi capacidad para trabajar en equipo y adaptarme a diferentes desafíos.",
         "services": {
-          "input1":"Implementación de Cookies Básicas: Diseñé e implementé un sistema de gestión de cookies que incluye un banner informativo con opciones para aceptar o declinar las cookies necesarias. Este sistema también proporciona un enlace directo al texto legal correspondiente, asegurando la transparencia y cumplimiento normativo.",
-          "input2":"Desarrollo del Modo Oscuro: Implementé una función de modo oscuro que mejora la experiencia del usuario ofreciendo una alternativa visualmente cómoda para entornos de baja luz. Esta característica se integra sin problemas con el diseño general de la interfaz, demostrando mi compromiso con la accesibilidad y la usabilidad.",
-          "input3":"Creación del Componente Player: Desarrollé un componente de reproductor multimedia que no solo muestra un video principal sino que también ofrece una lista de reproducción. Además, diseñé la lógica para realizar llamadas API básicas para obtener los videos desde un servidor remoto, optimizando así la eficiencia y la escalabilidad del proyecto.",
-          "input4":"Integración de APIs para Información de Videos: Realicé integraciones con una API externa para recuperar información detallada sobre cada video, lo que permite personalizar la presentación de datos según las necesidades específicas del proyecto.",
-          "input5":"Componente de Error Interactivo: Diseñé un componente de error en forma de modal que no solo informa al usuario sobre posibles fallos sino que también ofrece soluciones proactivas, como reintentar la acción o reportar un bug mediante correo electrónico. Esta funcionalidad mejora significativamente la experiencia del usuario al enfrentarse a situaciones imprevistas.",
-          "input6":"Incorporación de Google Analytics: Integré Google Analytics en el proyecto para rastrear y analizar el comportamiento del usuario, lo que facilita la toma de decisiones basadas en datos y la optimización continua del producto.",
-          "input7":"Diseño y Funcionalidad de Navbar y Menú Hamburguesa: Colaboré en el diseño y desarrollo de la barra de navegación y el menú hamburguesa, elementos cruciales para la navegación intuitiva y la experiencia del usuario en dispositivos móviles y de escritorio."
+          "input1": {
+            "title": "Implementación de Cookies Básicas",
+            "description": "Diseñé e implementé un sistema de gestión de cookies que incluye un banner informativo con opciones para aceptar o declinar las cookies necesarias. Este sistema también proporciona un enlace directo al texto legal correspondiente, asegurando la transparencia y cumplimiento normativo."
+          },
+          "input2": {
+            "title": "Desarrollo del Modo Oscuro",
+            "description": "Implementé una función de modo oscuro que mejora la experiencia del usuario ofreciendo una alternativa visualmente cómoda para entornos de baja luz. Esta característica se integra sin problemas con el diseño general de la interfaz, demostrando mi compromiso con la accesibilidad y la usabilidad."
+          },
+          "input3": {
+            "title": "Creación del Componente Player",
+            "description": "Desarrollé un componente de reproductor multimedia que no solo muestra un video principal sino que también ofrece una lista de reproducción. Además, diseñé la lógica para realizar llamadas API básicas para obtener los videos desde un servidor remoto, optimizando así la eficiencia y la escalabilidad del proyecto."
+          },
+          "input4": {
+            "title": "Integración de APIs para Información de Videos",
+            "description": "Realicé integraciones con una API externa para recuperar información detallada sobre cada video, lo que permite personalizar la presentación de datos según las necesidades específicas del proyecto."
+          },
+          "input5": {
+                     "title": "Componente de Error Interactivo",
+          "description": "Diseñé un componente de error en forma de modal que no solo informa al usuario sobre posibles fallos sino que también ofrece soluciones proactivas, como reintentar la acción o reportar un bug mediante correo electrónico. Esta funcionalidad mejora significativamente `la experiencia del usuario al` enfrentarse a situaciones imprevistas.",
+          "input6": {
+            "title": "Incorporación de Google Analytics",
+            "description": "Integré Google Analytics en el proyecto para rastrear y analizar el comportamiento del usuario, lo que facilita `la toma de decisiones basadas en datos y la optimización continua del producto`."
+          },
+          "input7": {
+            "title": "Diseño y Funcionalidad de Navbar y Menú Hamburguesa",
+            "description": "Colaboré en el diseño y desarrollo de la barra de navegación y el menú hamburguesa, elementos cruciales para `la navegación intuitiva y la experiencia del usuario en dispositivos móviles y de escritorio`."
+          }
         },
-        "platform": "Explora una amplia colección de videos, transformando el contenido visual en texto accesible con nuestra tecnología de reconocimiento óptico de caracteres (OCR) en video. También disponemos de búsqueda avanzada con más filtros para asegurar una búsqueda completa, y la oportunidad de crear tus propias listas de videos Nuestra plataforma esta enfocada al e-learnig, proporcionando una herramienta útil para el estudio."
+          "platform": "Explora una amplia colección de videos, transformando el contenido visual en texto accesible con nuestra tecnología de reconocimiento óptico de caracteres (OCR) en video. También disponemos de búsqueda avanzada con más filtros para asegurar una búsqueda completa, y la oportunidad de crear tus propias listas de videos. Nuestra plataforma está enfocada al e-learning, proporcionando una herramienta útil para el estudio."
+        }
       }
     }
   ]

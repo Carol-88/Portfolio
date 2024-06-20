@@ -1,29 +1,12 @@
 import { useState } from "react";
 import { RRSS } from "../commons/RRSS";
+import { handleLinkClick, menuItems } from "../../lib/funcs-navbar";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
-
-  const handleLinkClick = (url) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
-
-  const menuItems = [
-    { path: "/", label: "Home" },
-    { path: "/aboutme", label: "Sobre mí" },
-    { path: "/experience", label: "Experiencia" },
-    {
-      path: "https://www.linkedin.com/newsletters/7059940563789189120/",
-      label: "Newsletter",
-      external: true,
-    },
-    { path: "/services", label: "Servicios" },
-    { path: "/contact", label: "Contacto" },
-  ];
 
   return (
     <nav className="relative z-30">

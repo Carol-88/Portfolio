@@ -88,12 +88,12 @@ export const Experience = () => {
         <a
           href="/CV2024_SIMPLE.pdf"
           download
-          className="text-red-800 hover:animate-ping"
+          className="text-red-800 hover:animate-pulse"
         >
           Descarga mi currículum si quieres saber más
         </a>{" "}
         o{" "}
-        <a href="/contact" className="text-green-700 hover:animate-ping">
+        <a href="/contact" className="text-green-700 hover:animate-pulse">
           Contacta conmigo directamente por email
         </a>
       </div>
