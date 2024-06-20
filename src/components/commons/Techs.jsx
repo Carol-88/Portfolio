@@ -1,4 +1,5 @@
-import { technologies, TechnologyLogo } from "../../lib/func-techs";
+import { TechnologyLogo } from "../commons/TechnologyLogo";
+import { technologies } from "../../lib//techStack";
 
 export const Techs = () => {
   return (

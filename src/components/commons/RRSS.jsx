@@ -1,7 +1,7 @@
 import { rrss } from "../../lib/func-rrss";
 export const RRSS = () => {
   return (
-    <div className="flex justify-center gap-4 p-8">
+    <div className="flex justify-center gap-4 p-4">
       {rrss.map((social, index) => (
         <a
           key={index}

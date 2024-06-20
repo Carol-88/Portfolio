@@ -1,6 +1,5 @@
 import projects from "../../assets/projects.json";
-import ProjectCard from "../Experience/Experience";
-
+import { ProjectCard } from "../components/Projects/ProjectCard";
 export const Project = () => {
   return (
     <section>

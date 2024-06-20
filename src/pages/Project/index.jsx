@@ -1,4 +1,4 @@
-import { ProjectDetails } from "../../components/Project/ProjectDetails";
+import { ProjectDetails } from "../../components/Projects/ProjectDetails";
 
 export const ProjectPage = (id) => {
   return (
