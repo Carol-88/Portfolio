@@ -1,26 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import jsonData from "../../assets/projects.json";
-
-const filterImages = (contributions) =>
-  Object.values(contributions).filter(Boolean);
-
-// Corrección y mejora en renderServices
-const renderServices = (services) =>
-  services
-    ? Object.entries(services).map(([key, service]) => (
-        <div key={key} className="leading-8 mt-4">
-          <strong>{service.title}</strong> {service.description}
-        </div>
-      ))
-    : null;
-
-const createGridImages = (images, columns) => {
-  const rows = Math.ceil(images.length / columns);
-  return Array.from({ length: columns }, (_, colIndex) =>
-    images.slice(colIndex * rows, colIndex * rows + rows)
-  );
-};
+import {
+  filterImages,
+  renderServices,
+  createGridImages,
+} from "../../lib/funcs-projectdetails";
 
 export const ProjectDetails = () => {
   const { id } = useParams();

@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
-import emailjs from "emailjs-com";
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { sendEmail } from "../../lib/func-contact";
 
 export const Contact = () => {
   const {
@@ -11,20 +10,6 @@ export const Contact = () => {
   } = useForm({
     mode: "onChange", // Actualiza los errores en tiempo real
   });
-
-  const sendEmail = async (data) => {
-    const userID = import.meta.env.VITE_ID_USER_EMAILJS;
-    const templateID = import.meta.env.VITE_ID_TEMPLATE;
-    const serviceID = import.meta.env.VITE_ID_SERVICE;
-
-    try {
-      await emailjs.send(serviceID, templateID, data, userID);
-      toast.success("Correo enviado exitosamente!");
-    } catch (error) {
-      console.log(error.text);
-      toast.error("Hubo un error al enviar el correo.");
-    }
-  };
 
   return (
     <div
