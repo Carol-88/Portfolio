@@ -59,7 +59,17 @@ export const ProjectDetails = () => {
       <h3 className="mt-4">
         <strong>Plataforma:</strong>
       </h3>
-      <p>{project.description.platform}</p>
+      <p>{project.description.services.platform}</p>
+
+      <h3 className="mt-4"></h3>
+      <a
+        href={project.web}
+        className="text-orange-600 font-semibold hover:text-orange-800 flex justify-center"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visita nuestra plataforma
+      </a>
 
       {/* Sección de video */}
       {project.video && (
