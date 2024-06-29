@@ -15,11 +15,6 @@ export const AboutMe = () => {
     <article aria-label="About Me Section">
       <div className="container max-w-4xl mx-auto px-6 py-4 mt-4 bg-red-50 shadow-xl rounded-lg overflow-hidden text-pretty">
         <header className="text-center p-6">
-          <img
-            src="/img/portrait.webp"
-            alt="Carolina, desarrolladora web"
-            className="mx-auto w-48 h-48 rounded-full mb-4 "
-          />
           <h1 className="text-4xl font-bold mb-4 text-gray-800">
             Un poco más sobre mi
           </h1>
@@ -30,55 +25,60 @@ export const AboutMe = () => {
           role="main"
           aria-labelledby="about-me-title"
         >
+          <img
+            src="/img/me.png"
+            alt="Carolina, desarrolladora web"
+            className="mx-auto w-48 h-60 mb-4 float-left mr-4"
+          />
           <p className="mb-4 text-lg">
-            ¡Hola Soy Carolina, una apasionada del desarrollo web y una
-            exploradora incansable de nuevas experiencias. Mi camino hacia el
-            mundo IT ha sido tan variado y enriquecedor como mis intereses: he
-            pasado de estudiar sanidad a adentrarme en el desarrollo web,
-            siempre con la esperanza y el esfuerzo como mis fieles compañeras de
-            viaje.
+            <strong>Hola a todos!</strong> Soy Carolina, una apasionada del
+            desarrollo web que ha recorrido un camino tan variado y emocionante
+            como mis propios intereses. Sí, has leído bien: ¡de Técnica Superior
+            en Dietética a exploradora del mundo IT! ➡️
           </p>
           <p className="mb-4 text-lg">
-            Me considero una persona sensible, calmada e introvertida, lo que me
-            permite conectar profundamente con los proyectos en los que creo.
-            Disfruto especialmente trabajando en iniciativas que buscan mejorar
-            la vida de las personas, fomentar la creatividad y aportar un toque
-            de diversión y originalidad.
+            Soy una persona <strong>sensible </strong>,{" "}
+            <strong> calmada</strong> e <strong> introvertida</strong>, lo que
+            me permite profundizar en cada proyecto que me apasiona. Me encantan
+            los retos que buscan
+            <strong> mejorar la vida de las personas</strong>, fomentar la
+            <strong> creatividad</strong> y aportar un toque de{" "}
+            <strong>diversión</strong> y <strong>originalidad</strong>. ✨
           </p>
           <p className="mb-4 text-lg">
-            No me verás feliz en un entorno de banca, pero sí en proyectos que
-            transformen el ocio o la cultura. Soy una amante de la flexibilidad
-            y del equilibrio. Valoro mi tiempo y necesito espacios donde pueda
-            ser yo misma, desarrollar mis ideas sin miedo a equivocarme y
-            mantener siempre viva la chispa creativa.
+            Olvídate de trajes y corbatas, ¡mi hábitat natural son los proyectos
+            que <strong>transforman el ocio y la cultura</strong>! Soy una
+            amante de la <strong>flexibilidad</strong> y el{" "}
+            <strong>equilibrio</strong>, valoro mi tiempo y necesito espacios
+            donde pueda ser yo misma, desarrollar mis ideas sin miedo y mantener
+            viva la chispa creativa.
           </p>
           <p className="mb-4 text-lg">
-            Para mí, es esencial tener momentos de desconexión que me permitan
-            recargar energías y volver con más fuerza e inspiración. Fuera del
-            trabajo, soy una entusiasta de la cultura asiática y de la
-            naturaleza. Me encanta la música rock y punk, disfruto de las
-            manualidades y soy una ávida lectora y cinéfila, aunque mis pasiones
-            van cambiando con las estaciones.
+            Para recargar pilas y volver con las ideas frescas, disfruto de la
+            cultura asiática, la naturaleza, la música rock y punk, las
+            manualidades, la lectura y el cine. ¡Ah! Y mis perros son parte
+            fundamental de mi vida.
           </p>
           <p className="mb-4 text-lg">
-            Mis perros son una parte vital de mi vida, y el contacto con los
-            animales y la naturaleza es lo que realmente me llena. Me gusta
-            crear un ambiente de confianza y cercanía con quienes trabajo,
-            mezclando profesionalismo con un toque de humor. Creo que trabajar
-            de manera colaborativa y abierta nos hace más humanos y eficaces.
+            En el trabajo, creo en un ambiente de <strong>confianza</strong> y
+            <strong> cercanía</strong>, donde el{" "}
+            <strong>profesionalismo</strong> se mezcla con un toque de humor.
+            Para mí, la colaboración y la apertura son claves para{" "}
+            <strong>un trabajo más humano y eficaz</strong>.
           </p>
           <p className="mb-4 text-lg">
-            En cuanto a desafíos, siempre valoro si puedo afrontarlos y cómo me
-            harán crecer. Estoy trabajando en mantener el foco en lo que puedo
-            manejar y en aprender sin miedo. Mi fortaleza reside en la esperanza
-            y el esfuerzo que pongo en todo lo que hago, a pesar de las
-            adversidades.
+            Soy una <strong>aprendiz constante</strong> que siempre busca nuevos
+            desafíos que me hagan crecer. Mi <strong>mayor fortaleza</strong> es
+            la esperanza y el
+            <strong> esfuerzo</strong> que pongo en todo lo que hago, incluso
+            ante las adversidades.
           </p>
           <p className="mb-4 text-lg">
-            Este soy yo, Carolina, una desarrolladora web en continuo
-            aprendizaje, siempre lista para enfrentar nuevos retos y con la
-            esperanza de que, con esfuerzo y pasión, siempre se puede encontrar
-            una solución.
+            ¿Quieres conocer a una desarrolladora web entusiasta, creativa y
+            llena de energía?{" "}
+            <strong>¡Entonces no dudes en contactarme! </strong>P.D. ¿Te has
+            fijado en mi capacidad de adaptación? ¡De la sanidad al desarrollo
+            web... todo es posible!
           </p>
 
           <div className="mt-8">
