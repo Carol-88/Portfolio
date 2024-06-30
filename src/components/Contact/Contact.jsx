@@ -8,7 +8,7 @@ export const Contact = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    mode: "onChange", // Actualiza los errores en tiempo real
+    mode: "onChange",
   });
 
   return (
@@ -29,6 +29,9 @@ export const Contact = () => {
             Contacto
           </h2>
           <div className="mb-5">
+            <label htmlFor="from_name" className="sr-only">
+              Nombre completo
+            </label>
             <input
               {...register("from_name", { required: true })}
               type="text"
@@ -37,13 +40,19 @@ export const Contact = () => {
               placeholder="Nombre completo"
               aria-required="true"
               aria-label="Nombre completo"
+              defaultValue=""
               className="w-full rounded-md border bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:shadow-md"
             />
             {errors.from_name && (
-              <span className="text-red-500">Nombre requerido</span>
+              <span className="text-red-500" aria-live="polite">
+                Nombre requerido
+              </span>
             )}
           </div>
           <div className="mb-5">
+            <label htmlFor="email" className="sr-only">
+              Correo electrónico
+            </label>
             <input
               {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
               type="email"
@@ -52,13 +61,19 @@ export const Contact = () => {
               placeholder="tu-email@domain.com"
               aria-required="true"
               aria-label="Correo electrónico"
+              defaultValue=""
               className="w-full rounded-md border bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:shadow-md"
             />
             {errors.email && (
-              <span className="text-red-500">Correo electrónico inválido</span>
+              <span className="text-red-500" aria-live="polite">
+                Correo electrónico inválido
+              </span>
             )}
           </div>
           <div className="mb-5">
+            <label htmlFor="subject" className="sr-only">
+              Asunto
+            </label>
             <input
               {...register("subject", { required: true })}
               type="text"
@@ -67,13 +82,19 @@ export const Contact = () => {
               placeholder="Asunto"
               aria-required="true"
               aria-label="Asunto"
+              defaultValue=""
               className="w-full rounded-md border bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:shadow-md"
             />
             {errors.subject && (
-              <span className="text-red-500">Asunto requerido</span>
+              <span className="text-red-500" aria-live="polite">
+                Asunto requerido
+              </span>
             )}
           </div>
           <div className="mb-5">
+            <label htmlFor="message" className="sr-only">
+              Mensaje
+            </label>
             <textarea
               {...register("message", { required: true })}
               rows="4"
@@ -82,16 +103,19 @@ export const Contact = () => {
               placeholder="Escribe tu mensaje"
               aria-required="true"
               aria-label="Mensaje"
+              defaultValue=""
               className="w-full resize-none rounded-md border bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:shadow-md"
             ></textarea>
             {errors.message && (
-              <span className="text-red-500">Mensaje requerido</span>
+              <span className="text-red-500" aria-live="polite">
+                Mensaje requerido
+              </span>
             )}
           </div>
           <div className="flex justify-end">
             <button
               type="submit"
-              className="flex justify-end hover:shadow-form rounded-md bg-rose-400 hover:bg-red-800 text-white py-3 px-8 text-base font-semibold outline-none"
+              className="flex justify-end hover:shadow-form rounded-md bg-red-400 hover:bg-red-800 text-black hover:text-white py-3 px-8 text-base font-semibold outline-none"
               aria-label="Enviar"
               tabIndex={0}
             >
