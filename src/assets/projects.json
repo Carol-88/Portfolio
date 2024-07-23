@@ -20,8 +20,8 @@
         "goal": "Colaboración en todo el proceso de desarrollo frontend de la plataforma de la comunidad.",
         "services": {
           "input1": {
-            "title": "Registro de usuario",
-            "description": "Fomentamos la innovación y el emprendimiento dentro de nuestro equipo, incentivando la propuesta de nuevos servicios que enriquezcan nuestra oferta y beneficien a nuestra comunidad."
+            "title": "",
+            "description": ""
           }
         },
         "platform": "Creemos en el poder de la comunidad para transformar el futuro del sector IT. Nuestra plataforma busca ser un puente entre profesionales y empresas innovadoras, promoviendo la educación continua, el networking y el desarrollo profesional."
@@ -69,19 +69,19 @@
     },
     {
       "id": 3,
-      "banner": "/img/Banner-Dark-CloudSolute.png",
+      "banner": "",
       "logo": "/img/logocs.png",
       "video": "",
       "contributions": {
         "landing": ""
       },
-      "name": "Cloudsolute",
+      "name": "Proyecto Jon Doe",
       "subtitle": "Transformación digital con Next.js y TypeScript. Colaboración en el liderazgo en desarrollo frontend.",
       "role": "Desarrollo web frontend",
-      "web": "https://cloudsolute.net",
+      "web": "",
       "projectLink": "/project/:id",
       "description": {
-        "goal": "Participo activamente en todas las etapas del proceso de desarrollo frontend, desde la planificación del diseño hasta la gestión del backlog e issues, incluyendo sesiones de pair programming. Este proyecto me permite aplicar y mejorar mis habilidades técnicas, a la vez que refuerza mi capacidad para trabajar en equipo y adaptarme a diferentes desafíos.",
+        "goal": "Participo activamente en todas las etapas del proceso de desarrollo frontend, desde la planificación del diseño hasta la gestión del backlog e issues, incluyendo sesiones de pair programming. Este proyecto me permite aplicar y mejorar mis habilidades técnicas, a la vez que refuerza mi capacidad para trabajar en equipo y adaptarme a diferentes desafíos. Proximamente estaré colaborando en en UX, comunicación y marketing online.",
         "services": {
           "input1": {
             "title": "Implementación de Cookies Básicas",
@@ -111,7 +111,7 @@
             "description": "Colaboro en el diseño y desarrollo de la barra de navegación y el menú hamburguesa, elementos cruciales para `la navegación intuitiva y la experiencia del usuario en dispositivos móviles y de escritorio`."
           }
         },
-          "platform": "Explora una amplia colección de videos, transformando el contenido visual en texto accesible con nuestra tecnología de reconocimiento óptico de caracteres (OCR) en video. También disponemos de búsqueda avanzada con más filtros para asegurar una búsqueda completa, y la oportunidad de crear tus propias listas de videos. Nuestra plataforma está enfocada al e-learning, proporcionando una herramienta útil para el estudio."
+          "platform": "Proximamente"
         }
       }
     }
