@@ -6,19 +6,18 @@ export const Hero = () => {
       </h1>
       <article>
         <p className="text-start mb-4 ">
-          Me considero afortunada de dedicarme a lo que amo: Soy una apasionada
-          del desarrollo web que se enorgullece de crear aplicaciones que
-          destacan por su diseño, funcionalidad y accesibilidad.
+          Soy una apasionada del ecosistema IT, me encanta crear aplicaciones
+          web que destaquen por su diseño, funcionalidad y accesibilidad.
         </p>
         <p className="text-start mb-4 ">
           Soy consciente de que tengo un camino infinito por recorrer para
           seguir aprendiendo, pero me motiva la emoción del aprendizaje
-          constante.
+          continuo.
         </p>
         <p className="text-start mb-4">
           Busco constantemente nuevas oportunidades para aplicar mis habilidades
-          y expandir mis horizontes. Mi objetivo es simple: aportar mi granito
-          de arena al éxito de cada proyecto.
+          y expandir mis horizontes. ¡Mi objetivo es aportar mi granito de arena
+          al éxito de cada proyecto!.
         </p>
         <p className="text-start">
           Me encanta trabajar en equipo para desarrollar experiencias web que no

@@ -11,6 +11,5 @@ export const menuItems = [
     label: "Newsletter",
     external: true,
   },
-  { path: "/services", label: "Servicios" },
   { path: "/contact", label: "Contacto" },
 ];

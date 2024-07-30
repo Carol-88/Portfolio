@@ -6,10 +6,10 @@
       "logo": "/img/logoauj.png",
       "video": "",
       "contributions": {
-        "landing": "/img/contributions/auj/landingauj.png",
-        "contribution1": "/img/contributions/auj/footerlap.png",
-        "contribution2": "/img/contributions/auj/footermov.png",
-        "contribution3": "/img/contributions/auj/footertab.png"
+        "landing": "",
+        "contribution1": "",
+        "contribution2": "",
+        "contribution3": ""
       },
       "name": "Adopta un Junior",
       "subtitle": "Transformación digital con Next.js y TypeScript. Colaboración en el liderazgo en desarrollo frontend.",
@@ -17,11 +17,11 @@
       "web": "https://adoptaunjunior.es",
       "projectLink": "/project/:id",
       "description": {
-        "goal": "Colaboración en todo el proceso de desarrollo frontend de la plataforma de la comunidad.",
+        "goal": "Colaboración en todo el proceso de desarrollo frontend de la plataforma de la comunidad. Próximo rol como Scrum de un equipo multidisciplinar que seguirá desarrollando la web.",
         "services": {
           "input1": {
-            "title": "",
-            "description": ""
+            "title": "Equipo de la comunidad, desarrollo frontend.",
+            "description": "Colaboro en este proyecto desarollando la interfaz de usuario junto a mis compañeros de equipo, he participado en todo el proceso de grooming de la plataforma de la comunidad, he apoyado y aprendido de todo el equipo y sigo desarrollandome junto a ellos."
           }
         },
         "platform": "Creemos en el poder de la comunidad para transformar el futuro del sector IT. Nuestra plataforma busca ser un puente entre profesionales y empresas innovadoras, promoviendo la educación continua, el networking y el desarrollo profesional."
@@ -69,7 +69,7 @@
     },
     {
       "id": 3,
-      "banner": "",
+      "banner": "/img/incognito.jpg",
       "logo": "/img/logocs.png",
       "video": "",
       "contributions": {
@@ -81,7 +81,7 @@
       "web": "",
       "projectLink": "/project/:id",
       "description": {
-        "goal": "Participo activamente en todas las etapas del proceso de desarrollo frontend, desde la planificación del diseño hasta la gestión del backlog e issues, incluyendo sesiones de pair programming. Este proyecto me permite aplicar y mejorar mis habilidades técnicas, a la vez que refuerza mi capacidad para trabajar en equipo y adaptarme a diferentes desafíos. Proximamente estaré colaborando en en UX, comunicación y marketing online.",
+        "goal": "Participo activamente en todas las etapas del proceso de desarrollo frontend, desde la planificación del diseño hasta la gestión del backlog e issues, incluyendo sesiones de pair programming. Este proyecto me permite aplicar y mejorar mis habilidades técnicas, a la vez que refuerza mi capacidad para trabajar en equipo y adaptarme a diferentes desafíos. Proximamente estaré colaborando en UX, comunicación y marketing online.",
         "services": {
           "input1": {
             "title": "Implementación de Cookies Básicas",
