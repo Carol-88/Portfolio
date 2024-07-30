@@ -33,22 +33,33 @@ export const AboutMe = () => {
           <p className="mb-4 text-lg">
             <strong>Hola a todos!</strong> Soy Carolina, una apasionada del
             desarrollo web que ha recorrido un camino tan variado y emocionante
-            como mis propios intereses. Sí, has leído bien: ¡de Técnica Superior
-            en Dietética a exploradora del mundo IT! ➡️
+            como mis propios intereses. Estudié un grado medio de atención
+            socisanitaria, luego trabajé en infinitos puestos de atención al
+            cliente y venta, tanto presencial como en call center, encontré mi
+            sitio en un proyecto de atención a usuarios mayores o con
+            dificultades, donde puse toda mi alma, que me permitió acceder a la
+            universidad y estudiar Psicología. Pero las vueltas que da la vida,
+            llegó la pandemia, pasaron muchas cosas, y acabé reinventandome
+            hacia el mundo de la tecnología, algo que me había apasionado desde
+            pequeña, pero que siempre quedó atrás. ➡️
           </p>
           <p className="mb-4 text-lg">
             Soy una persona <strong>sensible </strong>,{" "}
             <strong> calmada</strong> e <strong> introvertida</strong>, lo que
-            me permite profundizar en cada proyecto que me apasiona. Me encantan
-            los retos que buscan
+            me permite profundizar en cada proyecto que me apasiona. Luego, como
+            entenderéis en la playlist que dejo mas abajo, ¡también puedo ser
+            todo lo opuesto!. Me encantan los retos que buscan
             <strong> mejorar la vida de las personas</strong>, fomentar la
             <strong> creatividad</strong> y aportar un toque de{" "}
             <strong>diversión</strong> y <strong>originalidad</strong>. ✨
           </p>
           <p className="mb-4 text-lg">
             Olvídate de trajes y corbatas, ¡mi hábitat natural son los proyectos
-            que <strong>transforman el ocio y la cultura</strong>! Soy una
-            amante de la <strong>flexibilidad</strong> y el{" "}
+            que{" "}
+            <strong>
+              transforman el ocio, la cultura y la vida de las personas
+            </strong>
+            ! Soy una amante de la <strong>flexibilidad</strong> y el{" "}
             <strong>equilibrio</strong>, valoro mi tiempo y necesito espacios
             donde pueda ser yo misma, desarrollar mis ideas sin miedo y mantener
             viva la chispa creativa.
@@ -63,22 +74,20 @@ export const AboutMe = () => {
             En el trabajo, creo en un ambiente de <strong>confianza</strong> y
             <strong> cercanía</strong>, donde el{" "}
             <strong>profesionalismo</strong> se mezcla con un toque de humor.
-            Para mí, la colaboración y la apertura son claves para{" "}
+            Para mí, la colaboración y la transparencia son claves para{" "}
             <strong>un trabajo más humano y eficaz</strong>.
           </p>
           <p className="mb-4 text-lg">
             Soy una <strong>aprendiz constante</strong> que siempre busca nuevos
             desafíos que me hagan crecer. Mi <strong>mayor fortaleza</strong> es
-            la esperanza y el
+            la motivación y el
             <strong> esfuerzo</strong> que pongo en todo lo que hago, incluso
             ante las adversidades.
           </p>
           <p className="mb-4 text-lg">
             ¿Quieres conocer a una desarrolladora web entusiasta, creativa y
             llena de energía?{" "}
-            <strong>¡Entonces no dudes en contactarme! </strong>P.D. ¿Te has
-            fijado en mi capacidad de adaptación? ¡De la sanidad al desarrollo
-            web... todo es posible!
+            <strong>¡Entonces no dudes en contactarme! </strong>
           </p>
 
           <div className="mt-8">
