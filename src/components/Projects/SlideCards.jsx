@@ -1,6 +1,6 @@
 import projectsData from "../../assets/projects.json";
 import { ProjectCard } from "./ProjectCard";
-import { useState } from "react"; // Importar useState
+import { useState } from "react";
 
 export const SlideCards = () => {
   const projects = projectsData.projects;
