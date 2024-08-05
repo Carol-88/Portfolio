@@ -7,7 +7,7 @@ export const sendEmail = async (data) => {
   const serviceID = import.meta.env.VITE_ID_SERVICE;
 
   try {
-    await emailjs.send(serviceID, templateID, data, userID, recaptcha);
+    await emailjs.send(serviceID, templateID, data, userID);
     toast.success("Correo enviado exitosamente!");
   } catch (error) {
     console.log(error.text);
