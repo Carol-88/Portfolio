@@ -1,10 +1,10 @@
 import { useForm } from "react-hook-form";
 import "react-toastify/dist/ReactToastify.css";
 import { sendEmail } from "../../lib/func-contact";
-import ReCAPTCHA from "react-google-recaptcha";
-export const Contact = () => {
-  const recaptcha = import.meta.env.VITE_ID_RECAPTCHA;
+import { useEffect } from "react";
+import { loadReCaptcha } from "react-recaptcha-v3"; // Asegúrate de instalar esta librería
 
+export const Contact = () => {
   const {
     register,
     handleSubmit,
@@ -14,13 +14,21 @@ export const Contact = () => {
   });
 
   const onSubmit = async (data) => {
-    const recaptchaValue = data.recaptchaValue;
-    if (!recaptchaValue) {
+    // Verificar el token de reCAPTCHA
+    const recaptchaToken = data.recaptchaValue;
+    if (!recaptchaToken) {
       alert("Por favor, verifica que no eres un robot.");
       return;
     }
+
+    // Aquí puedes enviar el correo
     await sendEmail(data);
   };
+
+  useEffect(() => {
+    const recaptcha = import.meta.env.VITE_ID_RECAPTCHA;
+    loadReCaptcha(recaptcha); // Cargar reCAPTCHA
+  }, []);
 
   return (
     <div
@@ -123,12 +131,7 @@ export const Contact = () => {
               </span>
             )}
           </div>
-          <ReCAPTCHA
-            sitekey={recaptcha} // Reemplaza con tu clave de sitio de reCAPTCHA
-            onChange={(value) => {
-              register("recaptchaValue").onChange(value);
-            }}
-          />
+          <input type="hidden" {...register("recaptchaValue")} />
           <div className="flex justify-end">
             <button
               type="submit"
