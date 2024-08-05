@@ -1,10 +1,10 @@
+import { useEffect, useState, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import "react-toastify/dist/ReactToastify.css";
 import { sendEmail } from "../../lib/func-contact";
-import ReCAPTCHA from "react-google-recaptcha";
-export const Contact = () => {
-  const recaptcha = import.meta.env.VITE_ID_RECAPTCHA;
 
+export const Contact = () => {
+  const hCAPTCHA = import.meta.env.VITE_ID_hCAPTCHA;
   const {
     register,
     handleSubmit,
@@ -13,12 +13,59 @@ export const Contact = () => {
     mode: "onChange",
   });
 
+  const [captchaLoaded, setCaptchaLoaded] = useState(false);
+  const [captchaResponse, setCaptchaResponse] = useState(null);
+
+  const verifyCaptcha = useCallback(() => {
+    if (window.hcaptcha && captchaLoaded) {
+      console.log("hcaptcha disponible:", window.hcaptcha); // Verifica si hcaptcha está disponible
+      window.hcaptcha.render("hcaptcha", {
+        sitekey: hCAPTCHA,
+        callback: (response) => {
+          setCaptchaResponse(response);
+        },
+      });
+    } else {
+      console.error("hcaptcha no está disponible o no se ha cargado."); // Mensaje de error si hcaptcha no está disponible
+    }
+  }, [captchaLoaded, hCAPTCHA]);
+
+  useEffect(() => {
+    if (!window.hcaptcha) {
+      const script = document.createElement("script");
+      script.src =
+        "https://hcaptcha.com/1/api.js?onload=onloadCallback&render=explicit";
+      script.async = true;
+      script.defer = true;
+
+      document.body.appendChild(script);
+
+      window.onloadCallback = () => {
+        setCaptchaLoaded(true);
+        verifyCaptcha(); // Llama a verifyCaptcha aquí
+      };
+    } else {
+      setCaptchaLoaded(true);
+      verifyCaptcha(); // Asegúrate de llamar a verifyCaptcha si ya está cargado
+    }
+
+    return () => {
+      delete window.onloadCallback;
+    };
+  }, []); // No incluyas verifyCaptcha aquí para evitar el error de referencia
+
+  useEffect(() => {
+    if (captchaLoaded) {
+      verifyCaptcha(); // Llama a verifyCaptcha solo si el captcha está cargado
+    }
+  }, [captchaLoaded, verifyCaptcha]);
+
   const onSubmit = async (data) => {
-    const recaptchaValue = data.recaptchaValue;
-    if (!recaptchaValue) {
-      alert("Por favor, verifica que no eres un robot.");
+    if (!captchaResponse) {
+      alert("Por favor, completa el CAPTCHA.");
       return;
     }
+
     await sendEmail(data);
   };
 
@@ -122,19 +169,15 @@ export const Contact = () => {
                 Mensaje requerido
               </span>
             )}
-          </div>
-          <ReCAPTCHA
-            sitekey={recaptcha} // Reemplaza con tu clave de sitio de reCAPTCHA
-            onChange={(value) => {
-              register("recaptchaValue").onChange(value);
-            }}
-          />
-          <div className="flex justify-end">
+            <div
+              id="hcaptcha"
+              className="mb-5 h-captcha"
+              data-sitekey={hCAPTCHA}
+              data-theme="dark"
+            ></div>
             <button
               type="submit"
               className="flex justify-end hover:shadow-form rounded-md bg-red-400 hover:bg-red-800 text-black hover:text-white py-3 px-8 text-base font-semibold outline-none"
-              aria-label="Enviar"
-              tabIndex={0}
             >
               Enviar
             </button>
