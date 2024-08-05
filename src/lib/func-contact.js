@@ -5,7 +5,6 @@ export const sendEmail = async (data) => {
   const userID = import.meta.env.VITE_ID_USER_EMAILJS;
   const templateID = import.meta.env.VITE_ID_TEMPLATE;
   const serviceID = import.meta.env.VITE_ID_SERVICE;
-  const recaptcha = import.meta.env.VITE_ID_RECAPTCHA;
 
   try {
     await emailjs.send(serviceID, templateID, data, userID, recaptcha);

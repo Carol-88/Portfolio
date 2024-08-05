@@ -3,6 +3,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { sendEmail } from "../../lib/func-contact";
 import ReCAPTCHA from "react-google-recaptcha";
 export const Contact = () => {
+  const recaptcha = import.meta.env.VITE_ID_RECAPTCHA;
+
   const {
     register,
     handleSubmit,
@@ -122,7 +124,7 @@ export const Contact = () => {
             )}
           </div>
           <ReCAPTCHA
-            sitekey={sendEmail} // Reemplaza con tu clave de sitio de reCAPTCHA
+            sitekey={recaptcha} // Reemplaza con tu clave de sitio de reCAPTCHA
             onChange={(value) => {
               register("recaptchaValue").onChange(value);
             }}
