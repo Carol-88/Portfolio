@@ -1,8 +1,6 @@
 import { useForm } from "react-hook-form";
 import "react-toastify/dist/ReactToastify.css";
 import { sendEmail } from "../../lib/func-contact";
-import { useEffect } from "react";
-import { loadReCaptcha } from "react-recaptcha-v3"; // Asegúrate de instalar esta librería
 
 export const Contact = () => {
   const {
@@ -24,11 +22,6 @@ export const Contact = () => {
     // Aquí puedes enviar el correo
     await sendEmail(data);
   };
-
-  useEffect(() => {
-    const recaptcha = import.meta.env.VITE_ID_RECAPTCHA;
-    loadReCaptcha(recaptcha); // Cargar reCAPTCHA
-  }, []);
 
   return (
     <div
