@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { sendEmail } from "../../lib/func-contact";
 
@@ -15,10 +16,10 @@ export const Contact = () => {
 
   const [captchaLoaded, setCaptchaLoaded] = useState(false);
   const [captchaResponse, setCaptchaResponse] = useState(null);
+  const [emailSent, setEmailSent] = useState(false); // Estado para controlar si el email ya ha sido enviado
 
   const verifyCaptcha = useCallback(() => {
     if (window.hcaptcha && captchaLoaded) {
-      console.log("hcaptcha disponible:", window.hcaptcha); // Verifica si hcaptcha está disponible
       window.hcaptcha.render("hcaptcha", {
         sitekey: hCAPTCHA,
         callback: (response) => {
@@ -26,7 +27,7 @@ export const Contact = () => {
         },
       });
     } else {
-      console.error("hcaptcha no está disponible o no se ha cargado."); // Mensaje de error si hcaptcha no está disponible
+      toast.error("Error al cargar CAPTCHA");
     }
   }, [captchaLoaded, hCAPTCHA]);
 
@@ -42,31 +43,54 @@ export const Contact = () => {
 
       window.onloadCallback = () => {
         setCaptchaLoaded(true);
-        verifyCaptcha(); // Llama a verifyCaptcha aquí
+        verifyCaptcha();
       };
     } else {
       setCaptchaLoaded(true);
-      verifyCaptcha(); // Asegúrate de llamar a verifyCaptcha si ya está cargado
+      verifyCaptcha();
     }
 
     return () => {
       delete window.onloadCallback;
     };
-  }, []); // No incluyas verifyCaptcha aquí para evitar el error de referencia
+  }, []);
 
   useEffect(() => {
     if (captchaLoaded) {
-      verifyCaptcha(); // Llama a verifyCaptcha solo si el captcha está cargado
+      verifyCaptcha();
     }
   }, [captchaLoaded, verifyCaptcha]);
 
-  const onSubmit = async (data) => {
-    if (!captchaResponse) {
-      alert("Por favor, completa el CAPTCHA.");
-      return;
-    }
+  const submitForm = async (data) => {
+    const lastSendTime = localStorage.getItem("lastSendTime");
+    const timeDiff = (
+      (new Date().getTime() - (lastSendTime ? parseInt(lastSendTime) : 0)) /
+      1000 /
+      60
+    ).toFixed(2);
 
-    await sendEmail(data);
+    if (timeDiff >= 1) {
+      localStorage.setItem("lastSendTime", new Date().getTime());
+
+      if (!captchaResponse) {
+        toast.error("Por favor, completa el CAPTCHA.");
+        return;
+      }
+
+      if (!emailSent) {
+        try {
+          await sendEmail(data);
+          toast.success("Email enviado exitosamente!");
+          setEmailSent(true); // Marca el email como enviado
+        } catch (error) {
+          toast.error("Error al enviar el email.");
+        }
+      }
+    } else {
+      toast.info(
+        "Por favor, espera al menos un minuto antes de enviar otro email."
+      );
+    }
   };
 
   return (
@@ -76,7 +100,7 @@ export const Contact = () => {
     >
       <div className="mx-auto w-full max-w-[550px]">
         <form
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(submitForm)}
           aria-label="Contact Form"
           role="form"
         >
@@ -112,7 +136,10 @@ export const Contact = () => {
               Correo electrónico
             </label>
             <input
-              {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
+              {...register("email", {
+                required: true,
+                pattern: /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
+              })}
               type="email"
               name="email"
               id="email"
