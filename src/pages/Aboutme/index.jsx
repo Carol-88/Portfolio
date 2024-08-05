@@ -28,7 +28,7 @@ export const AboutMe = () => {
           <img
             src="/img/me.png"
             alt="Carolina, desarrolladora web"
-            className="mx-auto w-48 h-60 mb-4 float-left mr-4"
+            className="mx-auto w-48 h-52 mb-4 md:float-left px-4"
           />
           <p className="mb-4 text-lg">
             <strong>Hola a todos!</strong> Soy Carolina, una apasionada del
