@@ -19,7 +19,7 @@ export const ProfileCard = () => {
           </h4>
           <p>Diseño y desarrollo Web</p>
         </div>
-        <div>
+        <div className="p-4">
           <RRSS />
         </div>
       </div>
