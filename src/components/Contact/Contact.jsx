@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import "react-toastify/dist/ReactToastify.css";
 import { sendEmail } from "../../lib/func-contact";
-
+import ReCAPTCHA from "react-google-recaptcha";
 export const Contact = () => {
   const {
     register,
@@ -11,6 +11,15 @@ export const Contact = () => {
     mode: "onChange",
   });
 
+  const onSubmit = async (data) => {
+    const recaptchaValue = data.recaptchaValue;
+    if (!recaptchaValue) {
+      alert("Por favor, verifica que no eres un robot.");
+      return;
+    }
+    await sendEmail(data);
+  };
+
   return (
     <div
       id="contact"
@@ -18,7 +27,7 @@ export const Contact = () => {
     >
       <div className="mx-auto w-full max-w-[550px]">
         <form
-          onSubmit={handleSubmit(sendEmail)}
+          onSubmit={handleSubmit(onSubmit)}
           aria-label="Contact Form"
           role="form"
         >
@@ -112,6 +121,12 @@ export const Contact = () => {
               </span>
             )}
           </div>
+          <ReCAPTCHA
+            sitekey={sendEmail} // Reemplaza con tu clave de sitio de reCAPTCHA
+            onChange={(value) => {
+              register("recaptchaValue").onChange(value);
+            }}
+          />
           <div className="flex justify-end">
             <button
               type="submit"
