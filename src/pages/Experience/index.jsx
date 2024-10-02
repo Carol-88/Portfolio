@@ -86,15 +86,20 @@ export const Experience = () => {
       </section>
       <div className="text-md mt-14 border-2 border-rose-400 p-4 font-bold rounded-lg shadow-lg text-center">
         <a
-          href="/CV2024_SIMPLE.pdf"
+          href="/CarolinaRomeroCV.pdf"
           download
           className="text-red-800 hover:animate-pulse"
         >
           Descarga mi currículum si quieres saber más
         </a>{" "}
         o{" "}
-        <a href="/contact" className="text-green-700 hover:animate-pulse">
-          Contacta conmigo directamente por email
+        <a
+          href="https://www.linkedin.com/in/carolina-romero-c/overlay/contact-info/"
+          className="text-green-700 hover:animate-pulse"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contacta conmigo directamente
         </a>
       </div>
     </section>

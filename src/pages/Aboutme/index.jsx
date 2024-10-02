@@ -111,7 +111,12 @@ export const AboutMe = () => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="/contact" aria-label="Contact me for collaboration">
+              <a
+                href="https://www.linkedin.com/in/carolina-romero-c/overlay/contact-info/"
+                aria-label="Contact me for collaboration"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 🚀 ¡Vamos a hacer cosas geniales juntos! 🚀
               </a>
             </span>

@@ -1,6 +1,6 @@
 import { Hero } from "../../components/Hero/Hero";
 import { SlideCards } from "../../components/Projects/SlideCards";
-import { Contact } from "../../components/Contact/Contact";
+// import { Contact } from "../../components/Contact/Contact";
 import { Techs } from "../../components/commons/Techs";
 
 export const Home = () => {
@@ -9,7 +9,7 @@ export const Home = () => {
       <Hero />
       <Techs />
       <SlideCards />
-      <Contact />
+      {/* <Contact /> */}
     </section>
   );
 };
