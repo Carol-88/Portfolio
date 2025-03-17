@@ -1,10 +1,10 @@
-import { useParams } from "react-router-dom";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import jsonData from "../../assets/projects.json";
 import {
+  createGridImages,
   filterImages,
   renderServices,
-  createGridImages,
 } from "../../lib/funcs-projectdetails";
 
 export const ProjectDetails = () => {
@@ -26,7 +26,7 @@ export const ProjectDetails = () => {
         <img
           src={project.logo}
           alt="Logo"
-          className="w-16 h-16 rounded-full mb-4 md:mb-0 md:mr-4"
+          className="w-16 h-16 mb-4 md:mb-0 md:mr-4 object-cover"
         />
         <a
           href={project.web}
@@ -56,19 +56,14 @@ export const ProjectDetails = () => {
       )}
 
       {/* Sección de plataforma */}
-      <h3 className="mt-4">
-        <strong>Plataforma:</strong>
-      </h3>
-      <p>{project.description.services.platform}</p>
 
-      <h3 className="mt-4"></h3>
       <a
-        href={project.web}
-        className="text-orange-600 font-semibold hover:text-orange-800 flex justify-center"
+        href={project.web ? project.web : "Próximamente"}
+        className="text-orange-600 font-semibold hover:text-orange-800 flex justify-center mt-16"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Visita nuestra plataforma
+        Visita la web o el código
       </a>
 
       {/* Sección de video */}

@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,86 +10,72 @@ export const Contact = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
-    mode: "onChange",
-  });
+    reset,
+  } = useForm({ mode: "onChange" });
 
-  const [captchaLoaded, setCaptchaLoaded] = useState(false);
   const [captchaResponse, setCaptchaResponse] = useState(null);
-  const [emailSent, setEmailSent] = useState(false); // Estado para controlar si el email ya ha sido enviado
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const verifyCaptcha = useCallback(() => {
-    if (window.hcaptcha && captchaLoaded) {
+  const renderCaptcha = useCallback(() => {
+    if (window.hcaptcha) {
       window.hcaptcha.render("hcaptcha", {
         sitekey: hCAPTCHA,
-        callback: (response) => {
-          setCaptchaResponse(response);
-        },
+        callback: (response) => setCaptchaResponse(response),
       });
-    } else {
-      toast.error("Error al cargar CAPTCHA");
     }
-  }, [captchaLoaded, hCAPTCHA]);
+  }, [hCAPTCHA]);
 
   useEffect(() => {
     if (!window.hcaptcha) {
+      window.onloadCallback = renderCaptcha;
       const script = document.createElement("script");
       script.src =
         "https://hcaptcha.com/1/api.js?onload=onloadCallback&render=explicit";
       script.async = true;
       script.defer = true;
-
       document.body.appendChild(script);
 
-      window.onloadCallback = () => {
-        setCaptchaLoaded(true);
-        verifyCaptcha();
+      return () => {
+        delete window.onloadCallback;
+        document.body.removeChild(script);
       };
     } else {
-      setCaptchaLoaded(true);
-      verifyCaptcha();
+      renderCaptcha();
     }
-
-    return () => {
-      delete window.onloadCallback;
-    };
-  }, []);
-
-  useEffect(() => {
-    if (captchaLoaded) {
-      verifyCaptcha();
-    }
-  }, [captchaLoaded, verifyCaptcha]);
+  }, [renderCaptcha]);
 
   const submitForm = async (data) => {
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+
     const lastSendTime = localStorage.getItem("lastSendTime");
-    const timeDiff = (
-      (new Date().getTime() - (lastSendTime ? parseInt(lastSendTime) : 0)) /
-      1000 /
-      60
-    ).toFixed(2);
+    const timeDiff = lastSendTime
+      ? (Date.now() - parseInt(lastSendTime, 10)) / 60000
+      : Infinity;
 
-    if (timeDiff >= 1) {
-      localStorage.setItem("lastSendTime", new Date().getTime());
-
-      if (!captchaResponse) {
-        toast.error("Por favor, completa el CAPTCHA.");
-        return;
-      }
-
-      if (!emailSent) {
-        try {
-          await sendEmail(data);
-          toast.success("Email enviado exitosamente!");
-          setEmailSent(true); // Marca el email como enviado
-        } catch (error) {
-          toast.error("Error al enviar el email.");
-        }
-      }
-    } else {
+    if (timeDiff < 2) {
       toast.info(
-        "Por favor, espera al menos un minuto antes de enviar otro email."
+        "Por favor, espera al menos dos minutos antes de enviar otro email."
       );
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (!captchaResponse) {
+      toast.error("Por favor, completa el CAPTCHA.");
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      await sendEmail(data);
+      toast.success("¡Email enviado exitosamente!");
+      reset();
+      localStorage.setItem("lastSendTime", Date.now().toString());
+    } catch (error) {
+      toast.error("Error al enviar el email.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -110,105 +96,96 @@ export const Contact = () => {
           >
             Contacto
           </h2>
+
+          {/* Campo Nombre */}
           <div className="mb-5">
             <label htmlFor="from_name" className="sr-only">
               Nombre completo
             </label>
             <input
-              {...register("from_name", { required: true })}
+              {...register("from_name", { required: "Nombre requerido" })}
               type="text"
-              name="from_name"
               id="from_name"
               placeholder="Nombre completo"
-              aria-required="true"
-              aria-label="Nombre completo"
-              defaultValue=""
-              className="w-full rounded-md border bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:shadow-md"
+              className="w-full rounded-md border bg-white py-3 px-6 text-base text-[#6B7280] outline-none focus:shadow-md"
             />
             {errors.from_name && (
-              <span className="text-red-500" aria-live="polite">
-                Nombre requerido
-              </span>
+              <span className="text-red-500">{errors.from_name.message}</span>
             )}
           </div>
+
+          {/* Campo Correo Electrónico */}
           <div className="mb-5">
             <label htmlFor="email" className="sr-only">
               Correo electrónico
             </label>
             <input
               {...register("email", {
-                required: true,
-                pattern: /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
+                required: "Correo electrónico requerido",
+                pattern: {
+                  value: /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
+                  message: "Correo electrónico inválido",
+                },
               })}
               type="email"
-              name="email"
               id="email"
               placeholder="tu-email@domain.com"
-              aria-required="true"
-              aria-label="Correo electrónico"
-              defaultValue=""
-              className="w-full rounded-md border bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:shadow-md"
+              className="w-full rounded-md border bg-white py-3 px-6 text-base text-[#6B7280] outline-none focus:shadow-md"
             />
             {errors.email && (
-              <span className="text-red-500" aria-live="polite">
-                Correo electrónico inválido
-              </span>
+              <span className="text-red-500">{errors.email.message}</span>
             )}
           </div>
+
+          {/* Campo Asunto */}
           <div className="mb-5">
             <label htmlFor="subject" className="sr-only">
               Asunto
             </label>
             <input
-              {...register("subject", { required: true })}
+              {...register("subject", { required: "Asunto requerido" })}
               type="text"
-              name="subject"
               id="subject"
               placeholder="Asunto"
-              aria-required="true"
-              aria-label="Asunto"
-              defaultValue=""
-              className="w-full rounded-md border bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:shadow-md"
+              className="w-full rounded-md border bg-white py-3 px-6 text-base text-[#6B7280] outline-none focus:shadow-md"
             />
             {errors.subject && (
-              <span className="text-red-500" aria-live="polite">
-                Asunto requerido
-              </span>
+              <span className="text-red-500">{errors.subject.message}</span>
             )}
           </div>
+
+          {/* Campo Mensaje */}
           <div className="mb-5">
             <label htmlFor="message" className="sr-only">
               Mensaje
             </label>
             <textarea
-              {...register("message", { required: true })}
+              {...register("message", { required: "Mensaje requerido" })}
               rows="4"
-              name="message"
               id="message"
               placeholder="Escribe tu mensaje"
-              aria-required="true"
-              aria-label="Mensaje"
-              defaultValue=""
-              className="w-full resize-none rounded-md border bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:shadow-md"
+              className="w-full resize-none rounded-md border bg-white py-3 px-6 text-base text-[#6B7280] outline-none focus:shadow-md"
             ></textarea>
             {errors.message && (
-              <span className="text-red-500" aria-live="polite">
-                Mensaje requerido
-              </span>
+              <span className="text-red-500">{errors.message.message}</span>
             )}
-            <div
-              id="hcaptcha"
-              className="mb-5 h-captcha"
-              data-sitekey={hCAPTCHA}
-              data-theme="dark"
-            ></div>
-            <button
-              type="submit"
-              className="flex justify-end hover:shadow-form rounded-md bg-red-400 hover:bg-red-800 text-black hover:text-white py-3 px-8 text-base font-semibold outline-none"
-            >
-              Enviar
-            </button>
           </div>
+
+          {/* hCaptcha */}
+          <div id="hcaptcha" className="mb-5 h-captcha"></div>
+
+          {/* Botón de Envío */}
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className={`flex justify-end rounded-md py-3 px-8 text-base font-semibold outline-none transition-colors ${
+              isSubmitting
+                ? "bg-gray-400 text-gray-700 cursor-not-allowed"
+                : "bg-red-400 hover:bg-red-800 text-red-800 hover:text-white"
+            }`}
+          >
+            {isSubmitting ? "Enviando..." : "Enviar"}
+          </button>
         </form>
       </div>
     </div>

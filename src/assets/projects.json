@@ -13,7 +13,7 @@
       },
       "name": "Adopta un Junior",
       "subtitle": "Transformación digital con Next.js y TypeScript. Colaboración en el liderazgo en desarrollo frontend.",
-      "role": "Desarrollo web frontend",
+      "role": "Desarrollo frontend",
       "web": "https://adoptaunjunior.es",
       "projectLink": "/project/:id",
       "description": {
@@ -23,8 +23,7 @@
             "title": "Equipo de la comunidad, desarrollo frontend.",
             "description": "Colaboro en este proyecto desarollando la interfaz de usuario junto a mis compañeros de equipo, he participado en todo el proceso de grooming de la plataforma de la comunidad, he apoyado y aprendido de todo el equipo y sigo desarrollandome junto a ellos."
           }
-        },
-        "platform": "Creemos en el poder de la comunidad para transformar el futuro del sector IT. Nuestra plataforma busca ser un puente entre profesionales y empresas innovadoras, promoviendo la educación continua, el networking y el desarrollo profesional."
+        }
       }
     },
     {
@@ -41,7 +40,7 @@
       },
       "name": "To Do List",
       "subtitle": "Aplicación web para gestionar tus tareas, utilizando Vue.js3, pinia y Supabase.",
-      "role": "Desarrollo web frontend",
+      "role": "Desarrollo frontend",
       "web": "https://github.com/Carol-88/todo-list-vue",
       "projectLink": "/project/:id",
       "description": {
@@ -63,25 +62,24 @@
             "title": "Lista de tareas",
             "description": "Permite a los usuarios gestionar y organizar sus tareas de manera efectiva."
           }
-        },
-        "platform": "Puedes utilizar la plataforma o hacer fork del repositorio para desarrollar tu propia aplicación"
+        }
       }
     },
     {
       "id": 3,
-      "banner": "/img/incognito.jpg",
+      "banner": "/img/Banner-Dark-CloudSolute.png",
       "logo": "/img/logocs.png",
       "video": "",
       "contributions": {
         "landing": ""
       },
-      "name": "Proyecto Jon Doe",
+      "name": "CloudSolute",
       "subtitle": "Transformación digital con Next.js y TypeScript. Colaboración en el liderazgo en desarrollo frontend.",
-      "role": "Desarrollo web frontend",
-      "web": "",
+      "role": "Desarrollo frontend",
+      "web": "https://cloudsolute.net/",
       "projectLink": "/project/:id",
       "description": {
-        "goal": "Participo activamente en todas las etapas del proceso de desarrollo frontend, desde la planificación del diseño hasta la gestión del backlog e issues, incluyendo sesiones de pair programming. Este proyecto me permite aplicar y mejorar mis habilidades técnicas, a la vez que refuerza mi capacidad para trabajar en equipo y adaptarme a diferentes desafíos. Proximamente estaré colaborando en UX, comunicación y marketing online.",
+        "goal": "Participación activa en todas las etapas del proceso de desarrollo frontend, desde la planificación del diseño hasta la gestión del backlog e issues, incluyendo sesiones de pair programming. Este proyecto me permitió aplicar y mejorar mis habilidades técnicas, a la vez que reforcé mi capacidad para trabajar en equipo y adaptarme a diferentes desafíos.",
         "services": {
           "input1": {
             "title": "Implementación de Cookies Básicas",
@@ -97,21 +95,55 @@
           },
           "input4": {
             "title": "Integración de APIs para Información de Videos",
-            "description": "Realizo integraciones con una API externa para recuperar información detallada sobre cada video, lo que permite personalizar la presentación de datos según las necesidades específicas del proyecto."
+            "description": "Realicé integraciones con una API externa para recuperar información detallada sobre cada video, lo que permite personalizar la presentación de datos según las necesidades específicas del proyecto."
           },
           "input5": {
                      "title": "Componente de Error Interactivo",
-          "description": "Diseño un componente de error en forma de modal que no solo informa al usuario sobre posibles fallos sino que también ofrece soluciones proactivas, como reintentar la acción o reportar un bug mediante correo electrónico.Esta funcionalidad mejora significativamente la experiencia del usuario al enfrentarse a situaciones imprevistas.",
+          "description": "Diseñé un componente de error en forma de modal que no solo informa al usuario sobre posibles fallos sino que también ofrece soluciones proactivas, como reintentar la acción o reportar un bug mediante correo electrónico.Esta funcionalidad mejora significativamente la experiencia del usuario al enfrentarse a situaciones imprevistas.",
           "input6": {
             "title": "Incorporación de Google Analytics",
             "description": "Integré Google Analytics en el proyecto para rastrear y analizar el comportamiento del usuario, lo que facilita `la toma de decisiones basadas en datos y la optimización continua del producto`."
           },
           "input7": {
             "title": "Diseño y Funcionalidad de Navbar y Menú Hamburguesa",
-            "description": "Colaboro en el diseño y desarrollo de la barra de navegación y el menú hamburguesa, elementos cruciales para `la navegación intuitiva y la experiencia del usuario en dispositivos móviles y de escritorio`."
+            "description": "Colaboré en el diseño y desarrollo de la barra de navegación y el menú hamburguesa, elementos cruciales para `la navegación intuitiva y la experiencia del usuario en dispositivos móviles y de escritorio`."
           }
-        },
-          "platform": "Proximamente"
+        }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "banner": "/img/logopetcare.svg",
+      "logo": "/img/logopetcare.svg",
+      "video": "",
+      "contributions": {
+        "landing": "",
+        "contribution1": "",
+        "contribution2": "",
+        "contribution3": "",
+        "contribution4": ""
+      },
+      "name": "PetCareManager",
+      "subtitle": "Aplicación móvil con React Native.",
+      "role": "Desarrollo frontend",
+      "web": "https://github.com/PetCare-Manager/petcare-manager-front",
+      "projectLink": "/project/:id",
+      "description": {
+        "goal": "Ideación del proyecto, gestión del MVP, desarrollo en frontend con React Native, TypeScript y TailwindCSS",
+        "services": {
+          "input1": {
+            "title": "Registro y login del usuario",
+            "description": ""
+          },
+          "input2": {
+            "title": "Crear evento para una o varias mascotas a la vez.",
+            "description": ""
+          },
+          "input3": {
+            "title": "Crear y editar el perfil de una mascota.",
+            "description": ""
+          }
         }
       }
     }
