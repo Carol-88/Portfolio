@@ -1,0 +1,39 @@
+{
+  "exercises": [
+    {
+      "id": 1,
+      "title": "Buscador de libros con OpenLibrary",
+      "description": "Consumo de API y filtrado de datos en tiempo real.",
+      "technologies": ["Flutter"],
+      "github": "https://github.com/Carol-88/LibraryApp"
+    },
+    {
+      "id": 2,
+      "title": "Buscador de países con GraphQL",
+      "description": "Consumo de API GraphQL, búesqueda por páis, muestra de datos, práctica de GraphQL.",
+      "technologies": ["React", "TypeScript", "CSS"],
+      "github": "https://github.com/Carol-88/ej_graphql"
+    },
+    {
+      "id": 3,
+      "title": "Lista de usuarios",
+      "description": "Consumo de API REST pública para mostrar una lista de usuarios, práctica de Redux.",
+      "technologies": ["React", "Redux", "Vite", "TailwindCSS"],
+      "github": "https://github.com/Carol-88/ej_redux"
+    },
+    {
+      "id": 4,
+      "title": "Lista de tareas",
+      "description": "Consumo de API REST pública para mostrar una lista de usuarios, práctica de hooks, estado y props.",
+      "technologies": ["React", "Hook Personalizado", "PropTypes"],
+      "github": "https://github.com/Carol-88/ej_todo"
+    },
+    {
+      "id": 5,
+      "title": "Contador",
+      "description": "Práctica de estado y Props",
+      "technologies": ["React", "Hooks", "PropTypes"],
+      "github": "https://github.com/Carol-88/ej_todo"
+    }
+  ]
+}

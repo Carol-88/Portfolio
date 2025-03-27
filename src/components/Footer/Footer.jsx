@@ -6,9 +6,9 @@ export const Footer = () => {
       <p className="text-center sm:text-left p-1 sm:flex-1 lg:text-end">
         Created with love by Carolina Romero Cotan
       </p>
-      <p className="flex justify-end items-center p-1 sm:flex-1">
+      <section className="flex justify-end items-center p-1 sm:flex-1">
         <RRSS />
-      </p>
+      </section>
     </footer>
   );
 };

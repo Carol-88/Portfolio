@@ -2,6 +2,7 @@ import { Hero } from "../../components/Hero/Hero";
 import { ProjectSlider } from "../../components/Projects/ProjectSlider";
 // import { Contact } from "../../components/Contact/Contact";
 import { Techs } from "../../components/commons/Techs";
+import { ExercisesPage } from "../Exercises";
 
 export const Home = () => {
   return (
@@ -10,6 +11,7 @@ export const Home = () => {
       <Techs />
       <ProjectSlider />
       {/* <Contact /> */}
+      <ExercisesPage />
     </section>
   );
 };

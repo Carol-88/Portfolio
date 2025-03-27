@@ -3,6 +3,7 @@ import { ToastContainer } from "react-toastify";
 import { Layout } from "./layout/Layout";
 import { AboutMe } from "./pages/Aboutme";
 import { ContactPage } from "./pages/ContactPage";
+import { ExercisesPage } from "./pages/Exercises";
 import { Experience } from "./pages/Experience";
 import { Home } from "./pages/Home";
 import { ProjectPage } from "./pages/Project";
@@ -13,6 +14,8 @@ const App = () => {
     { path: "/experience", element: <Experience /> },
     { path: "/projects/:id", element: <ProjectPage /> },
     { path: "/contact", element: <ContactPage /> },
+    { path: "/exercises", element: <ExercisesPage /> },
+    { path: "/exercises/:id", element: <ExercisesPage /> },
   ]);
 
   return (
