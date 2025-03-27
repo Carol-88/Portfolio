@@ -1,11 +1,11 @@
+import { useRoutes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import { Layout } from "./layout/Layout";
 import { AboutMe } from "./pages/Aboutme";
+import { ContactPage } from "./pages/ContactPage";
 import { Experience } from "./pages/Experience";
 import { Home } from "./pages/Home";
 import { ProjectPage } from "./pages/Project";
-import { useRoutes } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import { ContactPage } from "./pages/ContactPage";
 const App = () => {
   const routes = useRoutes([
     { path: "/", element: <Home /> },

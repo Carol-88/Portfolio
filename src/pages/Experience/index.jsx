@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import jobsData from "../../assets/experiences.json";
+import { Contact } from "../../components/Contact/Contact";
 
 // Componente para mostrar una lista de habilidades
 const SkillsList = ({ skills }) => (
@@ -18,7 +19,7 @@ const SkillsList = ({ skills }) => (
 
 // Componente para mostrar experiencias profesionales
 const ExperienceItem = ({ jobTitle, period, tasks }) => (
-  <article className="bg-white shadow-md rounded-lg p-4 mb-8 ">
+  <article className="bg-white shadow-md rounded-lg p-4 m-2 ">
     <h3 className="font-semibold text-xl mb-2">{jobTitle}</h3>
     <p className="text-sm text-gray-600 mb-2">{period}</p>
     <ul className="list-disc pl-5">
@@ -57,7 +58,7 @@ export const Experience = () => {
   ];
 
   return (
-    <section className="container max-w-4xl mx-auto p-8 mt-4 bg-red-50 shadow-xl rounded-lg overflow-hidden">
+    <section className="container max-w-4xl mx-auto p-8 rounded-lg overflow-hidden">
       <section aria-labelledby="experience-section">
         <h2 id="experience-section" className="text-2xl font-semibold mb-8">
           Experiencia Profesional
@@ -66,6 +67,15 @@ export const Experience = () => {
           <ExperienceItem key={experience.id || index} {...experience} /> // Usa experience.id si existe, de lo contrario usa index
         ))}
       </section>
+      <button className=" text-md mt-14 mb-14 border-2 border-rose-400 bg-white p-4 font-bold rounded-lg shadow-lg text-center hover:animate-pulse">
+        <a
+          href="/CarolinaRomero_Frontend.pdf"
+          download
+          className="text-red-800"
+        >
+          Descarga mi currículum si quieres saber más
+        </a>
+      </button>
       <section aria-labelledby="education-skills-section">
         <h2
           id="education-skills-section"
@@ -84,24 +94,7 @@ export const Experience = () => {
         </h2>
         <SkillsList skills={personalSkills} />
       </section>
-      <div className="text-md mt-14 border-2 border-rose-400 p-4 font-bold rounded-lg shadow-lg text-center">
-        <a
-          href="/CarolinaRomeroCV.pdf"
-          download
-          className="text-red-800 hover:animate-pulse"
-        >
-          Descarga mi currículum si quieres saber más
-        </a>{" "}
-        o{" "}
-        <a
-          href="https://www.linkedin.com/in/carolina-romero-c/overlay/contact-info/"
-          className="text-green-700 hover:animate-pulse"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Contacta conmigo directamente
-        </a>
-      </div>
+      <Contact />
     </section>
   );
 };

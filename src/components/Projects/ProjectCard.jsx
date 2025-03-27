@@ -9,7 +9,7 @@ export const ProjectCard = ({ banner, name, id }) => {
   return (
     <div className="min-w-[200px] sm:min-w-[250px] md:min-w-[300px] flex-shrink-0">
       <article className="shadow-lg hover:shadow-xl bg-white rounded-xl overflow-hidden m-2">
-        <img src={banner} alt={name} className="w-full h-40 object-cover" />
+        <img src={banner} alt={name} className="w-full h-40 object-fill" />
         <div className="p-2 text-center">
           <Link
             to={`/projects/${id}`}
