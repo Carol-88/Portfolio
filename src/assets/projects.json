@@ -116,7 +116,7 @@
       "id": 4,
       "banner": "/img/logopetcare.svg",
       "logo": "/img/logopetcare.svg",
-      "video": "",
+      "video": "/img/contributions/petcare/minidemopetcare.mp4",
       "contributions": {
         "landing": "",
         "contribution1": "",
@@ -126,23 +126,23 @@
       },
       "name": "PetCareManager",
       "subtitle": "Aplicación móvil con React Native.",
-      "role": "Desarrollo frontend",
-      "web": "https://github.com/PetCare-Manager/petcare-manager-front",
+     "role": "Implementación de la interfaz con React Native, TypeScript y TailwindCSS. Definición de funcionalidades clave y planificación del producto mínimo viable. Conexión a la API mediante Axios para el registro, login y gestión de datos.",
+      "web": "https://github.com/PetCare-Manager",
       "projectLink": "/project/:id",
       "description": {
-        "goal": "Ideación del proyecto, gestión del MVP, desarrollo en frontend con React Native, TypeScript y TailwindCSS",
+        "goal": "PetCareManager es una aplicación móvil que ayuda a los dueños de mascotas a organizar y gestionar información importante sobre sus animales, como eventos, citas, documentos y más.",
         "services": {
           "input1": {
-            "title": "Registro y login del usuario",
-            "description": ""
+            "title": "",
+            "description": "Registro y login de usuarios: Implementación de la autenticación mediante el frontend, enviando datos al backend con Axios."
           },
           "input2": {
-            "title": "Crear evento para una o varias mascotas a la vez.",
-            "description": ""
+            "title": "",
+            "description": "Permite crear recordatorios como \"Comprar comida\" o \"Cita con el veterinario\" para una o varias mascotas (en desarrollo)."
           },
           "input3": {
-            "title": "Crear y editar el perfil de una mascota.",
-            "description": ""
+            "title": "",
+            "description": "Los usuarios pueden registrar a sus mascotas, agregar información relevante y subir imágenes de documentos o fotos para tenerlos siempre a mano."
           }
         }
       }
