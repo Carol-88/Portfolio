@@ -6,14 +6,21 @@ import { SectionTitle } from "../commons/SectionTitle";
 export const ProjectGrid = ({
   featuredOnly = false,
   secondaryOnly = false,
+  businessOnly = false,
   showTitle = true,
 }) => {
   let projects = projectsData.projects;
 
   if (featuredOnly) {
-    projects = projects.filter((project) => project.featured);
+    projects = projects.filter(
+      (project) => project.featured && project.category !== "business"
+    );
   } else if (secondaryOnly) {
-    projects = projects.filter((project) => !project.featured);
+    projects = projects.filter(
+      (project) => !project.featured && project.category !== "business"
+    );
+  } else if (businessOnly) {
+    projects = projects.filter((project) => project.category === "business");
   }
 
   if (projects.length === 0) {
@@ -24,19 +31,29 @@ export const ProjectGrid = ({
     ? "Proyectos destacados"
     : secondaryOnly
       ? "Otros proyectos"
-      : "Proyectos";
+      : businessOnly
+        ? "Webs para negocios"
+        : "Proyectos";
 
   const subtitle = featuredOnly
     ? "Productos propios donde aplico dominio nutricional, visión de producto y desarrollo full stack."
     : secondaryOnly
       ? "Proyectos complementarios que refuerzan mi perfil mobile y backend."
-      : "Selección de proyectos propios y formativos que representan mi perfil técnico.";
+      : businessOnly
+        ? "Demos y landings pensadas para pymes y negocios locales: modernas, responsive y listas para desplegar."
+        : "Selección de proyectos propios y formativos que representan mi perfil técnico.";
 
   return (
     <section>
       {showTitle && (
         <SectionTitle
-          id={featuredOnly ? undefined : "projects-heading"}
+          id={
+            businessOnly
+              ? "business-projects"
+              : featuredOnly
+                ? undefined
+                : "projects-heading"
+          }
           title={title}
           subtitle={subtitle}
         />
@@ -59,5 +76,6 @@ export const ProjectGrid = ({
 ProjectGrid.propTypes = {
   featuredOnly: PropTypes.bool,
   secondaryOnly: PropTypes.bool,
+  businessOnly: PropTypes.bool,
   showTitle: PropTypes.bool,
 };

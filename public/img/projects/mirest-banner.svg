@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Mi Rest De Confianza">
+  <rect width="800" height="400" fill="#1c1917"/>
+  <rect x="0" y="280" width="800" height="120" fill="#b45309" opacity="0.25"/>
+  <rect x="60" y="60" width="680" height="260" rx="16" fill="#faf8f5" opacity="0.08"/>
+  <text x="80" y="150" fill="#faf8f5" font-family="Georgia, serif" font-size="52" font-weight="600">Mi Rest</text>
+  <text x="80" y="210" fill="#ca8a04" font-family="Georgia, serif" font-size="40" font-style="italic">De Confianza</text>
+  <text x="80" y="270" fill="#faf8f5" font-family="sans-serif" font-size="18" opacity="0.75">Restaurante · Landing page demo</text>
+  <circle cx="680" cy="120" r="48" fill="#b45309" opacity="0.35"/>
+  <circle cx="720" cy="200" r="32" fill="#ca8a04" opacity="0.25"/>
+</svg>

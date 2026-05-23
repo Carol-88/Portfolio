@@ -22,6 +22,9 @@ export const Home = () => {
       <div className="section-card mb-10">
         <ProjectGrid secondaryOnly />
       </div>
+      <div id="business-projects" className="section-card mb-10 scroll-mt-24">
+        <ProjectGrid businessOnly />
+      </div>
       <Techs />
       <section className="section-card mt-10 text-center">
         <SectionTitle

@@ -146,6 +146,46 @@
           }
         }
       }
+    },
+    {
+      "id": 5,
+      "featured": false,
+      "category": "business",
+      "badge": "Web para negocios",
+      "status": "Demo desplegada",
+      "banner": "/img/projects/mirest-hero.png",
+      "logo": "/img/projects/mirest-logo.svg",
+      "video": "",
+      "tech": ["HTML5", "CSS3", "JavaScript", "Google Fonts", "Netlify"],
+      "contributions": {
+        "landing": "/img/projects/mirest-hero.png"
+      },
+      "name": "Mi Rest De Confianza",
+      "subtitle": "Landing page para restaurante ficticio orientada a negocios locales",
+      "role": "Diseño y desarrollo front-end (HTML, CSS y JavaScript vanilla)",
+      "web": "https://mirestdeconfianza.netlify.app/",
+      "github": "https://github.com/Carol-88/demo-mi-rest-de-confianza",
+      "description": {
+        "goal": "Demo de portfolio que muestra el tipo de web que puedo entregar a negocios locales: moderna, responsive y lista para desplegar sin dependencias ni build. El restaurante es ficticio; el objetivo es demostrar diseño, usabilidad y despliegue en producción.",
+        "services": {
+          "input1": {
+            "title": "Landing de una sola página:",
+            "description": "Hero con imagen de entrada, carta, platos destacados, galería, opiniones y formulario de reservas."
+          },
+          "input2": {
+            "title": "Carta interactiva:",
+            "description": "Pestañas por categorías (entrantes, principales, postres y bebidas) con precios y etiquetas dietéticas."
+          },
+          "input3": {
+            "title": "Diseño responsive:",
+            "description": "Tipografía elegante, paleta cálida, navegación sticky con efecto glass y animaciones al scroll."
+          },
+          "input4": {
+            "title": "Listo para producción:",
+            "description": "Sitio estático desplegado en Netlify, sin framework ni build, fácil de personalizar para un cliente real."
+          }
+        }
+      }
     }
   ]
 }
