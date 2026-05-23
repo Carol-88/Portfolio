@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import jsonData from "../../assets/projects.json";
 import {
-  createGridImages,
   filterImages,
   renderServices,
 } from "../../lib/funcs-projectdetails";
@@ -30,7 +29,6 @@ export const ProjectDetails = () => {
   }
 
   const images = filterImages(project.contributions);
-  const gridImages = createGridImages(images, 2);
 
   return (
     <PageShell>
@@ -39,7 +37,7 @@ export const ProjectDetails = () => {
           <img
             src={project.logo}
             alt={`Logo de ${project.name}`}
-            className="h-16 w-16 rounded-xl object-cover"
+            className="h-16 w-16 shrink-0 rounded-xl border border-accent-soft/20 bg-surface-muted object-contain p-1"
           />
           <div>
             <div className="mb-2 flex flex-wrap gap-2">
@@ -103,15 +101,16 @@ export const ProjectDetails = () => {
           <div className="mt-8 flex justify-center">
             {isVideoFile(project.video) ? (
               <video
-                className="w-full max-w-2xl rounded-xl shadow-card"
+                className="mx-auto max-h-[45vh] w-auto max-w-[min(100%,280px)] rounded-xl shadow-card object-contain sm:max-h-[50vh] sm:max-w-xs"
                 controls
+                playsInline
                 src={project.video}
               >
                 Tu navegador no soporta la reproducción de video.
               </video>
             ) : (
               <iframe
-                className="h-64 w-full max-w-2xl rounded-xl md:h-96"
+                className="h-48 w-full max-w-xl rounded-xl sm:h-56 md:h-64"
                 src={project.video}
                 title={`Video de ${project.name}`}
                 allowFullScreen
@@ -125,24 +124,20 @@ export const ProjectDetails = () => {
             <h3 className="text-lg font-semibold text-primary-dark">
               Capturas del proyecto
             </h3>
-            <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-              {gridImages.map((colImages, colIndex) => (
-                <div key={colIndex} className="grid gap-4">
-                  {colImages.map((image, rowIndex) => (
-                    <button
-                      key={rowIndex}
-                      type="button"
-                      onClick={() => setSelectedImage(image)}
-                      className="overflow-hidden rounded-xl shadow-card"
-                    >
-                      <img
-                        className="h-auto w-full cursor-pointer"
-                        src={image}
-                        alt={`Captura ${colIndex * 2 + rowIndex + 1} de ${project.name}`}
-                      />
-                    </button>
-                  ))}
-                </div>
+            <div className="mt-6 flex flex-col items-center gap-6">
+              {images.map((image, index) => (
+                <button
+                  key={image}
+                  type="button"
+                  onClick={() => setSelectedImage(image)}
+                  className="w-full max-w-3xl overflow-hidden rounded-xl border border-accent-soft/30 bg-white p-4 shadow-card transition hover:shadow-card-hover"
+                >
+                  <img
+                    className="mx-auto max-h-80 w-full cursor-pointer object-contain sm:max-h-96"
+                    src={image}
+                    alt={`Captura ${index + 1} de ${project.name}`}
+                  />
+                </button>
               ))}
             </div>
           </article>

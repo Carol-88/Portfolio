@@ -23,11 +23,17 @@ export const ProjectCard = ({
       }`}
     >
       <Link to={`/projects/${id}`} onClick={handleClick} className="block">
-        <img
-          src={banner}
-          alt={name}
-          className={`w-full object-cover ${featured ? "h-48 sm:h-56" : "h-40"}`}
-        />
+        <div
+          className={`flex items-center justify-center border-b border-accent-soft/20 bg-white p-2 ${
+            featured ? "h-44 sm:h-52" : "h-44 sm:h-48"
+          }`}
+        >
+          <img
+            src={banner}
+            alt={name}
+            className="h-full w-full rounded-md object-contain object-center"
+          />
+        </div>
       </Link>
       <div className="flex flex-1 flex-col p-5">
         <div className="mb-3 flex flex-wrap gap-2">

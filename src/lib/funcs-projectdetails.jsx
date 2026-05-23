@@ -11,9 +11,7 @@ export const renderServices = (services) =>
     : null;
 
 export const filterImages = (contributions) =>
-  Object.values(contributions).filter(
-    (value) => Boolean(value) && !value.endsWith("banner.svg")
-  );
+  Object.values(contributions).filter(Boolean);
 
 export const createGridImages = (images, columns) => {
   const rows = Math.ceil(images.length / columns);

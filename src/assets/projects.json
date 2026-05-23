@@ -5,12 +5,13 @@
       "featured": true,
       "badge": "Producto propio",
       "status": "En desarrollo activo",
-      "banner": "/img/projects/bioevolva-banner.svg",
+      "banner": "/img/projects/bioevolva-hero.png",
       "logo": "/img/projects/bioevolva-logo.svg",
       "video": "",
       "tech": ["React", "TypeScript", "Java", "Spring Boot", "Netlify", "API REST"],
       "contributions": {
-        "landing": "/img/projects/bioevolva-banner.svg"
+        "landing": "/img/projects/bioevolva-hero.png",
+        "contribution1": "/img/projects/bioevolva-nutricion.png"
       },
       "name": "BioEvolva — MenuPlanner",
       "subtitle": "Gestor de menú semanal para recomposición corporal",
@@ -125,12 +126,12 @@
       "featured": false,
       "badge": "Proyecto formativo",
       "status": "",
-      "banner": "/img/projects/azaila-banner.svg",
-      "logo": "/img/projects/azaila-banner.svg",
+      "banner": "/img/projects/azaila-diagram.svg",
+      "logo": "/img/projects/azaila-logo.svg",
       "video": "",
-      "tech": ["Java", "Spring Boot", "MVC", "API REST", "Git"],
+      "tech": ["Java", "Spring Boot", "MVC", "API REST", "MySQL", "JPA", "Git"],
       "contributions": {
-        "landing": "/img/projects/azaila-banner.svg"
+        "landing": "/img/projects/azaila-diagram.svg"
       },
       "name": "Azaila Community",
       "subtitle": "API REST para conectar a la comunidad del pueblo de Azaila",
