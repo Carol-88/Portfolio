@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { site } from "../../config/site";
 
 export const Hero = () => {
@@ -19,9 +20,9 @@ export const Hero = () => {
         <a href={site.cvPath} download className="btn-secondary">
           Descargar CV
         </a>
-        <a href="/contact" className="btn-secondary">
+        <Link to="/contact" className="btn-secondary">
           Contactar
-        </a>
+        </Link>
       </div>
     </section>
   );

@@ -1,19 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import jsonData from "../../assets/projects.json";
-import {
-  filterImages,
-  renderServices,
-} from "../../lib/funcs-projectdetails";
+import { filterImages, renderServices } from "../../lib/funcs-projectdetails";
 import { PageShell } from "../commons/PageShell";
 import { Tag } from "../commons/Tag";
+import { usePageSEO } from "../../hooks/usePageSEO";
 
 const isVideoFile = (src) => /\.(mp4|webm|ogg)$/i.test(src);
+const isGitHubUrl = (url) => url?.includes("github.com");
 
 export const ProjectDetails = () => {
   const { id } = useParams();
   const project = jsonData.projects.find((p) => p.id === Number(id));
   const [selectedImage, setSelectedImage] = useState(null);
+
+  usePageSEO({
+    title: project
+      ? `${project.name} — Carolina Romero`
+      : "Proyecto no encontrado — Carolina Romero",
+    description: project?.subtitle || project?.description?.goal || "",
+  });
+
+  useEffect(() => {
+    if (!selectedImage) return undefined;
+
+    const handleEscape = (event) => {
+      if (event.key === "Escape") setSelectedImage(null);
+    };
+
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [selectedImage]);
 
   if (!project) {
     return (
@@ -29,6 +46,9 @@ export const ProjectDetails = () => {
   }
 
   const images = filterImages(project.contributions);
+  const primaryLabel = isGitHubUrl(project.web)
+    ? "Ver repositorio en GitHub"
+    : "Ver demo";
 
   return (
     <PageShell>
@@ -38,6 +58,8 @@ export const ProjectDetails = () => {
             src={project.logo}
             alt={`Logo de ${project.name}`}
             className="h-16 w-16 shrink-0 rounded-xl border border-accent-soft/20 bg-surface-muted object-contain p-1"
+            loading="lazy"
+            decoding="async"
           />
           <div>
             <div className="mb-2 flex flex-wrap gap-2">
@@ -83,7 +105,7 @@ export const ProjectDetails = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Ver demo o repositorio
+            {primaryLabel}
           </a>
           {project.github && project.github !== project.web && (
             <a
@@ -104,6 +126,7 @@ export const ProjectDetails = () => {
                 className="mx-auto max-h-[45vh] w-auto max-w-[min(100%,280px)] rounded-xl shadow-card object-contain sm:max-h-[50vh] sm:max-w-xs"
                 controls
                 playsInline
+                preload="metadata"
                 src={project.video}
               >
                 Tu navegador no soporta la reproducción de video.
@@ -114,6 +137,7 @@ export const ProjectDetails = () => {
                 src={project.video}
                 title={`Video de ${project.name}`}
                 allowFullScreen
+                loading="lazy"
               />
             )}
           </div>
@@ -121,9 +145,9 @@ export const ProjectDetails = () => {
 
         {images.length > 0 && (
           <article id="contributions" className="mt-10">
-            <h3 className="text-lg font-semibold text-primary-dark">
+            <h2 className="text-lg font-semibold text-primary-dark">
               Capturas del proyecto
-            </h3>
+            </h2>
             <div className="mt-6 flex flex-col items-center gap-6">
               {images.map((image, index) => (
                 <button
@@ -131,11 +155,14 @@ export const ProjectDetails = () => {
                   type="button"
                   onClick={() => setSelectedImage(image)}
                   className="w-full max-w-3xl overflow-hidden rounded-xl border border-accent-soft/30 bg-white p-4 shadow-card transition hover:shadow-card-hover"
+                  aria-label={`Ampliar captura ${index + 1} de ${project.name}`}
                 >
                   <img
                     className="mx-auto max-h-80 w-full cursor-pointer object-contain sm:max-h-96"
                     src={image}
                     alt={`Captura ${index + 1} de ${project.name}`}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </button>
               ))}
@@ -147,19 +174,25 @@ export const ProjectDetails = () => {
           <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4"
             onClick={() => setSelectedImage(null)}
-            role="presentation"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Vista ampliada de captura"
           >
-            <div className="relative max-h-full max-w-full">
+            <div
+              className="relative max-h-full max-w-full"
+              onClick={(event) => event.stopPropagation()}
+            >
               <button
                 type="button"
                 className="absolute right-2 top-2 rounded-full bg-black/50 px-3 py-1 text-white"
                 onClick={() => setSelectedImage(null)}
+                aria-label="Cerrar vista ampliada"
               >
                 Cerrar
               </button>
               <img
                 src={selectedImage}
-                alt="Captura ampliada"
+                alt="Captura ampliada del proyecto"
                 className="max-h-[90vh] max-w-full rounded-lg"
               />
             </div>

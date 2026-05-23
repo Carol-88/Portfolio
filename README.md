@@ -1,8 +1,42 @@
-# React + Vite
+# Portfolio — Carolina Romero
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personal en React + Vite desplegado en [caroldev.com](https://caroldev.com).
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js 18+
+- npm
+
+## Instalación
+
+```bash
+npm install
+cp .env.example .env
+```
+
+Completa `.env` con tus claves de EmailJS y hCaptcha.
+
+## Desarrollo
+
+```bash
+npm run dev
+```
+
+## Build
+
+```bash
+npm run lint
+npm run build
+npm run preview
+```
+
+## Estructura
+
+- `src/config/site.js` — identidad, navegación y skills
+- `src/assets/projects.json` — proyectos del portfolio
+- `src/assets/experiences.json` — experiencia profesional
+- `public/` — assets estáticos y CV
+
+## Deploy
+
+Configurado para Vercel con SPA rewrites en `vercel.json`. Añade las variables de entorno en el panel de Vercel.

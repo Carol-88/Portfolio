@@ -1,12 +1,22 @@
 import { PageShell } from "../../components/commons/PageShell";
 import { SectionTitle } from "../../components/commons/SectionTitle";
 import { site } from "../../config/site";
+import { usePageSEO } from "../../hooks/usePageSEO";
 
 export const AboutMe = () => {
+  usePageSEO({
+    title: "Sobre mí — Carolina Romero",
+    description:
+      "Conoce la trayectoria de Carolina Romero: frontend con base full stack, productos propios y background en nutrición y atención al usuario.",
+  });
+
   return (
     <PageShell>
       <article aria-label="Sobre mí" className="section-card">
-        <SectionTitle title="Sobre mí" />
+        <SectionTitle
+          title="Sobre mí"
+          headingLevel="h1"
+        />
 
         <div className="space-y-5 text-base leading-relaxed text-primary-dark/85">
           <p>
@@ -48,11 +58,7 @@ export const AboutMe = () => {
         </div>
 
         <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href={site.cvPath}
-            download
-            className="btn-secondary"
-          >
+          <a href={site.cvPath} download className="btn-secondary">
             Descargar CV
           </a>
           <a

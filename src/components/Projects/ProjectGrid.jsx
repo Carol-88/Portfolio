@@ -33,7 +33,7 @@ export const ProjectGrid = ({
       : "Selección de proyectos propios y formativos que representan mi perfil técnico.";
 
   return (
-    <section id={secondaryOnly ? "projects" : featuredOnly ? undefined : "projects"}>
+    <section>
       {showTitle && (
         <SectionTitle
           id={featuredOnly ? undefined : "projects-heading"}

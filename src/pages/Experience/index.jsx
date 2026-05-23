@@ -11,6 +11,7 @@ import {
   personalSkills,
   languages,
 } from "../../config/site";
+import { usePageSEO } from "../../hooks/usePageSEO";
 
 const SkillsList = ({ skills }) => (
   <ul className="flex flex-wrap gap-2 mb-8">
@@ -35,6 +36,12 @@ const ExperienceItem = ({ jobTitle, period, tasks }) => (
 );
 
 export const Experience = () => {
+  usePageSEO({
+    title: "Experiencia — Carolina Romero",
+    description:
+      "Experiencia profesional, habilidades técnicas y formación de Carolina Romero, desarrolladora frontend con base full stack.",
+  });
+
   return (
     <PageShell>
       <section className="section-card mb-8" aria-labelledby="experience-section">
@@ -42,6 +49,7 @@ export const Experience = () => {
           id="experience-section"
           title="Experiencia profesional"
           subtitle="Trayectoria alineada con mi CV 2026, desde productos propios hasta roles frontend en empresas."
+          headingLevel="h1"
         />
         <div className="space-y-4">
           {jobsData.jobs.map((experience) => (

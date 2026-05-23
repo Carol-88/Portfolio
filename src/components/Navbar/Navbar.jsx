@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { site, navItems } from "../../config/site";
 import { RRSS } from "../commons/RRSS";
 
@@ -8,6 +8,24 @@ export const Navbar = () => {
   const location = useLocation();
 
   const handleNavClick = () => setIsOpen(false);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const handleEscape = (event) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
+
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [isOpen]);
 
   const handleProjectsClick = (event) => {
     handleNavClick();
@@ -80,6 +98,7 @@ export const Navbar = () => {
           className="inline-flex items-center justify-center rounded-lg p-2 text-primary-dark hover:bg-surface md:hidden"
           aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={isOpen}
+          aria-controls="primary-navigation"
         >
           <svg
             className="h-6 w-6"
@@ -107,6 +126,7 @@ export const Navbar = () => {
         </button>
 
         <div
+          id="primary-navigation"
           className={`${
             isOpen ? "flex" : "hidden"
           } absolute left-0 right-0 top-full flex-col gap-1 border-b border-accent-soft/20 bg-surface-muted px-4 py-4 shadow-card md:static md:flex md:flex-row md:items-center md:gap-6 md:border-0 md:bg-transparent md:p-0 md:shadow-none`}

@@ -8,15 +8,24 @@ export const Layout = ({ children }) => {
   const location = useLocation();
 
   useEffect(() => {
-    if (!location.hash) return;
-    const target = document.getElementById(location.hash.replace("#", ""));
-    target?.scrollIntoView({ behavior: "smooth" });
-  }, [location]);
+    if (location.hash) {
+      const target = document.getElementById(location.hash.replace("#", ""));
+      target?.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+
+    window.scrollTo(0, 0);
+  }, [location.pathname, location.hash]);
 
   return (
     <div className="flex min-h-screen flex-col">
+      <a href="#main-content" className="skip-link">
+        Saltar al contenido principal
+      </a>
       <Navbar />
-      <main className="flex-1 pb-24">{children}</main>
+      <main id="main-content" className="flex-1 pb-24" tabIndex={-1}>
+        {children}
+      </main>
       <SiteFooter />
     </div>
   );

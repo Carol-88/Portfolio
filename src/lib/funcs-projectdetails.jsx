@@ -12,10 +12,3 @@ export const renderServices = (services) =>
 
 export const filterImages = (contributions) =>
   Object.values(contributions).filter(Boolean);
-
-export const createGridImages = (images, columns) => {
-  const rows = Math.ceil(images.length / columns);
-  return Array.from({ length: columns }, (_, colIndex) =>
-    images.slice(colIndex * rows, colIndex * rows + rows)
-  );
-};

@@ -1,7 +1,6 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { sendEmail } from "../../lib/func-contact";
 
 export const Contact = () => {
@@ -16,33 +15,40 @@ export const Contact = () => {
   const [captchaResponse, setCaptchaResponse] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const renderCaptcha = useCallback(() => {
-    if (window.hcaptcha) {
-      window.hcaptcha.render("hcaptcha", {
-        sitekey: hCAPTCHA,
-        callback: (response) => setCaptchaResponse(response),
-      });
-    }
-  }, [hCAPTCHA]);
-
   useEffect(() => {
-    if (!window.hcaptcha) {
-      window.onloadCallback = renderCaptcha;
-      const script = document.createElement("script");
-      script.src =
-        "https://hcaptcha.com/1/api.js?onload=onloadCallback&render=explicit";
-      script.async = true;
-      script.defer = true;
-      document.body.appendChild(script);
+    let widgetId;
+    let intervalId;
 
-      return () => {
-        delete window.onloadCallback;
-        document.body.removeChild(script);
-      };
-    } else {
+    const renderCaptcha = () => {
+      if (!hCAPTCHA || !window.hcaptcha || widgetId !== undefined) return;
+      try {
+        widgetId = window.hcaptcha.render("hcaptcha", {
+          sitekey: hCAPTCHA,
+          callback: (response) => setCaptchaResponse(response),
+        });
+      } catch (error) {
+        console.error("No se pudo cargar hCaptcha:", error);
+      }
+    };
+
+    if (window.hcaptcha) {
       renderCaptcha();
+    } else {
+      intervalId = window.setInterval(() => {
+        if (window.hcaptcha) {
+          renderCaptcha();
+          window.clearInterval(intervalId);
+        }
+      }, 100);
     }
-  }, [renderCaptcha]);
+
+    return () => {
+      if (intervalId) window.clearInterval(intervalId);
+      if (widgetId !== undefined && window.hcaptcha) {
+        window.hcaptcha.remove(widgetId);
+      }
+    };
+  }, [hCAPTCHA]);
 
   const submitForm = async (data) => {
     if (isSubmitting) return;
@@ -73,7 +79,7 @@ export const Contact = () => {
       reset();
       localStorage.setItem("lastSendTime", Date.now().toString());
     } catch {
-      toast.error("Error al enviar el email.");
+      toast.error("Error al enviar el email. Inténtalo de nuevo más tarde.");
     } finally {
       setIsSubmitting(false);
     }
@@ -82,9 +88,12 @@ export const Contact = () => {
   const inputClassName =
     "w-full rounded-xl border border-accent-soft/30 bg-white py-3 px-4 text-base text-primary-dark outline-none focus:border-primary focus:ring-2 focus:ring-primary/20";
 
+  const fieldError = (name) =>
+    errors[name] ? `${name}-error` : undefined;
+
   return (
     <div id="contact" className="mx-auto w-full max-w-xl">
-      <form onSubmit={handleSubmit(submitForm)} aria-label="Formulario de contacto">
+      <form onSubmit={handleSubmit(submitForm)} aria-label="Formulario de contacto" noValidate>
         <div className="mb-5">
           <label htmlFor="from_name" className="mb-2 block text-sm font-medium text-primary-dark">
             Nombre completo
@@ -95,9 +104,13 @@ export const Contact = () => {
             id="from_name"
             placeholder="Tu nombre"
             className={inputClassName}
+            aria-invalid={Boolean(errors.from_name)}
+            aria-describedby={fieldError("from_name")}
           />
           {errors.from_name && (
-            <span className="mt-1 block text-sm text-red-600">{errors.from_name.message}</span>
+            <span id="from_name-error" role="alert" className="mt-1 block text-sm text-red-600">
+              {errors.from_name.message}
+            </span>
           )}
         </div>
 
@@ -117,9 +130,13 @@ export const Contact = () => {
             id="email"
             placeholder="tu-email@domain.com"
             className={inputClassName}
+            aria-invalid={Boolean(errors.email)}
+            aria-describedby={fieldError("email")}
           />
           {errors.email && (
-            <span className="mt-1 block text-sm text-red-600">{errors.email.message}</span>
+            <span id="email-error" role="alert" className="mt-1 block text-sm text-red-600">
+              {errors.email.message}
+            </span>
           )}
         </div>
 
@@ -133,9 +150,13 @@ export const Contact = () => {
             id="subject"
             placeholder="Asunto del mensaje"
             className={inputClassName}
+            aria-invalid={Boolean(errors.subject)}
+            aria-describedby={fieldError("subject")}
           />
           {errors.subject && (
-            <span className="mt-1 block text-sm text-red-600">{errors.subject.message}</span>
+            <span id="subject-error" role="alert" className="mt-1 block text-sm text-red-600">
+              {errors.subject.message}
+            </span>
           )}
         </div>
 
@@ -149,13 +170,17 @@ export const Contact = () => {
             id="message"
             placeholder="Escribe tu mensaje"
             className={`${inputClassName} resize-none`}
+            aria-invalid={Boolean(errors.message)}
+            aria-describedby={fieldError("message")}
           />
           {errors.message && (
-            <span className="mt-1 block text-sm text-red-600">{errors.message.message}</span>
+            <span id="message-error" role="alert" className="mt-1 block text-sm text-red-600">
+              {errors.message.message}
+            </span>
           )}
         </div>
 
-        <div id="hcaptcha" className="mb-5 h-captcha" />
+        <div id="hcaptcha" className="mb-5 h-captcha" aria-label="Verificación de seguridad" />
 
         <button
           type="submit"

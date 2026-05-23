@@ -32,6 +32,8 @@ export const ProjectCard = ({
             src={banner}
             alt={name}
             className="h-full w-full rounded-md object-contain object-center"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </Link>

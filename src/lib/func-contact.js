@@ -1,16 +1,9 @@
-import emailjs from "emailjs-com";
-import { toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
 
 export const sendEmail = async (data) => {
-  const userID = import.meta.env.VITE_ID_USER_EMAILJS;
+  const publicKey = import.meta.env.VITE_ID_USER_EMAILJS;
   const templateID = import.meta.env.VITE_ID_TEMPLATE;
   const serviceID = import.meta.env.VITE_ID_SERVICE;
 
-  try {
-    await emailjs.send(serviceID, templateID, data, userID);
-    toast.success("Correo enviado exitosamente!");
-  } catch (error) {
-    console.log(error.text);
-    toast.error("Hubo un error al enviar el correo.");
-  }
+  await emailjs.send(serviceID, templateID, data, { publicKey });
 };

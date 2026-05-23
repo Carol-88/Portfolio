@@ -18,7 +18,6 @@
       "role": "Desarrollo frontend y evolución full stack en monorepo (rama backend: Java + Spring Boot)",
       "web": "https://menuplannerdiet.netlify.app/",
       "github": "https://github.com/Carol-88/menu-app-front",
-      "projectLink": "/projects/1",
       "description": {
         "goal": "Producto propio que une mi formación en dietética y nutrición con desarrollo full stack. MenuPlanner ayuda a planificar menús semanales orientados a recomposición corporal, con foco en usabilidad y accesibilidad web.",
         "services": {
@@ -50,19 +49,12 @@
       "logo": "/img/logopetcare.svg",
       "video": "/img/contributions/petcare/minidemopetcare.mp4",
       "tech": ["React Native", "TypeScript", "TailwindCSS", "API REST", "Figma"],
-      "contributions": {
-        "landing": "",
-        "contribution1": "",
-        "contribution2": "",
-        "contribution3": "",
-        "contribution4": ""
-      },
+      "contributions": {},
       "name": "PetCareManager",
       "subtitle": "App móvil para la gestión integral de mascotas",
       "role": "Liderazgo del desarrollo frontend mobile",
       "web": "https://github.com/PetCare-Manager",
       "github": "https://github.com/PetCare-Manager",
-      "projectLink": "/projects/2",
       "description": {
         "goal": "Lideré el desarrollo frontend en React Native: interfaces accesibles desde Figma, flujos de autenticación vía API, coordinación del equipo y documentación técnica del repositorio.",
         "services": {
@@ -102,7 +94,6 @@
       "role": "Desarrollo full stack mobile",
       "web": "https://github.com/Carol-88/LibraryApp",
       "github": "https://github.com/Carol-88/LibraryApp",
-      "projectLink": "/projects/3",
       "description": {
         "goal": "Aplicación móvil completa en Flutter conectada con la API de OpenLibrary, con autenticación Firebase y base de datos NoSQL. Proyecto integral desde la ideación hasta el despliegue.",
         "services": {
@@ -138,7 +129,6 @@
       "role": "Desarrollo backend / full stack (SEPE)",
       "web": "https://github.com/Carol-88/AzailaCommunity",
       "github": "https://github.com/Carol-88/AzailaCommunity",
-      "projectLink": "/projects/4",
       "description": {
         "goal": "Desarrollo de backend en Java con Spring Boot para una API REST comunitaria, aplicando POO, arquitectura MVC y persistencia de datos.",
         "services": {

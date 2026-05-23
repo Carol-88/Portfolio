@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export const Button = ({
   children,
   href,
+  to,
   variant = "primary",
   external = false,
   className = "",
@@ -10,12 +12,21 @@ export const Button = ({
 }) => {
   const styles =
     variant === "secondary" ? "btn-secondary" : "btn-primary";
+  const classes = `${styles} ${className}`.trim();
+
+  if (to) {
+    return (
+      <Link to={to} className={classes} onClick={onClick}>
+        {children}
+      </Link>
+    );
+  }
 
   if (href) {
     return (
       <a
         href={href}
-        className={`${styles} ${className}`.trim()}
+        className={classes}
         target={external ? "_blank" : undefined}
         rel={external ? "noopener noreferrer" : undefined}
         onClick={onClick}
@@ -26,7 +37,7 @@ export const Button = ({
   }
 
   return (
-    <button type="button" className={`${styles} ${className}`.trim()} onClick={onClick}>
+    <button type="button" className={classes} onClick={onClick}>
       {children}
     </button>
   );
@@ -35,6 +46,7 @@ export const Button = ({
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   href: PropTypes.string,
+  to: PropTypes.string,
   variant: PropTypes.oneOf(["primary", "secondary"]),
   external: PropTypes.bool,
   className: PropTypes.string,

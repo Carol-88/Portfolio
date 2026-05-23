@@ -4,12 +4,19 @@ import { Techs } from "../../components/commons/Techs";
 import { PageShell } from "../../components/commons/PageShell";
 import { SectionTitle } from "../../components/commons/SectionTitle";
 import { Button } from "../../components/commons/Button";
+import { usePageSEO } from "../../hooks/usePageSEO";
+import { site } from "../../config/site";
 
 export const Home = () => {
+  usePageSEO({
+    title: site.seo.title,
+    description: site.seo.description,
+  });
+
   return (
     <PageShell>
       <Hero />
-      <div className="mb-10">
+      <div id="projects" className="mb-10 scroll-mt-24">
         <ProjectGrid featuredOnly showTitle />
       </div>
       <div className="section-card mb-10">
@@ -21,7 +28,7 @@ export const Home = () => {
           title="¿Hablamos?"
           subtitle="Estoy abierta a oportunidades en frontend, soporte técnico y roles puente entre negocio y tecnología."
         />
-        <Button href="/contact">Ir a contacto</Button>
+        <Button to="/contact">Ir a contacto</Button>
       </section>
     </PageShell>
   );
