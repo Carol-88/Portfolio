@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Carolina Romero Portfolio">
+  <rect width="1200" height="630" fill="#fef7ed"/>
+  <rect width="1200" height="8" fill="#b74e22"/>
+  <text x="80" y="200" fill="#4a0f07" font-family="Lexend, sans-serif" font-size="64" font-weight="700">Carolina Romero</text>
+  <text x="80" y="280" fill="#b74e22" font-family="Lexend, sans-serif" font-size="32">Desarrolladora Frontend con base Full Stack</text>
+  <text x="80" y="360" fill="#711e09" font-family="Lexend, sans-serif" font-size="24">BioEvolva · PetCareManager · caroldev.com</text>
+</svg>

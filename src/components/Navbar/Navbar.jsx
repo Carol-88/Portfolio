@@ -1,76 +1,122 @@
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import { site, navItems } from "../../config/site";
 import { RRSS } from "../commons/RRSS";
-import { handleLinkClick, menuItems } from "../../lib/funcs-navbar";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsOpen((prevIsOpen) => !prevIsOpen);
+  const location = useLocation();
+
+  const handleNavClick = () => setIsOpen(false);
+
+  const handleProjectsClick = (event) => {
+    handleNavClick();
+    if (location.pathname !== "/") {
+      return;
+    }
+    event.preventDefault();
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const isActive = (path) => {
+    if (path === "/#projects") {
+      return location.pathname === "/";
+    }
+    if (path === "/") return location.pathname === "/";
+    return location.pathname === path;
+  };
+
+  const renderNavLink = (item) => {
+    if (item.path === "/#projects") {
+      return (
+        <Link
+          key={item.path}
+          to="/#projects"
+          onClick={handleProjectsClick}
+          className={`rounded-lg px-3 py-2 text-sm font-medium transition ${
+            isActive(item.path)
+              ? "bg-primary/10 text-primary"
+              : "text-primary-dark hover:bg-surface hover:text-primary"
+          }`}
+        >
+          {item.label}
+        </Link>
+      );
+    }
+
+    return (
+      <Link
+        key={item.path}
+        to={item.path}
+        onClick={handleNavClick}
+        className={`rounded-lg px-3 py-2 text-sm font-medium transition ${
+          isActive(item.path)
+            ? "bg-primary/10 text-primary"
+            : "text-primary-dark hover:bg-surface hover:text-primary"
+        }`}
+      >
+        {item.label}
+      </Link>
+    );
   };
 
   return (
-    <nav className="relative z-30">
-      <button
-        onClick={toggleMenu}
-        className="fixed right-0 top-0 p-2 focus:outline-none z-50 block"
-        aria-label="Toggle navigation menu"
-        aria-expanded={isOpen.toString()}
+    <header className="sticky top-0 z-40 border-b border-accent-soft/20 bg-surface-muted/95 backdrop-blur">
+      <nav
+        className="page-shell flex items-center justify-between py-4"
+        aria-label="Navegación principal"
       >
-        <svg
-          className="h-6 w-6 m-3 text-black hover:font-bold fill-current"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+        <Link
+          to="/"
+          className="text-lg font-bold text-primary-dark hover:text-primary"
+          onClick={handleNavClick}
         >
-          {isOpen ? (
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          ) : (
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          )}
-        </svg>
-      </button>
-      <div
-        className={`${
-          isOpen ? "block" : "hidden"
-        } absolute right-0 top-0 mt-2 w-48 rounded-md shadow-lgbg-gradient-to-r from-orange-200 via-rose-200 to-orange-200`}
-        aria-hidden={!isOpen}
-      >
+          {site.shortName}
+        </Link>
+
+        <button
+          type="button"
+          onClick={() => setIsOpen((open) => !open)}
+          className="inline-flex items-center justify-center rounded-lg p-2 text-primary-dark hover:bg-surface md:hidden"
+          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={isOpen}
+        >
+          <svg
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            {isOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+
         <div
-          className="md:w-3/5 w-full h-full text-center content-around pt-5 fixed bg-gradient-to-r from-orange-200 via-rose-200 to-orange-200 p-4 right-0 top-0 shadow-md"
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="options-menu"
+          className={`${
+            isOpen ? "flex" : "hidden"
+          } absolute left-0 right-0 top-full flex-col gap-1 border-b border-accent-soft/20 bg-surface-muted px-4 py-4 shadow-card md:static md:flex md:flex-row md:items-center md:gap-6 md:border-0 md:bg-transparent md:p-0 md:shadow-none`}
         >
-          {menuItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.external ? "#" : item.path}
-              className="block px-4 py-5 text-lg hover:font-bold"
-              role="menuitem"
-              onClick={(e) => {
-                if (item.external) {
-                  e.preventDefault();
-                  handleLinkClick(item.path);
-                }
-              }}
-            >
-              {item.label}
-            </a>
-          ))}
-          <RRSS />
+          {navItems.map((item) => renderNavLink(item))}
+          <div className="pt-2 md:pt-0">
+            <RRSS />
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };

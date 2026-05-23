@@ -2,121 +2,53 @@
   "projects": [
     {
       "id": 1,
-      "banner": "/img/bannerauj.jpg",
-      "logo": "/img/logoauj.png",
+      "featured": true,
+      "badge": "Producto propio",
+      "status": "En desarrollo activo",
+      "banner": "/img/projects/bioevolva-banner.svg",
+      "logo": "/img/projects/bioevolva-logo.svg",
       "video": "",
+      "tech": ["React", "TypeScript", "Java", "Spring Boot", "Netlify", "API REST"],
       "contributions": {
-        "landing": "",
-        "contribution1": "",
-        "contribution2": "",
-        "contribution3": ""
+        "landing": "/img/projects/bioevolva-banner.svg"
       },
-      "name": "Adopta un Junior",
-      "subtitle": "Transformación digital con Next.js y TypeScript. Colaboración en el liderazgo en desarrollo frontend.",
-      "role": "Desarrollo frontend",
-      "web": "https://adoptaunjunior.es",
-      "projectLink": "/project/:id",
+      "name": "BioEvolva — MenuPlanner",
+      "subtitle": "Gestor de menú semanal para recomposición corporal",
+      "role": "Desarrollo frontend y evolución full stack en monorepo (rama backend: Java + Spring Boot)",
+      "web": "https://menuplannerdiet.netlify.app/",
+      "github": "https://github.com/Carol-88/menu-app-front",
+      "projectLink": "/projects/1",
       "description": {
-        "goal": "Colaboración en todo el proceso de desarrollo frontend de la plataforma de la comunidad. Próximo rol como Scrum de un equipo multidisciplinar que seguirá desarrollando la web.",
+        "goal": "Producto propio que une mi formación en dietética y nutrición con desarrollo full stack. MenuPlanner ayuda a planificar menús semanales orientados a recomposición corporal, con foco en usabilidad y accesibilidad web.",
         "services": {
           "input1": {
-            "title": "Equipo de la comunidad, desarrollo frontend.",
-            "description": "Colaboro en este proyecto desarollando la interfaz de usuario junto a mis compañeros de equipo, he participado en todo el proceso de grooming de la plataforma de la comunidad, he apoyado y aprendido de todo el equipo y sigo desarrollandome junto a ellos."
+            "title": "Planificación semanal:",
+            "description": "Organización de menús orientados a recomposición corporal con una experiencia clara y accesible."
+          },
+          "input2": {
+            "title": "Monorepo full stack:",
+            "description": "Frontend desplegado en Netlify y backend en desarrollo activo con Java y Spring Boot en la rama backend."
+          },
+          "input3": {
+            "title": "Dominio nutricional:",
+            "description": "Aplicación del conocimiento en dietética y nutrición a un producto digital con impacto real."
+          },
+          "input4": {
+            "title": "Accesibilidad:",
+            "description": "Estructura semántica y navegación accesible, incluyendo skip link al contenido principal."
           }
         }
       }
     },
     {
       "id": 2,
-      "banner": "/img/contributions/todolist/dashboard.png",
-      "logo": "/img/contributions/todolist/logotodo.png",
-      "video": "",
-      "contributions": {
-        "landing": "/img/contributions/todolist/dashboard.png",
-        "contribution1": "/img/contributions/todolist/register.png",
-        "contribution2": "/img/contributions/todolist/login.png",
-        "contribution3": "/img/contributions/todolist/profile.png",
-        "contribution4": "/img/contributions/todolist/usercard.png"
-      },
-      "name": "To Do List",
-      "subtitle": "Aplicación web para gestionar tus tareas, utilizando Vue.js3, pinia y Supabase.",
-      "role": "Desarrollo frontend",
-      "web": "https://github.com/Carol-88/todo-list-vue",
-      "projectLink": "/project/:id",
-      "description": {
-        "goal": "CRUD autenticación y lista de tareas para gestionar mejor tu tiempo",
-        "services": {
-          "input1": {
-            "title": "Registro de usuario",
-            "description": "Permite a los usuarios registrarse en la plataforma para acceder a funcionalidades adicionales."
-          },
-          "input2": {
-            "title": "Login",
-            "description": "Permite a los usuarios iniciar sesión en la plataforma para acceder a su cuenta."
-          },
-          "input3": {
-            "title": "Perfil",
-            "description": "Permite a los usuarios ver y editar su perfil de usuario."
-          },
-          "input4": {
-            "title": "Lista de tareas",
-            "description": "Permite a los usuarios gestionar y organizar sus tareas de manera efectiva."
-          }
-        }
-      }
-    },
-    {
-      "id": 3,
-      "banner": "/img/Banner-Dark-CloudSolute.png",
-      "logo": "/img/logocs.png",
-      "video": "",
-      "contributions": {
-        "landing": ""
-      },
-      "name": "CloudSolute",
-      "subtitle": "Transformación digital con Next.js y TypeScript. Colaboración en el liderazgo en desarrollo frontend.",
-      "role": "Desarrollo frontend",
-      "web": "https://cloudsolute.net/",
-      "projectLink": "/project/:id",
-      "description": {
-        "goal": "Participación activa en todas las etapas del proceso de desarrollo frontend, desde la planificación del diseño hasta la gestión del backlog e issues, incluyendo sesiones de pair programming. Este proyecto me permitió aplicar y mejorar mis habilidades técnicas, a la vez que reforcé mi capacidad para trabajar en equipo y adaptarme a diferentes desafíos.",
-        "services": {
-          "input1": {
-            "title": "Implementación de Cookies Básicas",
-            "description": "Diseño e implemento un sistema de gestión de cookies que incluye un banner informativo con opciones para aceptar o declinar las cookies necesarias. Este sistema también proporciona un enlace directo al texto legal correspondiente, asegurando la transparencia y el cumplimiento normativo."
-          },
-          "input2": {
-            "title": "Desarrollo del Modo Oscuro",
-            "description": "Implemento una función de modo oscuro que mejora la experiencia del usuario ofreciendo una alternativa visualmente cómoda para entornos de baja luz. Esta característica se integra sin problemas con el diseño general de la interfaz, demostrando mi compromiso con la accesibilidad y la usabilidad."
-          },
-          "input3": {
-            "title": "Creación del Componente Player",
-            "description": "Desarrollo un componente de reproductor multimedia que no solo muestra un video principal sino que también ofrece una lista de reproducción. Diseño la lógica para realizar llamadas API básicas para obtener los videos desde un servidor remoto, optimizando así la eficiencia y la escalabilidad del proyecto."
-          },
-          "input4": {
-            "title": "Integración de APIs para Información de Videos",
-            "description": "Realicé integraciones con una API externa para recuperar información detallada sobre cada video, lo que permite personalizar la presentación de datos según las necesidades específicas del proyecto."
-          },
-          "input5": {
-                     "title": "Componente de Error Interactivo",
-          "description": "Diseñé un componente de error en forma de modal que no solo informa al usuario sobre posibles fallos sino que también ofrece soluciones proactivas, como reintentar la acción o reportar un bug mediante correo electrónico.Esta funcionalidad mejora significativamente la experiencia del usuario al enfrentarse a situaciones imprevistas.",
-          "input6": {
-            "title": "Incorporación de Google Analytics",
-            "description": "Integré Google Analytics en el proyecto para rastrear y analizar el comportamiento del usuario, lo que facilita `la toma de decisiones basadas en datos y la optimización continua del producto`."
-          },
-          "input7": {
-            "title": "Diseño y Funcionalidad de Navbar y Menú Hamburguesa",
-            "description": "Colaboré en el diseño y desarrollo de la barra de navegación y el menú hamburguesa, elementos cruciales para `la navegación intuitiva y la experiencia del usuario en dispositivos móviles y de escritorio`."
-          }
-        }
-        }
-      }
-    },
-    {
-      "id": 4,
+      "featured": true,
+      "badge": "Producto propio",
+      "status": "",
       "banner": "/img/logopetcare.svg",
       "logo": "/img/logopetcare.svg",
       "video": "/img/contributions/petcare/minidemopetcare.mp4",
+      "tech": ["React Native", "TypeScript", "TailwindCSS", "API REST", "Figma"],
       "contributions": {
         "landing": "",
         "contribution1": "",
@@ -125,24 +57,101 @@
         "contribution4": ""
       },
       "name": "PetCareManager",
-      "subtitle": "Aplicación móvil con React Native.",
-     "role": "Implementación de la interfaz con React Native, TypeScript y TailwindCSS. Definición de funcionalidades clave y planificación del producto mínimo viable. Conexión a la API mediante Axios para el registro, login y gestión de datos.",
+      "subtitle": "App móvil para la gestión integral de mascotas",
+      "role": "Liderazgo del desarrollo frontend mobile",
       "web": "https://github.com/PetCare-Manager",
-      "projectLink": "/project/:id",
+      "github": "https://github.com/PetCare-Manager",
+      "projectLink": "/projects/2",
       "description": {
-        "goal": "PetCareManager es una aplicación móvil que ayuda a los dueños de mascotas a organizar y gestionar información importante sobre sus animales, como eventos, citas, documentos y más.",
+        "goal": "Lideré el desarrollo frontend en React Native: interfaces accesibles desde Figma, flujos de autenticación vía API, coordinación del equipo y documentación técnica del repositorio.",
         "services": {
           "input1": {
-            "title": "",
-            "description": "Registro y login de usuarios: Implementación de la autenticación mediante el frontend, enviando datos al backend con Axios."
+            "title": "Autenticación:",
+            "description": "Registro y login de usuarios mediante el frontend, integrando la API con Axios."
           },
           "input2": {
-            "title": "",
-            "description": "Permite crear recordatorios como \"Comprar comida\" o \"Cita con el veterinario\" para una o varias mascotas (en desarrollo)."
+            "title": "Gestión de mascotas:",
+            "description": "Registro de mascotas, información relevante e imágenes de documentos o fotos siempre accesibles."
           },
           "input3": {
-            "title": "",
-            "description": "Los usuarios pueden registrar a sus mascotas, agregar información relevante y subir imágenes de documentos o fotos para tenerlos siempre a mano."
+            "title": "Recordatorios:",
+            "description": "Creación de recordatorios como citas veterinarias o compra de comida para una o varias mascotas."
+          },
+          "input4": {
+            "title": "Coordinación de equipo:",
+            "description": "Gestión de repositorio, documentación técnica y flujos de trabajo colaborativo."
+          }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "featured": false,
+      "badge": "Proyecto propio",
+      "status": "",
+      "banner": "/img/projects/libraryapp-banner.svg",
+      "logo": "/img/projects/libraryapp-banner.svg",
+      "video": "",
+      "tech": ["Flutter", "Firebase", "OpenLibrary API", "NoSQL"],
+      "contributions": {
+        "landing": "/img/projects/libraryapp-banner.svg"
+      },
+      "name": "LibraryApp",
+      "subtitle": "App móvil para buscar libros y gestionar listas personales",
+      "role": "Desarrollo full stack mobile",
+      "web": "https://github.com/Carol-88/LibraryApp",
+      "github": "https://github.com/Carol-88/LibraryApp",
+      "projectLink": "/projects/3",
+      "description": {
+        "goal": "Aplicación móvil completa en Flutter conectada con la API de OpenLibrary, con autenticación Firebase y base de datos NoSQL. Proyecto integral desde la ideación hasta el despliegue.",
+        "services": {
+          "input1": {
+            "title": "Búsqueda de libros:",
+            "description": "Integración con OpenLibrary para explorar y guardar títulos en listas personalizadas."
+          },
+          "input2": {
+            "title": "Autenticación:",
+            "description": "Registro e inicio de sesión con Firebase."
+          },
+          "input3": {
+            "title": "Gestión de listas:",
+            "description": "Organización de libros favoritos y listas de lectura del usuario."
+          }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "featured": false,
+      "badge": "Proyecto formativo",
+      "status": "",
+      "banner": "/img/projects/azaila-banner.svg",
+      "logo": "/img/projects/azaila-banner.svg",
+      "video": "",
+      "tech": ["Java", "Spring Boot", "MVC", "API REST", "Git"],
+      "contributions": {
+        "landing": "/img/projects/azaila-banner.svg"
+      },
+      "name": "Azaila Community",
+      "subtitle": "API REST para conectar a la comunidad del pueblo de Azaila",
+      "role": "Desarrollo backend / full stack (SEPE)",
+      "web": "https://github.com/Carol-88/AzailaCommunity",
+      "github": "https://github.com/Carol-88/AzailaCommunity",
+      "projectLink": "/projects/4",
+      "description": {
+        "goal": "Desarrollo de backend en Java con Spring Boot para una API REST comunitaria, aplicando POO, arquitectura MVC y persistencia de datos.",
+        "services": {
+          "input1": {
+            "title": "Arquitectura MVC:",
+            "description": "Estructuración de controladores, servicios y capa de persistencia."
+          },
+          "input2": {
+            "title": "Lógica de negocio:",
+            "description": "Implementación de reglas de dominio para la comunidad local."
+          },
+          "input3": {
+            "title": "Control de versiones:",
+            "description": "Seguimiento del proyecto con Git y GitHub."
           }
         }
       }

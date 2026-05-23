@@ -1,30 +1,28 @@
+import { site } from "../../config/site";
+
 export const Hero = () => {
   return (
-    <section id="hero" className=" bg-red-50 p-8 rounded-lg">
-      <h1 className="text-xl md:text-3xl mb-8 text-red-800 font-bold hover:animate-bounce">
-        ¡Amante del código y creadora de experiencias web!
+    <section id="hero" className="section-card mb-8">
+      <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">
+        {site.role}
+      </p>
+      <h1 className="text-2xl sm:text-4xl font-bold text-primary-dark mb-4 leading-tight">
+        Desarrollo productos web y mobile con foco en usuario y accesibilidad
       </h1>
-      <article>
-        <p className="text-start mb-4 ">
-          Soy una apasionada del ecosistema IT, me encanta crear aplicaciones
-          web que destaquen por su diseño, funcionalidad y accesibilidad.
-        </p>
-        <p className="text-start mb-4 ">
-          Soy consciente de que tengo un camino infinito por recorrer para
-          seguir aprendiendo, pero me motiva la emoción del aprendizaje
-          continuo.
-        </p>
-        <p className="text-start mb-4">
-          Busco constantemente nuevas oportunidades para aplicar mis habilidades
-          y expandir mis horizontes. ¡Mi objetivo es aportar mi granito de arena
-          al éxito de cada proyecto!.
-        </p>
-        <p className="text-start">
-          Me encanta trabajar en equipo para desarrollar experiencias web que no
-          solo sean visualmente atractivas, sino también eficaces y
-          significativas para los usuarios finales.
-        </p>
-      </article>
+      <p className="text-base sm:text-lg text-primary-dark/80 mb-6 max-w-3xl">
+        {site.tagline}
+      </p>
+      <div className="flex flex-wrap gap-3">
+        <a href="#projects" className="btn-primary">
+          Ver proyectos
+        </a>
+        <a href={site.cvPath} download className="btn-secondary">
+          Descargar CV
+        </a>
+        <a href="/contact" className="btn-secondary">
+          Contactar
+        </a>
+      </div>
     </section>
   );
 };

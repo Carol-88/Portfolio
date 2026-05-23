@@ -1,26 +1,66 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { Tag } from "../commons/Tag";
 
-export const ProjectCard = ({ banner, name, id }) => {
+export const ProjectCard = ({
+  banner,
+  name,
+  id,
+  subtitle,
+  badge,
+  status,
+  tech = [],
+  featured = false,
+}) => {
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
 
   return (
-    <div className="min-w-[200px] sm:min-w-[250px] md:min-w-[300px] flex-shrink-0">
-      <article className="shadow-lg hover:shadow-xl bg-white rounded-xl overflow-hidden m-2">
-        <img src={banner} alt={name} className="w-full h-40 object-fill" />
-        <div className="p-2 text-center">
-          <Link
-            to={`/projects/${id}`}
-            onClick={handleClick}
-            className="text-lg font-semibold hover:underline"
-          >
-            {name}
-          </Link>
+    <article
+      className={`flex flex-col overflow-hidden rounded-2xl border border-accent-soft/20 bg-white shadow-card transition hover:shadow-card-hover ${
+        featured ? "md:col-span-1" : ""
+      }`}
+    >
+      <Link to={`/projects/${id}`} onClick={handleClick} className="block">
+        <img
+          src={banner}
+          alt={name}
+          className={`w-full object-cover ${featured ? "h-48 sm:h-56" : "h-40"}`}
+        />
+      </Link>
+      <div className="flex flex-1 flex-col p-5">
+        <div className="mb-3 flex flex-wrap gap-2">
+          {badge && (
+            <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+              {badge}
+            </span>
+          )}
+          {status && (
+            <span className="rounded-full bg-accent/20 px-3 py-1 text-xs font-semibold text-primary-dark">
+              {status}
+            </span>
+          )}
         </div>
-      </article>
-    </div>
+        <Link
+          to={`/projects/${id}`}
+          onClick={handleClick}
+          className="text-lg font-semibold text-primary-dark hover:text-primary"
+        >
+          {name}
+        </Link>
+        {subtitle && (
+          <p className="mt-2 text-sm text-primary-dark/70">{subtitle}</p>
+        )}
+        {tech.length > 0 && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tech.slice(0, 4).map((item) => (
+              <Tag key={item} label={item} />
+            ))}
+          </div>
+        )}
+      </div>
+    </article>
   );
 };
 
@@ -28,4 +68,9 @@ ProjectCard.propTypes = {
   banner: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
+  subtitle: PropTypes.string,
+  badge: PropTypes.string,
+  status: PropTypes.string,
+  tech: PropTypes.arrayOf(PropTypes.string),
+  featured: PropTypes.bool,
 };

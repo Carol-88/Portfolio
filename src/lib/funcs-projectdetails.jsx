@@ -1,14 +1,19 @@
-export const filterImages = (contributions) =>
-  Object.values(contributions).filter(Boolean);
-
 export const renderServices = (services) =>
   services
     ? Object.entries(services).map(([key, service]) => (
-        <div key={key} className="leading-8 mt-4">
-          <strong>{service.title}</strong> {service.description}
+        <div key={key} className="rounded-xl bg-surface-muted p-4">
+          {service.title && (
+            <strong className="text-primary-dark">{service.title} </strong>
+          )}
+          <span className="text-primary-dark/80">{service.description}</span>
         </div>
       ))
     : null;
+
+export const filterImages = (contributions) =>
+  Object.values(contributions).filter(
+    (value) => Boolean(value) && !value.endsWith("banner.svg")
+  );
 
 export const createGridImages = (images, columns) => {
   const rows = Math.ceil(images.length / columns);

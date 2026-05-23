@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Azaila Community">
+  <rect width="800" height="400" fill="#711e09"/>
+  <circle cx="400" cy="180" r="90" fill="#fbd090" opacity="0.2"/>
+  <text x="48" y="120" fill="#fbd090" font-family="Lexend, sans-serif" font-size="36" font-weight="700">Azaila Community</text>
+  <text x="48" y="170" fill="#fffaf5" font-family="Lexend, sans-serif" font-size="20">API REST · Java · Spring Boot</text>
+</svg>

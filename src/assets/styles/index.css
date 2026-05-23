@@ -1,19 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
-@keyframes ping {
-  50% {
-    transform: scale(1.5);
-  }
-}
-
-.animate-ping:hover {
-  animation: ping 1s linear infinite;
+:root {
+  --color-primary: #b74e22;
+  --color-primary-dark: #4a0f07;
+  --color-accent: #f4914b;
+  --color-surface: #fbd090;
+  --color-surface-muted: #fef7ed;
 }
 
 body {
-  font-family: 'Lexend', sans-serif;
+  font-family: 'Lexend', system-ui, sans-serif;
+  background-color: var(--color-surface-muted);
+  color: var(--color-primary-dark);
 }
 
+@layer components {
+  .page-shell {
+    @apply container max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-10;
+  }
+
+  .section-card {
+    @apply bg-surface-card rounded-2xl shadow-card border border-accent-soft/20 p-6 sm:p-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-xl border-2 border-primary/30 bg-white px-5 py-2.5 text-sm font-semibold text-primary-dark transition hover:border-primary hover:bg-surface-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+  }
+
+  .tag-pill {
+    @apply inline-flex items-center rounded-full bg-surface px-3 py-1 text-xs font-medium text-primary-dark;
+  }
+}

@@ -1,22 +1,17 @@
 import { Contact } from "../../components/Contact/Contact";
+import { PageShell } from "../../components/commons/PageShell";
+import { SectionTitle } from "../../components/commons/SectionTitle";
 
 export const ContactPage = () => {
   return (
-    <div
-      className="
-      container
-      max-w-4xl
-      mx-auto
-      px-6
-      py-4
-      mt-4
-      bg-red-50
-      shadow-xl
-      rounded-lg
-      overflow-hidden
-      text-pretty"
-    >
-      <Contact />
-    </div>
+    <PageShell>
+      <section className="section-card">
+        <SectionTitle
+          title="Contacto"
+          subtitle="Escríbeme si quieres hablar sobre oportunidades, colaboraciones o proyectos."
+        />
+        <Contact />
+      </section>
+    </PageShell>
   );
 };

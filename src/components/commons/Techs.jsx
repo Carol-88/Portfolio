@@ -1,17 +1,19 @@
-import { TechnologyLogo } from "../commons/TechnologyLogo";
-import { technologies } from "../../lib//techStack";
+import { TechnologyLogo } from "./TechnologyLogo";
+import { technologies } from "../../lib/techStack";
+import { SectionTitle } from "./SectionTitle";
 
 export const Techs = () => {
   return (
-    <div id="techs" className=" bg-red-50 p-8 rounded-lg">
-      <h2 className="text-2xl font-bold mb-8 text-center text-red-800">
-        Tecnologías
-      </h2>
-      <div id="logos" className="flex flex-wrap justify-center gap-4">
-        {technologies.map((tech, index) => (
-          <TechnologyLogo key={index} {...tech} />
+    <section id="techs" className="section-card">
+      <SectionTitle
+        title="Stack principal"
+        subtitle="Tecnologías con las que trabajo en productos web, mobile y backend."
+      />
+      <div className="flex flex-wrap justify-center gap-4">
+        {technologies.map((tech) => (
+          <TechnologyLogo key={tech.alt} {...tech} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };

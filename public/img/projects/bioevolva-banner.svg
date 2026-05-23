@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="BioEvolva MenuPlanner">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a0f07"/>
+      <stop offset="50%" stop-color="#b74e22"/>
+      <stop offset="100%" stop-color="#f4914b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <circle cx="650" cy="80" r="120" fill="#fbd090" opacity="0.15"/>
+  <text x="48" y="120" fill="#fbd090" font-family="Lexend, sans-serif" font-size="42" font-weight="700">BioEvolva</text>
+  <text x="48" y="170" fill="#fffaf5" font-family="Lexend, sans-serif" font-size="28" font-weight="500">MenuPlanner</text>
+  <text x="48" y="230" fill="#fbd090" font-family="Lexend, sans-serif" font-size="18">Menú semanal · Recomposición corporal</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="LibraryApp">
+  <rect width="800" height="400" fill="#4a0f07"/>
+  <rect x="280" y="80" width="240" height="240" rx="12" fill="#f4914b" opacity="0.9"/>
+  <rect x="310" y="110" width="180" height="24" rx="4" fill="#4a0f07" opacity="0.3"/>
+  <rect x="310" y="150" width="140" height="16" rx="4" fill="#4a0f07" opacity="0.2"/>
+  <rect x="310" y="180" width="160" height="16" rx="4" fill="#4a0f07" opacity="0.2"/>
+  <text x="48" y="360" fill="#fbd090" font-family="Lexend, sans-serif" font-size="32" font-weight="600">LibraryApp</text>
+</svg>

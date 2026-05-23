@@ -1,26 +1,65 @@
 {
   "jobs": [
     {
-      "jobTitle": "AdoptaUnJunior - Desarrollador Web FrontEnd",
-      "period": "Noviembre 2023 - Actualidad",
+      "id": 1,
+      "jobTitle": "Azaila Community — Desarrolladora Backend / Full Stack (SEPE)",
+      "period": "Septiembre 2025",
       "tasks": [
-        "Creación de componentes reutilizables y transición a Next.js con TypeScript.",
-        "Organización de tareas."
+        "Desarrollo de backend en Java con Spring Boot, aplicando POO y arquitectura MVC.",
+        "Implementación de lógica de negocio, controladores y servicios.",
+        "Trabajo con persistencia de datos y estructuración de la aplicación.",
+        "Uso de Git y GitHub para control de versiones y seguimiento del proyecto."
       ]
     },
     {
-      "jobTitle": "CloudSolute - Desarrollador Web FrontEnd",
-      "period": "Febrero 2024 - Actualidad",
+      "id": 2,
+      "jobTitle": "PetCareManager — Desarrolladora Frontend Mobile",
+      "period": "Diciembre 2024 – Julio 2025",
       "tasks": [
-        "Desarrollo de funcionalidades clave y colaboración en la maquetación y componetización.",
-        "Integración de APIs y contribución en la migración tecnológica a Next.js."
+        "Liderazgo del desarrollo frontend de una app móvil en React Native y TailwindCSS.",
+        "Coordinación de colaboradores y gestión de repositorio y documentación técnica.",
+        "Implementación de interfaces accesibles y flujos de usuario basados en Figma."
       ]
     },
     {
-      "jobTitle": "Securitas Direct S.A. - Operador/a de Emergencias",
-      "period": "Mayo 2018 - Febrero 2024",
+      "id": 3,
+      "jobTitle": "LibraryApp — Desarrolladora Full Stack Mobile",
+      "period": "Octubre 2024",
       "tasks": [
-        "Atención de alarmas y coordinación de respuesta a emergencias, demostrando capacidad de trabajo bajo presión."
+        "Desarrollo de una app móvil completa en Flutter conectada con la API de OpenLibrary.",
+        "Implementación de autenticación con Firebase y base de datos NoSQL.",
+        "Gestión integral del proyecto: ideación, diseño, frontend y backend."
+      ]
+    },
+    {
+      "id": 4,
+      "jobTitle": "CloudSolute — Desarrolladora Web Frontend",
+      "period": "Marzo 2024 – Octubre 2024",
+      "tasks": [
+        "Migración de aplicaciones de React a Next.js, TypeScript y TailwindCSS.",
+        "Refactorización y limpieza de código existente, mejorando estructura y mantenibilidad.",
+        "Desarrollo de reproductor de vídeo HLS, integración de APIs y optimización de tiempos de carga.",
+        "Trabajo en entorno ágil con GitHub Projects (Kanban)."
+      ]
+    },
+    {
+      "id": 5,
+      "jobTitle": "AdoptaUnJunior — Desarrolladora Web Frontend",
+      "period": "Noviembre 2023 – Septiembre 2024",
+      "tasks": [
+        "Desarrollo de componentes en React y JavaScript.",
+        "Migración progresiva a Next.js y TypeScript.",
+        "Apoyo en tareas de facilitación ágil (Scrum Master) y coordinación del equipo."
+      ]
+    },
+    {
+      "id": 6,
+      "jobTitle": "Securitas Direct — Gestión de Emergencias",
+      "period": "Mayo 2018 – Febrero 2024",
+      "tasks": [
+        "Gestión y priorización de incidencias críticas en tiempo real.",
+        "Comunicación clara con clientes y equipos técnicos bajo alta presión.",
+        "Desarrollo de habilidades clave para soporte y roles técnicos: organización, calma y empatía."
       ]
     }
   ]
