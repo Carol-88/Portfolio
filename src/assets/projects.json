@@ -186,6 +186,46 @@
           }
         }
       }
+    },
+    {
+      "id": 6,
+      "featured": false,
+      "category": "business",
+      "badge": "Web para negocios",
+      "status": "Demo desplegada",
+      "banner": "/img/projects/lookin-hero.png",
+      "logo": "/img/projects/lookin-logo.svg",
+      "video": "",
+      "tech": ["HTML5", "CSS3", "JavaScript", "Google Fonts", "Netlify"],
+      "contributions": {
+        "landing": "/img/projects/lookin-hero.png"
+      },
+      "name": "LookIN · Peluquería",
+      "subtitle": "Landing page para peluquería ficticia orientada a negocios de estilismo",
+      "role": "Diseño y desarrollo front-end (HTML, CSS y JavaScript vanilla)",
+      "web": "https://peluqueria-lookin.netlify.app/",
+      "github": "https://github.com/Carol-88/demo-lookin",
+      "description": {
+        "goal": "Demo de portfolio para peluquerías, barberías y centros de estética: one-page moderna, responsive y optimizada para conversión con reserva por teléfono y WhatsApp. LookIN es ficticia; el objetivo es mostrar diseño, accesibilidad y despliegue listo para un cliente real.",
+        "services": {
+          "input1": {
+            "title": "One-page con conversión:",
+            "description": "Hero con imagen del salón, CTAs de reserva, servicios con precios orientativos, galería y testimonios."
+          },
+          "input2": {
+            "title": "Reserva accesible:",
+            "description": "Enlaces tel:, WhatsApp, botón flotante en móvil y sección de contacto con mapa integrado."
+          },
+          "input3": {
+            "title": "Accesibilidad WCAG AA:",
+            "description": "Contraste en textos, skip link, foco visible y respeto a prefers-reduced-motion."
+          },
+          "input4": {
+            "title": "Sin dependencias:",
+            "description": "HTML, CSS y JavaScript vanilla desplegado en Netlify, fácil de personalizar con datos e imágenes del cliente."
+          }
+        }
+      }
     }
   ]
 }
