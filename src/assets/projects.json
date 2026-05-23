@@ -226,6 +226,46 @@
           }
         }
       }
+    },
+    {
+      "id": 7,
+      "featured": false,
+      "category": "business",
+      "badge": "Web para negocios",
+      "status": "Demo desplegada",
+      "banner": "/img/projects/brasa-y-asa-hero.png",
+      "logo": "/img/projects/brasa-y-asa-logo.svg",
+      "video": "",
+      "tech": ["HTML5", "CSS3", "JavaScript", "Decap CMS", "Netlify"],
+      "contributions": {
+        "landing": "/img/projects/brasa-y-asa-hero.png"
+      },
+      "name": "Brasa y Asa · Restaurante",
+      "subtitle": "Web completa para restaurante rural con CMS, SEO local y cumplimiento RGPD",
+      "role": "Diseño y desarrollo front-end (HTML, CSS y JavaScript vanilla) + CMS headless",
+      "web": "https://candid-kleicha-09a2eb.netlify.app/",
+      "github": "https://github.com/Carol-88/demo-brasa-y-asa",
+      "description": {
+        "goal": "Demo de portfolio para restaurantes y hostelería de montaña: landing multi-sección con carta editable, formulario de reservas, galería, eventos y panel CMS para que el cliente gestione contenidos sin tocar código. Restaurante ficticio; el objetivo es demostrar diseño emocional, conversión, SEO local y cumplimiento legal.",
+        "services": {
+          "input1": {
+            "title": "Landing multi-sección:",
+            "description": "Hero con reserva y carta, historia de la masía, carta con filtros y alérgenos, eventos, galería, formulario de reservas y mapa de contacto."
+          },
+          "input2": {
+            "title": "CMS headless (Decap):",
+            "description": "Panel en /admin/ para editar carta, precios, fotos, horarios y textos del negocio sin conocimientos técnicos."
+          },
+          "input3": {
+            "title": "SEO local y legal:",
+            "description": "Schema.org Restaurant, Open Graph, sitemap, bilingüe ES/CA, banner de cookies y páginas legales (RGPD)."
+          },
+          "input4": {
+            "title": "Conversión y accesibilidad:",
+            "description": "CTAs de reserva, llamada y WhatsApp, carta imprimible/PDF, skip link, ARIA y respeto a prefers-reduced-motion."
+          }
+        }
+      }
     }
   ]
 }

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Logo Brasa y Asa">
+  <rect width="120" height="120" rx="20" fill="#1c1917"/>
+  <rect x="28" y="28" width="28" height="28" rx="4" fill="#c2410c"/>
+  <text x="42" y="48" fill="#faf8f5" font-family="Georgia, serif" font-size="11" font-weight="700" text-anchor="middle">B&amp;A</text>
+  <text x="60" y="78" fill="#faf8f5" font-family="Georgia, serif" font-size="16" font-weight="600" text-anchor="middle">Brasa y Asa</text>
+  <text x="60" y="96" fill="#d6a574" font-family="Georgia, serif" font-size="9" font-style="italic" text-anchor="middle">Masía de montaña</text>
+</svg>
